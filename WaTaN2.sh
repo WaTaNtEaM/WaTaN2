@@ -4,7 +4,7 @@ Version=`lsb_release -rs | cut -f1 -d"."`
 install() {
 echo -e "\033[0;36m"
 echo -e "~ Welcome To Source WaTaNTeaM - اهلا بك في سورس وطن ~"
-echo -e "     ~ { Setting Up Offices - جاري رفع المكاتب } ~"
+echo -e "     ~ { Setting Up Offices - جار رفع المكاتب } ~"
 echo -e "\033[0m"
 sudo apt-get update -y
 sudo apt-get upgrade -y
