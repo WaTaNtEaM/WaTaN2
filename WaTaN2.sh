@@ -4,7 +4,7 @@ Version=`lsb_release -rs | cut -f1 -d"."`
 install() {
 echo -e "\033[0;36m"
 echo -e "~ Welcome To Source WaTaNTeaM - اهلا بك في سورس وطن ~"
-echo -e "     ~ { Setting Up Offices - جار رفع المكاتب } ~"
+echo -e "     ~ { Setting Up Offices - جاري رفع المكاتب } ~"
 echo -e "\033[0m"
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -46,7 +46,7 @@ echo -e "\033[0;36m"
 echo -e "-------------Welcome to source-------------"
 echo -e "\033[0m"
 cd $THIS_DIR && sudo chmod +x tg
-lua WaTaNTeaM.lua
+lua WaTaN2.lua
 }
 if [ "$1" = "install" ]; then
 install
@@ -56,5 +56,5 @@ echo -e "\033[0;31m\n~ The tg File Was Not Found In The Bot Files\n\033[0;33m"
 exit 1
 fi
 cd $THIS_DIR && sudo chmod +x tg
-lua WaTaNTeaM.lua
+lua WaTaN2.lua
 fi
