@@ -4191,11 +4191,11 @@ end
 if text == "السورس" or text == "سورس" or text == "ياسورس" or text == "يا سورس"   then 
 local text =  [[
 Welcome To Source
-⌁︙WaTaN2 TEAM
+⌁︙WaTaN TEAM
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/WaTaN2)
+⌁︙[Source Channel](https://t.me/WaTaNteam)
 
-⌁︙[Exp Source](https://t.me/WaTaN2UpDaTe)
+⌁︙[Exp Source](https://t.me/WaTaNUpDaTe)
 
 ⌁︙[Developer](https://t.me/abbasfadhil)
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
