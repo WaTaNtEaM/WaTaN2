@@ -1,5 +1,5 @@
 ------------------------------------------------
--- This Source Was Developed By @abbasfadhil.--
+-- This Source Was Developed By @abbasfadhil .--
 --   This Is The Source Channel @WaTaNTeaM .   --
 --                - WaTaNTeaM -                 --
 --        -- https://t.me/WaTaNTeaM --         --
