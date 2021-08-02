@@ -124,7 +124,7 @@ print("\27[36m"..[[
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId
-SudoIds = {Config.SudoIds,1349843982,742655070} or {Config.sudo_users,1349843982,782717203}
+SudoIds = {Config.SudoIds,782717203}
 WaTaNTeaM = Config.WaTaNTeaM
 TokenBot = Config.TokenBot
 NameBot = (DevAbs:get(WaTaNTeaM..'Abs:NameBot') or 'وطن')
@@ -590,7 +590,7 @@ end ,nil)
 end
 --     Source WaTaNTeaM     --
 local AbsRank = function(msg) if SudoId(msg.sender_user_id_) then WaTaNTeaMTEAM  = "المطور" elseif SecondSudo(msg) then WaTaNTeaMTEAM = "المطور" elseif SudoBot(msg) then WaTaNTeaMTEAM = "المطور" elseif ManagerAll(msg) then WaTaNTeaMTEAM = "المدير" elseif AdminAll(msg) then WaTaNTeaMTEAM = "الادمن" elseif AbsConstructor(msg) then WaTaNTeaMTEAM = "المالك" elseif BasicConstructor(msg) then WaTaNTeaMTEAM = "المنشئ" elseif Constructor(msg) then WaTaNTeaMTEAM = "المنشئ" elseif Manager(msg) then WaTaNTeaMTEAM = "المدير" elseif Admin(msg) then WaTaNTeaMTEAM = "الادمن" else WaTaNTeaMTEAM = "العضو" end return WaTaNTeaMTEAM end
-function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1349843982) then WaTaNTeaMTEAM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(WaTaNTeaM) then WaTaNTeaMTEAM = 'البوت' elseif SudoId(user_id) then WaTaNTeaMTEAM = 'المطور الاساسي' elseif DevAbs:sismember(WaTaNTeaM..'Abs:SecondSudo:', user_id) then WaTaNTeaMTEAM = 'المطور الثانوي' elseif DevAbs:sismember(WaTaNTeaM..'Abs:SudoBot:', user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(WaTaNTeaM..'Abs:ManagerAll:', user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(WaTaNTeaM..'Abs:AdminAll:', user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(WaTaNTeaM..'Abs:VipAll:', user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(WaTaNTeaM..'Abs:AbsConstructor:'..chat_id, user_id) then WaTaNTeaMTEAM = 'المالك' elseif DevAbs:sismember(WaTaNTeaM..'Abs:BasicConstructor:'..chat_id, user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(WaTaNTeaM..'Abs:Constructor:'..chat_id, user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(WaTaNTeaM..'Abs:Managers:'..chat_id, user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(WaTaNTeaM..'Abs:Admins:'..chat_id, user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(WaTaNTeaM..'Abs:VipMem:'..chat_id, user_id) then  WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(WaTaNTeaM..'Abs:Cleaner:'..chat_id, user_id) then  WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:mem:Rd"..chat_id) or 'العضو' end return WaTaNTeaMTEAM end
+function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(782717203) then WaTaNTeaMTEAM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(WaTaNTeaM) then WaTaNTeaMTEAM = 'البوت' elseif SudoId(user_id) then WaTaNTeaMTEAM = 'المطور الاساسي' elseif DevAbs:sismember(WaTaNTeaM..'Abs:SecondSudo:', user_id) then WaTaNTeaMTEAM = 'المطور الثانوي' elseif DevAbs:sismember(WaTaNTeaM..'Abs:SudoBot:', user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(WaTaNTeaM..'Abs:ManagerAll:', user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(WaTaNTeaM..'Abs:AdminAll:', user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(WaTaNTeaM..'Abs:VipAll:', user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(WaTaNTeaM..'Abs:AbsConstructor:'..chat_id, user_id) then WaTaNTeaMTEAM = 'المالك' elseif DevAbs:sismember(WaTaNTeaM..'Abs:BasicConstructor:'..chat_id, user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(WaTaNTeaM..'Abs:Constructor:'..chat_id, user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(WaTaNTeaM..'Abs:Managers:'..chat_id, user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(WaTaNTeaM..'Abs:Admins:'..chat_id, user_id) then WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(WaTaNTeaM..'Abs:VipMem:'..chat_id, user_id) then  WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(WaTaNTeaM..'Abs:Cleaner:'..chat_id, user_id) then  WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else WaTaNTeaMTEAM = DevAbs:get(WaTaNTeaM.."Abs:mem:Rd"..chat_id) or 'العضو' end return WaTaNTeaMTEAM end
 --     Source WaTaNTeaM     --
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
@@ -4375,7 +4375,7 @@ if tonumber(result.id_) == tonumber(DevId) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
-if tonumber(result.id_) == tonumber(1349843982) then 
+if tonumber(result.id_) == tonumber(782717203) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
@@ -4406,7 +4406,7 @@ if tonumber(result.sender_user_id_) == tonumber(DevId) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(1349843982) then  
+if tonumber(result.sender_user_id_) == tonumber(782717203) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
@@ -10369,7 +10369,7 @@ if SecondSudo(msg) then
 if text == "تحديث السورس" or text == "تحديث سورس" then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙جاري تحديث سورس وطن', 1, 'md') 
 os.execute('rm -rf WaTaNTeaM.lua') 
-os.execute('wget https://raw.githubusercontent.com/WaTaNTeaMTEAM/WaTaNTeaM/main/WaTaNTeaM.lua') 
+os.execute('wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2/main/WaTaN.lua') 
 dofile('WaTaNTeaM.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n          ( تم تحديث السورس )          \n\27[0;34;49m\n") 
@@ -10405,7 +10405,7 @@ end
 send(msg.chat_id_, msg.id_,Files)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/WaTaNTeaMTEAM/WaTaNTeaMFiles/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/WaTaNTeaM/WaTaNFiles/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -10437,7 +10437,7 @@ end
 if text and text:match("^(تعطيل ملف) (.*)(.lua)$") then
 local FileGet = {string.match(text, "^(تعطيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/WaTaNTeaMTEAM/WaTaNTeaMFiles/main/WaTaNTeaMFiles/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/WaTaNTeaM/WaTaNFiles/main/WaTaNFiles/"..FileName)
 if Res == 200 then
 os.execute("rm -fr Files/"..FileName)
 send(msg.chat_id_, msg.id_,"\n⌁︙الملف ↫ *"..FileName.."*\n⌁︙تم تعطيله وحذفه من البوت بنجاح") 
@@ -10449,7 +10449,7 @@ end
 if text and text:match("^(تفعيل ملف) (.*)(.lua)$") then
 local FileGet = {string.match(text, "^(تفعيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/WaTaNTeaMTEAM/WaTaNTeaMFiles/main/WaTaNTeaMFiles/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/WaTaNTeaM/WaTaNFiles/main/WaTaNFiles/"..FileName)
 if Res == 200 then
 local ChekAuto = io.open("Files/"..FileName,'w+')
 ChekAuto:write(GetJson)
