@@ -11132,7 +11132,7 @@ Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '᥀ مبرمج السورس',url="t.me/abbasfadhil"}
+{{text = '᥀ مبرمج السورس',url="t.me/abbasfadhil"},
 {text = '𝒄𝒉𝒂𝒏𝒏𝒆𝒍 𝒔𝒐𝒖𝒓𝒄𝒆',url="t.me/WaTaNTeaM"}},
 }
 local msg_id = msg.id_/2097152/0.5
