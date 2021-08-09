@@ -1,4 +1,4 @@
-# <p align="center" > تنصيب سورس سنايبر
+# <p align="center" > تنصيب سورس وطن
 # <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 # <p align="center" > ⤈ ↫ كود التنصيب الاول مع المكاتب ↬ ⤈
 # <p align="center" > `git clone https://github.com/WaTaNtEaM/WaTaN2.git;cd WaTaN2;chmod +x WaTaN2.sh;./WaTaN2.sh install`
