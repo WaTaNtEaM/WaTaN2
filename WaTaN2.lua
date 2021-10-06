@@ -10874,7 +10874,7 @@ os.execute('wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2/main/WaTaN2.
 dofile('WaTaN2.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n          ( تم تحديث السورس )          \n\27[0;34;49m\n") 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم التحديث الى الاصدار 2.0', 1, 'md') 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم التحديث الى الاصدار 2.1', 1, 'md') 
 end
 if text == 'تحديث' and ChCheck(msg) or text == 'تحديث البوت' and ChCheck(msg) or text == '↫ تحديث ✯' and ChCheck(msg) then  
 dofile('WaTaN2.lua') 
