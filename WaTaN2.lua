@@ -1715,6 +1715,7 @@ local key = {
 {'~ تعيين كلايش الاوامر ~'},
 {'تعطيل البوت الخدمي','تفعيل البوت الخدمي'},
 {'جلب نسخه السورس','تحديث السورس','جلب نسخه الكروبات'},
+{'تحديث المتجر'},
 {'↫ حذف رد عام ✯','↫ الردود العام ✯','↫ اضف رد عام ✯'},
 {'↫ حذف رد الخاص ✯','↫ تعيين رد الخاص ✯'},
 {'حذف قناة الاشتراك','قناة الاشتراك','تعيين قناة الاشتراك'},
@@ -10339,6 +10340,22 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end
 --     Source WaTaN2     --
 if SecondSudo(msg) then
+if text == 'تحديث المتجر' then 
+io.popen("mkdir Files")
+os.execute("rm -fr Files/*")
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/AddedMe.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/AutoFile.lua")  
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ChangeName.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ChangePhoto.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ChangeUser.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/MuteNames.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ProNames.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ReplyBot.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/TagAdmins.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/TagAll.lua") 
+Dev_Ali(msg.chat_id_, msg.id_, 1, '♪︙تم تحديث المتجر الى الاصدار الجديد', 1, 'md') 
+dofile('WaTaN2.lua') 
+end
 if text == "تحديث السورس" or text == "تحديث سورس" then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙جاري تحديث سورس وطن', 1, 'md') 
 os.execute('rm -rf WaTaN2.lua') 
