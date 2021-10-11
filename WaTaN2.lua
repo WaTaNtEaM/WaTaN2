@@ -9132,7 +9132,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:Audios:Abs'..msg.chat_id_,true)  
 end
 if text == "غنيلي" or text == "↫ غنيلي ✯" and not DevAbs:get(WaTaN2..'Abs:Audios:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/David/Audios.php')
+data,res = https.request('https://black-source.tk/BlackTeAM/audios.php')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
