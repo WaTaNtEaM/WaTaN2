@@ -1738,7 +1738,13 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '/start' and ChCheck(msg) then  
+if text == '/start' and ChCheck(msg) then
+local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
+data = JSON.decode(url)
+if data.Ch_Member.Info_WaTaNTeaM ~= true then
+send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
+return false 
+end  
 if not DevAbs:get(WaTaN2..'Abs:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=WaTaN2},function(arg,dp) 
 local inline = {{{text="✯ اضفني في مجموعتك ✯",url="t.me/"..dp.username_.."?startgroup=botstart"}}}
@@ -4332,6 +4338,12 @@ end,nil)
 end
 
 if text == 'القناة' and ChCheck(msg) or text == 'قناة السورس' and ChCheck(msg) or text == 'قناه السورس' and ChCheck(msg) or text == 'قنات السورس' and ChCheck(msg) or text == '↫ قناة السورس ✯' and ChCheck(msg) then 
+local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
+data = JSON.decode(url)
+if data.Ch_Member.Info_WaTaNTeaM ~= true then
+send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
+return false 
+end
 Text = [[
 ✯︙[قناة السورس](https://t.me/WaTaNTeaM)
 ]]
