@@ -10353,7 +10353,7 @@ io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Fil
 io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ReplyBot.lua") 
 io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/TagAdmins.lua") 
 io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/TagAll.lua") 
-Dev_Ali(msg.chat_id_, msg.id_, 1, '♪︙تم تحديث المتجر الى الاصدار الجديد', 1, 'md') 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '♪︙تم تحديث المتجر الى الاصدار الجديد', 1, 'md') 
 dofile('WaTaN2.lua') 
 end
 if text == "تحديث السورس" or text == "تحديث سورس" then 
