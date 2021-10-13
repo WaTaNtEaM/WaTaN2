@@ -585,7 +585,7 @@ end ,nil)
 end
 --     Source WaTaN2     --
 local AbsRank = function(msg) if SudoId(msg.sender_user_id_) then WaTaNTeaM  = "المطور" elseif AbsSudo(msg) then WaTaNTeaM = "المطور" elseif SecondSudo(msg) then WaTaNTeaM = "المطور" elseif SudoBot(msg) then WaTaNTeaM = "المطور" elseif Manager(msg) then WaTaNTeaM = "المدير" elseif Admin(msg) then WaTaNTeaM = "الادمن" else WaTaNTeaM = "العضو" end return WaTaNTeaM end
-function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1874628385) then WaTaNTeaM = 'مطور السورس' elseif tonumber(user_id) == tonumber(782717203) then WaTaNTeaM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(WaTaN2) then WaTaNTeaM = 'البوت' elseif SudoId(user_id) then WaTaNTeaM = 'المطور الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:AbsSudo:', user_id) then WaTaNTeaM = 'المطور الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:SecondSudo:', user_id) then WaTaNTeaM = 'المطور الاساسي²' elseif DevAbs:sismember(WaTaN2..'Abs:SudoBot:', user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(WaTaN2..'Abs:AbsConstructor:'..chat_id, user_id) then WaTaNTeaM = 'المالك' elseif DevAbs:sismember(WaTaN2..'Abs:BasicConstructor:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:Constructor:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(WaTaN2..'Abs:Managers:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(WaTaN2..'Abs:Admins:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(WaTaN2..'Abs:VipMem:'..chat_id, user_id) then  WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(WaTaN2..'Abs:Cleaner:'..chat_id, user_id) then  WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:mem:Rd"..chat_id) or 'العضو' end return WaTaNTeaM end
+function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(782717203) then WaTaNTeaM = 'مطور السورس' elseif tonumber(user_id) == tonumber(WaTaN2) then WaTaNTeaM = 'البوت' elseif SudoId(user_id) then WaTaNTeaM = 'المطور الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:AbsSudo:', user_id) then WaTaNTeaM = 'المطور الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:SecondSudo:', user_id) then WaTaNTeaM = 'المطور الاساسي²' elseif DevAbs:sismember(WaTaN2..'Abs:SudoBot:', user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(WaTaN2..'Abs:AbsConstructor:'..chat_id, user_id) then WaTaNTeaM = 'المالك' elseif DevAbs:sismember(WaTaN2..'Abs:BasicConstructor:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:Constructor:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(WaTaN2..'Abs:Managers:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(WaTaN2..'Abs:Admins:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(WaTaN2..'Abs:VipMem:'..chat_id, user_id) then  WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(WaTaN2..'Abs:Cleaner:'..chat_id, user_id) then  WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:mem:Rd"..chat_id) or 'العضو' end return WaTaNTeaM end
 --     Source WaTaN2     --
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
@@ -4676,7 +4676,7 @@ if tonumber(result.id_) == tonumber(DevId) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
-if tonumber(result.id_) == tonumber(1874628385) then 
+if tonumber(result.id_) == tonumber(782717203) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
@@ -4707,7 +4707,7 @@ if tonumber(result.sender_user_id_) == tonumber(DevId) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(1874628385) then  
+if tonumber(result.sender_user_id_) == tonumber(782717203) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
