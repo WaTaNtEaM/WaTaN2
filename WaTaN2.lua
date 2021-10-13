@@ -1,9 +1,9 @@
-------------------------------------------------
+-----------------------------------------------------
 -- This Source Was Developed By (Abs) @abbasfadhil.--
---   This Is The Source Channel @WaTaNTeaM .   --
---                - WaTaN2 -                 --
---        -- https://t.me/WaTaNTeaM --         --
------------------------------------------------- 
+--     This Is The Source Channel @WaTaNTeaM .     --
+--                   - WaTaN2 -                    --
+--           -- https://t.me/WaTaNTeaM --          --
+-----------------------------------------------------
 DevAbs  = dofile("./libs/redis.lua").connect("127.0.0.1", 6379)
 serpent = dofile("./libs/serpent.lua")
 JSON    = dofile("./libs/dkjson.lua")
@@ -118,9 +118,18 @@ return config
 end  
 Load_WaTaN2() 
 print("\27[36m"..[[                                           
----------------------------------------------
+--------------------------------------------
+|          ╔╗╔╗╔╗     ╔════╗     ╔═╗ ╔╗    |
+|          ║║║║║║     ║╔╗╔╗║     ║║╚╗║║    |
+|          ║║║║║║╔══╗ ╚╝║║╚╝╔══╗ ║╔╗╚╝║    |
+|          ║╚╝╚╝║╚ ╗║   ║║  ╚ ╗║ ║║╚╗║║    |
+|          ╚╗╔╗╔╝║╚╝╚╗ ╔╝╚╗ ║╚╝╚╗║║ ║║║    |
+|           ╚╝╚╝ ╚═══╝ ╚══╝ ╚═══╝╚╝ ╚═╝    |
+|                                          |
+|           > CH › @WaTaNTeaM              |
+|        ~> DEVELOPER › @abbasfadhil       |
 |               - WaTaN2 -                 |
----------------------------------------------
+--------------------------------------------
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId
@@ -576,7 +585,7 @@ end ,nil)
 end
 --     Source WaTaN2     --
 local AbsRank = function(msg) if SudoId(msg.sender_user_id_) then WaTaNTeaM  = "المطور" elseif AbsSudo(msg) then WaTaNTeaM = "المطور" elseif SecondSudo(msg) then WaTaNTeaM = "المطور" elseif SudoBot(msg) then WaTaNTeaM = "المطور" elseif Manager(msg) then WaTaNTeaM = "المدير" elseif Admin(msg) then WaTaNTeaM = "الادمن" else WaTaNTeaM = "العضو" end return WaTaNTeaM end
-function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(782717203) then WaTaNTeaM = 'مطور السورس' elseif tonumber(user_id) == tonumber(WaTaN2) then WaTaNTeaM = 'البوت' elseif SudoId(user_id) then WaTaNTeaM = 'المطور الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:AbsSudo:', user_id) then WaTaNTeaM = 'المطور الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:SecondSudo:', user_id) then WaTaNTeaM = 'المطور الاساسي²' elseif DevAbs:sismember(WaTaN2..'Abs:SudoBot:', user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(WaTaN2..'Abs:AbsConstructor:'..chat_id, user_id) then WaTaNTeaM = 'المالك' elseif DevAbs:sismember(WaTaN2..'Abs:BasicConstructor:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:Constructor:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(WaTaN2..'Abs:Managers:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(WaTaN2..'Abs:Admins:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(WaTaN2..'Abs:VipMem:'..chat_id, user_id) then  WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(WaTaN2..'Abs:Cleaner:'..chat_id, user_id) then  WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:mem:Rd"..chat_id) or 'العضو' end return WaTaNTeaM end
+function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1874628385) then WaTaNTeaM = 'مطور السورس' elseif tonumber(user_id) == tonumber(782717203) then WaTaNTeaM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(WaTaN2) then WaTaNTeaM = 'البوت' elseif SudoId(user_id) then WaTaNTeaM = 'المطور الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:AbsSudo:', user_id) then WaTaNTeaM = 'المطور الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:SecondSudo:', user_id) then WaTaNTeaM = 'المطور الاساسي²' elseif DevAbs:sismember(WaTaN2..'Abs:SudoBot:', user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(WaTaN2..'Abs:AbsConstructor:'..chat_id, user_id) then WaTaNTeaM = 'المالك' elseif DevAbs:sismember(WaTaN2..'Abs:BasicConstructor:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:Constructor:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(WaTaN2..'Abs:Managers:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(WaTaN2..'Abs:Admins:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(WaTaN2..'Abs:VipMem:'..chat_id, user_id) then  WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(WaTaN2..'Abs:Cleaner:'..chat_id, user_id) then  WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:mem:Rd"..chat_id) or 'العضو' end return WaTaNTeaM end
 --     Source WaTaN2     --
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
@@ -1718,6 +1727,7 @@ local key = {
 {'↫ تعيين كلايش الاوامر ✯','↫ العام ✯','↫ ردود الخاص ✯'},
 {'↫ المتجر ✯','↫ الاوامر الخدميه ✯'},
 {'↫ الاشتراك الاجباري ✯'},
+{'↫ السيرفر ✯'},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
@@ -3400,6 +3410,12 @@ DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 ReplyStatus(msg,msg.sender_user_id_,"WrongWay","✯︙ممنوع التكلم بالطائفيه هنا") 
 end end
 --     Source WaTaN2     --
+if text == 'جلب ملف السورس' then
+if not Sudo(msg) then
+Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
+else
+sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './WaTaN2.lua', '✯︙نسخة ملف سورس وطن',dl_cb, nil)
+end end
 if SecondSudo(msg) then
 if text == 'جلب نسخه الكروبات' and ChCheck(msg) or text == 'جلب نسخه احتياطيه' and ChCheck(msg) or text == 'جلب النسخه الاحتياطيه' and ChCheck(msg) or text == '↫ جلب نسخه احتياطيه ✯' and ChCheck(msg) then
 local List = DevAbs:smembers(WaTaN2..'Abs:Groups') 
@@ -4660,7 +4676,7 @@ if tonumber(result.id_) == tonumber(DevId) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
-if tonumber(result.id_) == tonumber(782717203) then 
+if tonumber(result.id_) == tonumber(1874628385) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
@@ -4691,7 +4707,7 @@ if tonumber(result.sender_user_id_) == tonumber(DevId) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(782717203) then  
+if tonumber(result.sender_user_id_) == tonumber(1874628385) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
@@ -10860,6 +10876,22 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end
 --     Source WaTaN2     --
 if SecondSudo(msg) then
+if text == 'تحديث المتجر' then 
+io.popen("mkdir Files")
+os.execute("rm -fr Files/*")
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/AddedMe.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/AutoFile.lua")  
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ChangeName.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ChangePhoto.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ChangeUser.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/MuteNames.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ProNames.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/ReplyBot.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/TagAdmins.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2Files/main/WaTaN2Files/TagAll.lua") 
+Dev_Ali(msg.chat_id_, msg.id_, 1, '♪︙تم تحديث المتجر الى الاصدار الجديد', 1, 'md') 
+dofile('WaTaN2.lua') 
+end
 if text == "تحديث السورس" and ChCheck(msg) or text == "تحديث سورس" and ChCheck(msg) or text == "↫ تحديث السورس ✯" and ChCheck(msg) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙جاري تحديث سورس وطن', 1, 'md') 
 os.execute('rm -rf WaTaN2.lua') 
@@ -10867,7 +10899,7 @@ os.execute('wget https://raw.githubusercontent.com/WaTaNTeaM/WaTaN2/main/WaTaN2.
 dofile('WaTaN2.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n          ( تم تحديث السورس )          \n\27[0;34;49m\n") 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم التحديث الى الاصدار 2.0', 1, 'md') 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم التحديث الى الاصدار 2.1', 1, 'md') 
 end
 if text == 'تحديث' and ChCheck(msg) or text == 'تحديث البوت' and ChCheck(msg) or text == '↫ تحديث ✯' and ChCheck(msg) then  
 dofile('WaTaN2.lua') 
@@ -11268,9 +11300,9 @@ end end,nil) end
 end
 --     Source WaTaN2     --
 end 
-------------------------------------------------
+-----------------------------------------------------
 -- This Source Was Developed By (Abs) @abbasfadhil.--
---   This Is The Source Channel @WaTaNTeaM .   --
---                - WaTaN2 -                 --
---        -- https://t.me/WaTaNTeaM --         --
-------------------------------------------------  
+--     This Is The Source Channel @WaTaNTeaM .     --
+--                   - WaTaN2 -                    --
+--           -- https://t.me/WaTaNTeaM --          --
+-----------------------------------------------------
