@@ -1,9 +1,9 @@
-------------------------------------------------
--- This Source Was Developed By (Abs) @AAAPA.--
---   This Is The Source Channel @PPPTP .   --
---                - WaTaN2 -                 --
---        -- https://t.me/PPPTP --         --
------------------------------------------------- 
+-----------------------------------------------------
+-- This Source Was Developed By (Abs) @abbasfadhil.--
+--     This Is The Source Channel @WaTaNTeaM .     --
+--                   - WaTaN2 -                    --
+--           -- https://t.me/WaTaNTeaM --          --
+-----------------------------------------------------
 DevAbs  = dofile("./libs/redis.lua").connect("127.0.0.1", 6379)
 serpent = dofile("./libs/serpent.lua")
 JSON    = dofile("./libs/dkjson.lua")
@@ -14,7 +14,6 @@ HTTPS   = require("ssl.https")
 https   = require("ssl.https") 
 User    = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '')
 Server  = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a') 
-DirName = io.popen("echo $(cd $(dirname $0); pwd)"):read('*a'):gsub('[\n\r]+', '')
 Ip      = io.popen("dig +short myip.opendns.com @resolver1.opendns.com"):read('*a'):gsub('[\n\r]+', '')
 Name    = io.popen("uname -a | awk '{ name = $2 } END { print name }'"):read('*a'):gsub('[\n\r]+', '')
 Port    = io.popen("echo ${SSH_CLIENT} | awk '{ port = $3 } END { print port }'"):read('*a'):gsub('[\n\r]+', '')
@@ -13288,9 +13287,9 @@ end end,nil) end
 end
 --     Source WaTaN2     --
 end 
-------------------------------------------------
--- This Source Was Developed By (Ali) @AAAPA.--
---   This Is The Source Channel @PPPTP .   --
---                - WaTaN2 -                 --
---        -- https://t.me/PPPTP --         --
-------------------------------------------------   
+-----------------------------------------------------
+-- This Source Was Developed By (Abs) @abbasfadhil.--
+--     This Is The Source Channel @WaTaNTeaM .     --
+--                   - WaTaN2 -                    --
+--           -- https://t.me/WaTaNTeaM --          --
+-----------------------------------------------------
