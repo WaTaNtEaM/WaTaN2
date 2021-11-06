@@ -3150,7 +3150,7 @@ DevAbs:set(WaTaN2.."Set:Cmd:Group:New1"..msg.chat_id_..":غ","غنيلي")
 DevAbs:sadd(WaTaN2.."List:Cmd:Group:New"..msg.chat_id_,"غ")
 DevAbs:set(WaTaN2.."Set:Cmd:Group:New1"..msg.chat_id_..":#","مسح قائمه العام")
 DevAbs:sadd(WaTaN2.."List:Cmd:Group:New"..msg.chat_id_,"#")
-send(msg.chat_id_, msg.id_,"✯︙تم ترتيب الاوامر بالشكل التالي ~\n✯︙ايدي - ا .\n✯︙رفع مميز - م .\n✯︙رفع ادمن - اد .\n✯︙رفع مدير - مد . \n✯︙رفع منشى - من . \n✯︙رفع منشئ الاساسي - اس  .\n✯︙رفع مطور - مط .\n✯︙رفع مطور ثانوي - ثانوي .\n✯︙تنزيل الكل - تك .\n✯︙تعطيل الايدي بالصوره - تعط .\n✯︙تفعيل الايدي بالصوره - تفع .\n✯︙الرابط - ر .\n✯︙ردود المدير - رر .\n✯︙مسح المكتومين - ،، .\n✯︙اضف رد - رد .\n✯︙مسح سحكاتي - سح .\n✯︙مسح رسائلي - رس .\n✯︙غنيلي - غ .\n✯︙مسح قائمه العام")  
+send(msg.chat_id_, msg.id_,"✯︙تم ترتيب الاوامر بالشكل التالي ~\n✯︙ايدي - ا .\n✯︙رفع مميز - م .\n✯︙رفع ادمن - اد .\n✯︙رفع مدير - مد . \n✯︙رفع منشى - من . \n✯︙رفع منشئ الاساسي - اس  .\n✯︙رفع مطور - مط .\n✯︙رفع مطور ثانوي - ثانوي .\n✯︙تنزيل الكل - تك .\n✯︙تعطيل الايدي بالصوره - تعط .\n✯︙تفعيل الايدي بالصوره - تفع .\n✯︙الرابط - ر .\n✯︙ردود المدير - رر .\n✯︙مسح المكتومين - ،، .\n✯︙اضف رد - رد .\n✯︙مسح سحكاتي - سح .\n✯︙مسح رسائلي - رس .\n✯︙غنيلي - غ .\n✯︙مسح قائمه العام - # .")  
 end
 if text == "اضف امر" and ChCheck(msg) or text == "اضافة امر" and ChCheck(msg) or text == "اضافه امر" and ChCheck(msg) then
 DevAbs:set(WaTaN2.."Set:Cmd:Group"..msg.chat_id_..":"..msg.sender_user_id_,"true") 
@@ -3753,6 +3753,11 @@ end
 getUser(msg.sender_user_id_,get_firstname)
 end 
 if text == 'نبذتي' or text == 'بايو' or text == '↫  نبذتي ✯' then
+local my_ph = DevAbs:get(WaTaN2.."Abs:Bio:Profile"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_," ✯︙البايو معطل") 
+return false  
+end
 send(msg.chat_id_, msg.id_,'['..GetBio(msg.sender_user_id_)..']')
 end
 if text == "صورتي" or text == "↫ صورتي ✯" then
@@ -10732,7 +10737,17 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, TXTE, 1, 'md')
 end
 end
 --     Source WaTaN2     --
-if text and text:match("^كول (.*)$") and ChCheck(msg) then
+if text == "تفعيل كول" and Manager(msg) and ChCheck(msg) then
+local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل كول'
+Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
+DevAbs:del(WaTaN2..'Speak:after:me'..msg.chat_id_) 
+end
+if text == "تعطيل كول" and Manager(msg) and ChCheck(msg) then
+local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تعطيل كول'
+Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
+DevAbs:set(WaTaN2..'Speak:after:me'..msg.chat_id_,true)  
+end
+if text and text:match("^كول (.*)$") and ChCheck(msg) and not DevAbs:get(WaTaN2.."Speak:after:me"..msg.chat_id_) then
 local txt = {string.match(text, "^(كول) (.*)$")}
 Dev_Abs(msg.chat_id_,0, 1, txt[2], 1, 'md')
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
@@ -11512,6 +11527,16 @@ DevAbs:set(WaTaN2..'Abs:Lock:FreeBot'..WaTaN2,true)
 end 
 end
 if ChatType == 'sp' or ChatType == 'gp'  then
+if text == 'تعطيل بايو' and Manager(msg) and ChCheck(msg) or text == 'تعطيل البايو' and Manager(msg) and ChCheck(msg) then   
+local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تعطيل بايو بنجاح'
+Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
+DevAbs:del(WaTaN2..'Abs:Bio:Profile'..msg.chat_id_) 
+end
+if text == 'تفعيل بايو' and Manager(msg) and ChCheck(msg) or text == 'تفعيل البايو' and Manager(msg) and ChCheck(msg) then
+local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل بايو بنجاح'
+Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
+DevAbs:set(WaTaN2..'Abs:Bio:Profile'..msg.chat_id_,true)  
+end
 if text == 'تعطيل صورتي' and Manager(msg) and ChCheck(msg) then   
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تعطيل صورتي بنجاح'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
