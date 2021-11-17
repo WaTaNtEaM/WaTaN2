@@ -1,9 +1,11 @@
-------------------------------------------------
--- This Source Was Developed By (Abs) @abbasfadhil.--
---   This Is The Source Channel @WaTaNTeaM .   --
---                - WaTaN2 -                 --
---        -- https://t.me/WaTaNTeaM --         --
------------------------------------------------- 
+
+----- لم ولن ابرئ الذمة لأي شخص ينسخ الملفات والسورس والاكواد الخاصه بي حتى لو كان قريبا مني لن ابرئ الذمة له -----
+-----------------------------------------------------
+-- This Source Was Developed By (Abs) @abbasfadhil. --
+--     This Is The Source Channel @WaTaNTeaM .      --
+--                     - WaTaN2 -                    --
+--           -- https://t.me/WaTaNTeaM --           --
+------------------------------------------------------
 DevAbs  = dofile("./libs/redis.lua").connect("127.0.0.1", 6379)
 serpent = dofile("./libs/serpent.lua")
 JSON    = dofile("./libs/dkjson.lua")
@@ -13515,9 +13517,10 @@ end end,nil) end
 end
 --     Source WaTaN2     --
 end 
-------------------------------------------------
--- This Source Was Developed By (Abs) @abbasfadhil.--
---   This Is The Source Channel @WaTaNTeaM .   --
---                - WaTaN2 -                 --
---        -- https://t.me/WaTaNTeaM --         --
-------------------------------------------------   
+-----------------------------------------------------
+-- This Source Was Developed By (Abs) @abbasfadhil. --
+--     This Is The Source Channel @WaTaNTeaM .      --
+--                     - WaTaN2 -                   --
+--           -- https://t.me/WaTaNTeaM --           --
+------------------------------------------------------
+----- لم ولن ابرئ الذمة لأي شخص ينسخ الملفات والسورس والاكواد الخاصه بي حتى لو كان قريبا مني لن ابرئ الذمة له -----
