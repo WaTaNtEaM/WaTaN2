@@ -21,7 +21,7 @@ Ip      = io.popen("dig +short myip.opendns.com @resolver1.opendns.com"):read('*
 Name    = io.popen("uname -a | awk '{ name = $2 } END { print name }'"):read('*a'):gsub('[\n\r]+', '')
 Port    = io.popen("echo ${SSH_CLIENT} | awk '{ port = $3 } END { print port }'"):read('*a'):gsub('[\n\r]+', '')
 UpTime  = io.popen([[uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes"}']]):read('*a'):gsub('[\n\r]+', '')
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 local AutoSet = function() 
 if not DevAbs:get(Server.."IdWaTaN2") then 
 io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي ↫ ⤈\n\27[0;33;49m') 
@@ -151,7 +151,7 @@ SudoIds = {Config.SudoIds,782717203}
 WaTaN2 = Config.WaTaN2
 TokenBot = Config.TokenBot
 NameBot = (DevAbs:get(WaTaN2..'Abs:NameBot') or 'وطن')
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"..'\27[m'
 FilesNumber = 0
 for v in io.popen('ls Files'):lines() do
@@ -164,15 +164,15 @@ FilesPrint = FilesPrint.."\27[35m".."┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 if FilesNumber ~= 0 then
 print(FilesPrint)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --     Start Functions    --
 function vardump(value)
 print(serpent.block(value, {comment=false}))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function dl_cb(arg, data)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ----------  Sudo  ----------
 function Sudo(msg) 
 local var = false 
@@ -196,7 +196,7 @@ var = true
 end 
 return var 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 -------  AbsSudo  -------
 function AbsSudo(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:AbsSudo:',msg.sender_user_id_) 
@@ -206,7 +206,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 -------  SecondSudo  -------
 function SecondSudo(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:SecondSudo:',msg.sender_user_id_) 
@@ -216,7 +216,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ----------  Bot  -----------
 function Bot(msg) 
 local var = false  
@@ -225,7 +225,7 @@ var = true
 end  
 return var  
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ---------  SudoBot  --------
 function SudoBot(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:SudoBot:',msg.sender_user_id_) 
@@ -235,7 +235,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ----   AbsConstructor   ----
 function AbsConstructor(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:AbsConstructor:'..msg.chat_id_,msg.sender_user_id_) 
@@ -245,7 +245,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ----   Owner   ----
 function Owner(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:Owner:'..msg.chat_id_,msg.sender_user_id_) 
@@ -255,7 +255,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ----  BasicConstructor  ----
 function BasicConstructor(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:BasicConstructor:'..msg.chat_id_,msg.sender_user_id_) 
@@ -265,7 +265,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ----    Constructor     ----
 function Constructor(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:Constructor:'..msg.chat_id_,msg.sender_user_id_) 
@@ -275,7 +275,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ---------  Manager  --------
 function Manager(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:Managers:'..msg.chat_id_,msg.sender_user_id_) 
@@ -285,7 +285,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ----------  Admin  ---------
 function Admin(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:Admins:'..msg.chat_id_,msg.sender_user_id_) 
@@ -295,7 +295,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ---------Vip Member---------
 function VipMem(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:VipMem:'..msg.chat_id_,msg.sender_user_id_) 
@@ -305,7 +305,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --------- Cleaner ----------
 function Cleaner(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:Cleaner:'..msg.chat_id_,msg.sender_user_id_) 
@@ -315,7 +315,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --------- CleanerNum ----------
 function CleanerNum(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:CleanerNum:'..msg.chat_id_,msg.sender_user_id_) 
@@ -325,7 +325,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --------- CleanerMusic ----------
 function CleanerMusic(msg) 
 local Status = DevAbs:sismember(WaTaN2..'Abs:CleanerMusic:'..msg.chat_id_,msg.sender_user_id_) 
@@ -335,7 +335,7 @@ else
 return false  
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ---------  Banned  ---------
 local function Ban(user_id, chat_id)
 if DevAbs:sismember(WaTaN2..'Abs:Ban:'..chat_id, user_id) then
@@ -345,7 +345,7 @@ var = false
 end
 return var
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ---------  BanAll  ---------
 function BanAll(user_id)
 if DevAbs:sismember(WaTaN2..'Abs:BanAll:', user_id) then
@@ -355,7 +355,7 @@ var = false
 end
 return var
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ----------  Muted  ---------
 local function Muted(user_id, chat_id)
 if DevAbs:sismember(WaTaN2..'Abs:Muted:'..chat_id, user_id) then
@@ -365,7 +365,7 @@ var = false
 end
 return var
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ---------  MuteAll  --------
 function MuteAll(user_id)
 if DevAbs:sismember(WaTaN2..'Abs:MuteAll:', user_id) then
@@ -375,7 +375,7 @@ var = false
 end
 return var
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function DeleteMessage(chatid ,mid)
 pcall(tdcli_function ({
 ID = "DeleteMessages",
@@ -384,12 +384,12 @@ message_ids_ = mid
 },function(arg,data) 
 end,nil))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function send(chat_id, reply_to_message_id, text)
 local TextParseMode = {ID = "TextParseModeMarkdown"}
 pcall(tdcli_function ({ID = "SendMessage",chat_id_ = chat_id,reply_to_message_id_ = reply_to_message_id,disable_notification_ = 1,from_background_ = 1,reply_markup_ = nil,input_message_content_ = {ID = "InputMessageText",text_ = text,disable_web_page_preview_ = 1,clear_draft_ = 0,entities_ = {},parse_mode_ = TextParseMode,},}, dl_cb, nil))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function WaTaN2Files(msg)
 for v in io.popen('ls Files'):lines() do
 if v:match(".lua$") then
@@ -401,7 +401,7 @@ end
 end
 send(msg.chat_id_, msg.id_,FilesText)  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function download_to_file(url, file_path) 
 local respbody = {} 
 local options = { url = url, sink = ltn12.sink.table(respbody), redirect = true } 
@@ -432,7 +432,7 @@ send(chat,msg.id_,"✯︙عذرا الملف ليس بصيغة ↫ Lua يرجى 
 end      
 send(chat,msg.id_,"✯︙تم رفع الملف الان ارسل تحديث ليتم تحديث الملف")
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function AddFile(msg,chat,ID_FILE,File_Name)
 if File_Name:match('.json') then
 if File_Name:lower():match('(%d+)') ~= WaTaN2:lower() then 
@@ -508,14 +508,14 @@ end
 end
 send(chat,msg.id_,"✯︙تم رفع النسخه بنجاح \n✯︙تم تفعيل جميع المجموعات \n✯︙تم استرجاع مشرفين المجموعات \n✯︙تم استرجاع اوامر القفل والفتح في جميع مجموعات البوت ")
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function resolve_username(username,cb)
 tdcli_function ({
 ID = "SearchPublicChat",
 username_ = username
 }, cb, nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function getInputFile(file)
 if file:match('/') then
 infile = {ID = "InputFileLocal", path_ = file}
@@ -526,7 +526,7 @@ infile = {ID = "InputFilePersistentId", persistent_id_ = file}
 end
 return infile
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function getChatId(id)
 local chat = {}
 local id = tostring(id)
@@ -539,15 +539,15 @@ chat = {ID = group_id, type = 'group'}
 end
 return chat
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function ChatLeave(chat_id, user_id)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = chat_id, user_id_ = user_id, status_ = { ID = "ChatMemberStatusLeft" }, }, dl_cb, nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function ChatKick(chat_id, user_id)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = chat_id, user_id_ = user_id, status_ = { ID = "ChatMemberStatusKicked" }, }, dl_cb, nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function getParseMode(parse_mode)
 if parse_mode then
 local mode = parse_mode:lower()
@@ -559,7 +559,7 @@ end
 end
 return P
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function getMessage(chat_id, message_id,cb)
 tdcli_function ({
 ID = "GetMessage",
@@ -567,19 +567,19 @@ chat_id_ = chat_id,
 message_id_ = message_id
 }, cb, nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function sendContact(chat_id, reply_to_message_id, disable_notification, from_background, reply_markup, phone_number, first_name, last_name, user_id)
 tdcli_function ({ ID = "SendMessage", chat_id_ = chat_id, reply_to_message_id_ = reply_to_message_id, disable_notification_ = disable_notification, from_background_ = from_background, reply_markup_ = reply_markup, input_message_content_ = { ID = "InputMessageContact", contact_ = { ID = "Contact", phone_number_ = phone_number, first_name_ = first_name, last_name_ = last_name, user_id_ = user_id },},}, dl_cb, nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function sendPhoto(chat_id, reply_to_message_id, disable_notification, from_background, reply_markup, photo, caption)
 tdcli_function ({ ID = "SendMessage", chat_id_ = chat_id, reply_to_message_id_ = reply_to_message_id, disable_notification_ = disable_notification, from_background_ = from_background, reply_markup_ = reply_markup, input_message_content_ = { ID = "InputMessagePhoto", photo_ = getInputFile(photo), added_sticker_file_ids_ = {}, width_ = 0, height_ = 0, caption_ = caption }, }, dl_cb, nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function Dev_Abs(chat_id, reply_to_message_id, disable_notification, text, disable_web_page_preview, parse_mode)
 local TextParseMode = getParseMode(parse_mode) tdcli_function ({ ID = "SendMessage", chat_id_ = chat_id, reply_to_message_id_ = reply_to_message_id, disable_notification_ = disable_notification, from_background_ = 1, reply_markup_ = nil, input_message_content_ = { ID = "InputMessageText", text_ = text, disable_web_page_preview_ = disable_web_page_preview, clear_draft_ = 0, entities_ = {}, parse_mode_ = TextParseMode, }, }, dl_cb, nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function GetApi(web) 
 local info, res = https.request(web) 
 local req = json:decode(info) if res ~= 200 then 
@@ -590,7 +590,7 @@ return false
 end 
 return req 
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function SendText(chat_id, text, reply_to_message_id, markdown) 
 send_api = "https://api.telegram.org/bot"..TokenBot 
 local url = send_api.."/sendMessage?chat_id=" .. chat_id .. "&text=" .. URL.escape(text) 
@@ -604,7 +604,7 @@ url = url.."&parse_mode=HTML"
 end 
 return GetApi(url) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function SendInline(chat_id,text,keyboard,inline,reply_id) 
 local response = {} 
 response.keyboard = keyboard 
@@ -618,9 +618,9 @@ send_api = send_api.."&reply_to_message_id="..reply_id
 end 
 return GetApi(send_api) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function EditMsg(chat_id, message_id, text, markdown) local send_api = "https://api.telegram.org/bot"..TokenBot.."/editMessageText?chat_id="..chat_id.."&message_id="..message_id.."&text="..URL.escape(text).."&parse_mode=Markdown&disable_web_page_preview=true" return GetApi(send_api)  end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function Pin(channel_id, message_id, disable_notification) 
 tdcli_function ({ 
 ID = "PinChannelMessage", 
@@ -631,10 +631,10 @@ disable_notification_ = disable_notification
 vardump(data)
 end ,nil) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 local AbsRank = function(msg) if SudoId(msg.sender_user_id_) then WaTaNTeaM  = "المطور" elseif AbsSudo(msg) then WaTaNTeaM = "المطور" elseif SecondSudo(msg) then WaTaNTeaM = "المطور" elseif SudoBot(msg) then WaTaNTeaM = "المطور" elseif Manager(msg) then WaTaNTeaM = "المدير" elseif Admin(msg) then WaTaNTeaM = "الادمن" else WaTaNTeaM = "العضو" end return WaTaNTeaM end
 function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(782717203) then WaTaNTeaM = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(WaTaN2) then WaTaNTeaM = 'البوت' elseif SudoId(user_id) then WaTaNTeaM = 'المطور الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:AbsSudo:', user_id) then WaTaNTeaM = 'المطور الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:SecondSudo:', user_id) then WaTaNTeaM = 'المطور الاساسي²' elseif DevAbs:sismember(WaTaN2..'Abs:SudoBot:', user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(WaTaN2..'Abs:Owner:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Owner:Rd"..chat_id) or 'المالك' elseif DevAbs:sismember(WaTaN2..'Abs:AbsConstructor:'..chat_id, user_id) then WaTaNTeaM = 'المالك' elseif DevAbs:sismember(WaTaN2..'Abs:BasicConstructor:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(WaTaN2..'Abs:Constructor:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(WaTaN2..'Abs:Managers:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(WaTaN2..'Abs:Admins:'..chat_id, user_id) then WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(WaTaN2..'Abs:VipMem:'..chat_id, user_id) then  WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(WaTaN2..'Abs:Cleaner:'..chat_id, user_id) then  WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else WaTaNTeaM = DevAbs:get(WaTaN2.."Abs:mem:Rd"..chat_id) or 'العضو' end return WaTaNTeaM end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
 var = true  
@@ -689,7 +689,7 @@ var = 'No'
 end  
 return var
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 local function Filters(msg, value)
 local Abs = (WaTaN2..'Abs:Filters:'..msg.chat_id_)
 if Abs then
@@ -702,7 +702,7 @@ end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function ReplyStatus(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,dp) 
 if dp.first_name_ ~= false then
@@ -727,7 +727,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙الحساب محذوف قم بالتا
 end
 end,nil)   
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function GetCustomTitle(user_id,chat_id)
 local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChatMember?chat_id='..chat_id..'&user_id='..user_id)
 local GetInfo = JSON.decode(Check)
@@ -771,7 +771,7 @@ send(msg.chat_id_,msg.id_,'✯︙صلاحيات '..GetCustomTitle(user_id,msg.ch
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function GetBio(chat_id)
 local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..chat_id)
 local GetInfo = JSON.decode(Check)
@@ -784,7 +784,7 @@ end
 end
 return Abs
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 local sendRequest = function(request_id, chat_id, reply_to_message_id, disable_notification, from_background, reply_markup, input_message_content, callback, extra)
 tdcli_function({ ID = request_id, chat_id_ = chat_id, reply_to_message_id_ = reply_to_message_id, disable_notification_ = disable_notification, from_background_ = from_background, reply_markup_ = reply_markup, input_message_content_ = input_message_content }, callback or dl_cb, extra)
 end
@@ -836,9 +836,9 @@ MsgText = "معلك لربك"
 end 
 return MsgText
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function Absmoned(chat_id, user_id, msg_id, text, offset, length) local tt = DevAbs:get(WaTaN2..'endmsg') or '' tdcli_function ({ ID = "SendMessage", chat_id_ = chat_id, reply_to_message_id_ = msg_id, disable_notification_ = 0, from_background_ = 1, reply_markup_ = nil, input_message_content_ = { ID = "InputMessageText", text_ = text..'\n\n'..tt, disable_web_page_preview_ = 1, clear_draft_ = 0, entities_ = {[0]={ ID="MessageEntityMentionName", offset_=offset, length_=length, user_id_=user_id }, }, }, }, dl_cb, nil) end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function ChCheck(msg)
 local var = true 
 if DevAbs:get(WaTaN2.."Abs:ChId") then
@@ -870,7 +870,7 @@ else
 return var
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function tdcli_update_callback(data)
 if (data.ID == "UpdateNewCallbackQuery") then
 local Chat_Id2 = data.chat_id_
@@ -909,7 +909,7 @@ DevAbs:del(WaTaN2..'yes'..data.sender_user_id_, 'delyes')
 DevAbs:del(WaTaN2..'no'..data.sender_user_id_, 'delno')
 EditMsg(Chat_Id2, Msg_Id2, "✯︙تم الغاء امر اطردني") 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText == '/yesdel' and DevAbs:get(WaTaN2..'yesdel'..data.sender_user_id_) == 'delyes' then
 DevAbs:del(WaTaN2..'yesdel'..data.sender_user_id_, 'delyes')
 DevAbs:del(WaTaN2..'nodel'..data.sender_user_id_, 'delno')
@@ -941,7 +941,7 @@ EditMsg(Chat_Id2, Msg_Id2, "✯︙لا استطيع تنزيل ↫ "..IdRank(dat
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DevAbs:get(WaTaN2.."Abs:NewDev"..data.sender_user_id_) then
 if DataText == '/setno' then
 EditMsg(Chat_Id2, Msg_Id2, "✯︙تم الغاء امر تغير المطور الاساسي") 
@@ -1067,7 +1067,7 @@ else
 EditMsg(Chat_Id2, Msg_Id2, "✯︙عذرا صلاحية الامر منتهيه !") 
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/DelKt:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/DelKt:'..tonumber(data.sender_user_id_)..'(.*)')
 EditMsg(Chat_Id2, Msg_Id2, "✯︙السؤال ↫ "..Abs.." تم حذفه") 
@@ -1096,7 +1096,7 @@ else
 EditMsg(Chat_Id2, Msg_Id2, "✯︙عذرا صلاحية الامر منتهيه !") 
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/Song:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/Song:'..tonumber(data.sender_user_id_)..'(.*)')
 Abs = math.random(4,2824); 
@@ -1106,7 +1106,7 @@ keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/Song:
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. data.chat_id_ .. '&voice=https://t.me/AudiosWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/mp3:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/mp3:'..tonumber(data.sender_user_id_)..'(.*)')
 Abs = math.random(2,1167); 
@@ -1116,7 +1116,7 @@ keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/mp3:"
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendAudio?chat_id=' .. data.chat_id_ .. '&audio=https://t.me/WaTaN2Mp3/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/memz:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/memz:'..tonumber(data.sender_user_id_)..'(.*)')
 Abs = math.random(2,1201); 
@@ -1126,7 +1126,7 @@ keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/memz:
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. data.chat_id_ .. '&voice=https://t.me/MemzWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 else
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/gif:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/gif:'..tonumber(data.sender_user_id_)..'(.*)')
 Abs = math.random(2,1075); 
@@ -1135,7 +1135,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/gif:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/WaTaNTeaM"}}} 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendanimation?chat_id=' .. data.chat_id_ .. '&animation=https://t.me/GifWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/photo:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/photo:'..tonumber(data.sender_user_id_)..'(.*)')
 Abs = math.random(4,1171); 
@@ -1144,7 +1144,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/photo:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/WaTaNTeaM"}}} 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. data.chat_id_ .. '&photo=https://t.me/PhotosWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/anime:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/anime:'..tonumber(data.sender_user_id_)..'(.*)')
 Abs = math.random(3,1002); 
@@ -1153,7 +1153,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/anime:"..data.sender_user_id_}},{{text=". WaTaN TeaM ✯",url="t.me/WaTaNTeaM"}}} 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. data.chat_id_ .. '&photo=https://t.me/AnimeWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..Msg_Id2.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match(tonumber(data.sender_user_id_)..':SetMem:(.*)') then
 local AbsId = DataText:match(tonumber(data.sender_user_id_)..':SetMem:(.*)')
 tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
@@ -1215,7 +1215,7 @@ DevAbs:sadd(WaTaN2..'Abs:AbsSudo:'..data.chat_id_,dp.id_)
 EditMsg(Chat_Id2, Msg_Id2,'✯︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'WaTaNTeaM')..')\n✯︙تم رفعه في قائمة المطورين الاساسيين')
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match(tonumber(data.sender_user_id_)..':RemMem:(.*)') then
 local AbsId = DataText:match(tonumber(data.sender_user_id_)..':RemMem:(.*)')
 tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
@@ -1277,7 +1277,7 @@ DevAbs:srem(WaTaN2..'Abs:AbsSudo:'..data.chat_id_,dp.id_)
 EditMsg(Chat_Id2, Msg_Id2,'✯︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'WaTaNTeaM')..')\n✯︙تم تنزيله في قائمة المطورين الاساسيين')
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match(tonumber(data.sender_user_id_)..':Ban:(.*)') then
 local AbsId = DataText:match(tonumber(data.sender_user_id_)..':Ban:(.*)')
 tdcli_function ({ID = "GetUser",user_id_ = AbsId},function(arg,dp) 
@@ -1354,7 +1354,7 @@ DevAbs:srem(WaTaN2..'Abs:Tkeed:'..data.chat_id_, dp.id_)
 EditMsg(Chat_Id2, Msg_Id2,'✯︙العضو ↫ ['..dp.first_name_..'](t.me/'..(dp.username_ or 'WaTaNTeaM')..')\n✯︙تم الغاء تقيده')
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match(tonumber(data.sender_user_id_)..':SetList:(.*)') then
 local Abs = DataText:match(tonumber(data.sender_user_id_)..':SetList:(.*)')
 tdcli_function ({ID = "GetUser",user_id_ = Abs},function(arg,dp) 
@@ -1386,7 +1386,7 @@ end
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match(tonumber(data.sender_user_id_)..':RemList:(.*)') then
 local Abs = DataText:match(tonumber(data.sender_user_id_)..':RemList:(.*)')
 tdcli_function ({ID = "GetUser",user_id_ = Abs},function(arg,dp) 
@@ -1418,7 +1418,7 @@ end
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/DelList:(.*)') then
 local Abs = DataText:match('/DelList:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
@@ -1564,7 +1564,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/DelGpRed:'..tonumber(data.sender_user_id_)..'(.*)') and not DevAbs:get(WaTaN2..'Abs:Lock:GpRd'..data.chat_id_) then
 local Abs = DataText:match('/DelGpRed:'..tonumber(data.sender_user_id_)..'(.*)')
 local redod = DevAbs:smembers(WaTaN2..'Abs:Manager:GpRed'..data.chat_id_)
@@ -1612,7 +1612,7 @@ keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text or redod).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/DelCmd:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/DelCmd:'..tonumber(data.sender_user_id_)..'(.*)')
 local List = DevAbs:smembers(WaTaN2.."List:Cmd:Group:New"..data.chat_id_)
@@ -1666,7 +1666,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/CmdList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/On:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/On:'..tonumber(data.sender_user_id_)..'(.*)')
 tdcli_function ({ID = "GetUser",user_id_ = data.sender_user_id_},function(extra,result,success)
@@ -1738,7 +1738,7 @@ end
 end,nil)
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/Stop:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/Stop:'..tonumber(data.sender_user_id_)..'(.*)')
 tdcli_function ({ID = "GetUser",user_id_ = data.sender_user_id_},function(extra,result,success)
@@ -1780,7 +1780,7 @@ end
 end,nil)
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/SetCmdGp:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/SetCmdGp:'..tonumber(data.sender_user_id_)..'(.*)')
 DevAbs:set(WaTaN2.."Set:Cmd:Group:New1"..data.chat_id_..":ا","ايدي")
@@ -1822,7 +1822,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="‹ رجوع ›",callback_data="/Reload:"..data.sender_user_id_}},{{text='‹ WaTaN TeaM ›',url="t.me/WaTaNTeaM"}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/Reload:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/Reload:'..tonumber(data.sender_user_id_)..'(.*)')
 Text = "✯︙تم تفعيل المجموعه"
@@ -1830,7 +1830,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="‹ ترتيب الاوامر ›",callback_data="/SetCmdGp:"..data.sender_user_id_},{text="‹ رفع الادمنيه ›",callback_data="/UploadAdmin:"..data.sender_user_id_}},{{text="‹ غادر ›",callback_data="/LeaveBot:"..data.sender_user_id_},{text="‹ تعطيل ›",callback_data="/Stop:"..data.sender_user_id_}},{{text="‹ WaTaN TeaM ›",url="t.me/WaTaNTeaM"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     -- 
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ ----- 
 if DataText and DataText:match('/UploadAdmin:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/UploadAdmin:'..tonumber(data.sender_user_id_)..'(.*)')
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = data.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 200},function(arg,Abs) 
@@ -1861,7 +1861,7 @@ EditMsg(Chat_Id2, Msg_Id2,  '✯︙تم رفع '..num..' من الادمنيه \
 end
 end,nil) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/CancelAllRed:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/CancelAllRed:'..tonumber(data.sender_user_id_)..'(.*)')
 local DelSudoRep = DevAbs:get(WaTaN2..'DelSudoRep')
@@ -1888,7 +1888,7 @@ keyboard.inline_keyboard = {{{text = '✯ WaTaN TeaM .',url="t.me/WaTaNTeaM"}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/CmdList:(.*)') then
 local Abs = DataText:match('/CmdList:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
@@ -1900,7 +1900,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="ترتيب الاوامر",callback_data="/SetCmd:"..data.sender_user_id_},{text="مسح الاوامر المضافه",callback_data="/DelCmd:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Cmd or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/DelHome:(.*)') then
 local Abs = DataText:match('/DelHome:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
@@ -1912,7 +1912,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="مسح رسائلي",callback_data="/DelMsg:"..data.sender_user_id_},{text="مسح سحكاتي",callback_data="/DelEdit:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Msg or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/DelEdit:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/DelEdit:'..tonumber(data.sender_user_id_)..'(.*)')
 DevAbs:del(WaTaN2..'Abs:EditMsg'..data.chat_id_..data.sender_user_id_)
@@ -1921,7 +1921,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="‹ رجوع ›",callback_data="/DelHome:"..data.sender_user_id_}},{{text="‹ اخفاء الكليشه ›",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/DelMsg:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/DelMsg:'..tonumber(data.sender_user_id_)..'(.*)')
 DevAbs:del(WaTaN2..'Abs:UsersMsgs'..data.chat_id_..':'..data.sender_user_id_)
@@ -1930,7 +1930,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• رجوع •",callback_data="/DelHome:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/FilterList:(.*)') then
 local Abs = DataText:match('/FilterList:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
@@ -1947,7 +1947,7 @@ keyboard.inline_keyboard = {{{text="مسح المتحركات",callback_data="/D
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/DelGif:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/DelGif:'..tonumber(data.sender_user_id_)..'(.*)')
 DevAbs:del(WaTaN2.."Abs:FilterAnimation"..data.chat_id_)
@@ -1991,7 +1991,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• رجوع •",callback_data="/FilterList:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_}}}
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/locklist:(.*)') then
 local Abs = DataText:match('/locklist:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
@@ -2008,7 +2008,7 @@ keyboard.inline_keyboard = {{{text="قفل الدردشه",callback_data="/lockT
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/LockBotList:(.*)') then
 local Abs = DataText:match('/LockBotList:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
@@ -2027,7 +2027,7 @@ keyboard.inline_keyboard = {{{text="قفل البوتات بالطرد",callback
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/LockSpamList:(.*)') then
 local Abs = DataText:match('/LockSpamList:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
@@ -2047,7 +2047,7 @@ keyboard.inline_keyboard = {{{text="قفل التكرار بالطرد",callback
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText == '/lockjoin:'..data.sender_user_id_ then
 if not DevAbs:get(WaTaN2..'Abs:Lock:Join'..data.chat_id_) then
 DevAbs:set(WaTaN2..'Abs:Lock:Join'..data.chat_id_,true)
@@ -2264,7 +2264,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/locklist:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/GameInline:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/GameInline:'..tonumber(data.sender_user_id_)..'(.*)')
 if not DevAbs:get(WaTaN2..'Abs:Lock:Gamesinline'..data.chat_id_) then
@@ -2276,7 +2276,7 @@ keyboard.inline_keyboard = {{{text="♟ الشطرنج ♟",url='https://t.me/T4
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end end
---     Source WaTaN2     -- 
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ ----- 
 if DataText and DataText:match('/SourceList:(.*)') then
 local Abs = DataText:match('/SourceList:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
@@ -2289,7 +2289,7 @@ keyboard.inline_keyboard = {{{text="تحديث السورس",callback_data="/Upd
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
---     Source WaTaN2     -- 
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ ----- 
 if DataText and DataText:match('/UpdateSource:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/UpdateSource:'..tonumber(data.sender_user_id_)..'(.*)')
 os.execute('rm -rf WaTaN2.lua') 
@@ -2312,7 +2312,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/SourceList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
---     Source WaTaN2     -- 
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ ----- 
 if DataText and DataText:match('/MediaHome:(.*)') then
 local Abs = DataText:match('/MediaHome:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
@@ -2325,7 +2325,7 @@ keyboard.inline_keyboard = {{{text="مسح الميديا",callback_data="/DelMe
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
---     Source WaTaN2     -- 
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ ----- 
 if Cleaner(data) then
 if DataText and DataText:match('/DelMedia:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/DelMedia:'..tonumber(data.sender_user_id_)..'(.*)')
@@ -2387,7 +2387,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/MediaHome:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     -- 
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ ----- 
 if DataText and DataText:match('/LeaveBot:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/LeaveBot:'..tonumber(data.sender_user_id_)..'(.*)')
 if DevAbs:get(WaTaN2.."Abs:Left:Bot"..WaTaN2) then
@@ -2406,7 +2406,7 @@ else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("✯ عذرا الامر ليس لك .")..'&show_alert=true')
 end
 end
---     Source WaTaN2     -- 
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ ----- 
 if DataText and DataText:match('/Linkinline:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/Linkinline:'..tonumber(data.sender_user_id_)..'(.*)')
 if not DevAbs:get(WaTaN2.."Abs:Lock:GpLinksinline"..data.chat_id_) then 
@@ -2433,7 +2433,7 @@ end
 else
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/lockorder:(.*)') then
 local Abs = DataText:match('/lockorder:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
@@ -2449,7 +2449,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="تعطيل الايدي بالصوره",callback_data="/LockIdPhoto:"..data.sender_user_id_},{text="تفعيل الايدي بالصوره",callback_data="/UnLockIdPhoto:"..data.sender_user_id_}},{{text="تعطيل الايدي",callback_data="/LockId:"..data.sender_user_id_},{text="تفعيل الايدي",callback_data="/UnLockId:"..data.sender_user_id_}},{{text="تعطيل الرابط",callback_data="/LockGpLinks:"..data.sender_user_id_},{text="تفعيل الرابط",callback_data="/UnLockGpLinks:"..data.sender_user_id_}},{{text="تعطيل الرابط انلاين",callback_data="/LockGpLinksinline:"..data.sender_user_id_},{text="تفعيل الرابط انلاين",callback_data="/UnLockGpLinksinline:"..data.sender_user_id_}},{{text="تعطيل الترحيب",callback_data="/LockWelcome:"..data.sender_user_id_},{text="تفعيل الترحيب",callback_data="/UnLockWelcome:"..data.sender_user_id_}},{{text="تعطيل الردود المطور",callback_data="/LockAllRed:"..data.sender_user_id_},{text="تفعيل الردود المطور",callback_data="/UnLockAllRed:"..data.sender_user_id_}},{{text="تعطيل ردود المدير",callback_data="/LockGpRed:"..data.sender_user_id_},{text="تفعيل ردود المدير",callback_data="/UnLockGpRed:"..data.sender_user_id_}},{{text="تعطيل نزلني",callback_data="/LockDelMe:"..data.sender_user_id_},{text="تفعيل نزلني",callback_data="/UnLockDelMe:"..data.sender_user_id_}},{{text="تعطيل اطردني",callback_data="/LockKickMe:"..data.sender_user_id_},{text="تفعيل اطردني",callback_data="/UnLockKickMe:"..data.sender_user_id_}},{{text="تعطيل الحظر",callback_data="/LockKickBan:"..data.sender_user_id_},{text="تفعيل الحظر",callback_data="/UnLockKickBan:"..data.sender_user_id_}},{{text="تعطيل الرفع",callback_data="/LockProSet:"..data.sender_user_id_},{text="تفعيل الرفع",callback_data="/UnLockProSet:"..data.sender_user_id_}},{{text="تعطيل الالعاب",callback_data="/LockGames:"..data.sender_user_id_},{text="تفعيل الالعاب",callback_data="/UnLockGames:"..data.sender_user_id_}},{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• القائمه الرئيسيه •",callback_data="/HelpList:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(order or Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/LockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)') then
 local Abs = DataText:match('/LockIdPhoto:'..tonumber(data.sender_user_id_)..'(.*)')
 DevAbs:set(WaTaN2..'Abs:Lock:Id:Photo'..data.chat_id_,true)
@@ -2642,7 +2642,7 @@ keyboard = {}
 keyboard.inline_keyboard = {{{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..data.sender_user_id_},{text="• رجوع •",callback_data="/lockorder:"..data.sender_user_id_}}}
 return https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DataText and DataText:match('/HideHelpList:(.*)') then
 local Abs = DataText:match('/HideHelpList:(.*)')
 if tonumber(Abs) == tonumber(data.sender_user_id_) then
@@ -3036,7 +3036,7 @@ return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackq
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if (data.ID == "UpdateNewMessage") then
 local msg = data.message_
 text = msg.content_.text_ 
@@ -3165,7 +3165,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙ارسل الامر الذي قمت ب�
 return false
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "الصلاحيات" and ChCheck(msg) or text == "صلاحيات" and ChCheck(msg) then 
 local List = DevAbs:smembers(WaTaN2.."Coomds"..msg.chat_id_)
 if #List == 0 then
@@ -3346,7 +3346,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = text1[3]},py_username,nil) 
 end  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if msg.chat_id_ then
 local id = tostring(msg.chat_id_)
 if id:match("-100(%d+)") then
@@ -3363,7 +3363,7 @@ else
 ChatType = 'gp' 
 end
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if ChatType == 'pv' then 
 if text == '/start' or text == '↫ رجوع ✯' then 
 local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
@@ -3652,7 +3652,7 @@ local key = {
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == '/start' then  
 local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
@@ -3680,7 +3680,7 @@ end
 DevAbs:setex(WaTaN2..'Abs:Start:Time'..msg.sender_user_id_,300,true)
 return false
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if not SecondSudo(msg) and not DevAbs:sismember(WaTaN2..'Abs:Ban:Pv',msg.sender_user_id_) and not DevAbs:get(WaTaN2..'Abs:Texting:Pv') then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,chat) 
 Dev_Abs(msg.sender_user_id_, msg.id_, 1, '✯︙تم ارسال رسالتك الى [المطور](t.me/'..(chat.username_ or "WaTaNTeaM")..')', 1, 'md') 
@@ -3738,7 +3738,7 @@ end,nil);
 end,nil);
 end 
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and DevAbs:get(WaTaN2..'Abs:Start:Bots'..msg.sender_user_id_) then
 if text == 'الغاء' then   
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم الغاء حفظ كليشة الستارت', 1, 'md')
@@ -3791,7 +3791,7 @@ DevAbs:set(WaTaN2.."Abs:Lock:AutoFile",true)
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "الابراج" or text == "↫ الابراج ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙من خلال البوت يمكنك معرفه توقعات برجك \n✯︙فقط قم بارسال امر برج + اسم البرج \n✯︙مثال : برج الاسد ،\n✯︙لمعرفه برجك قم بالرجوع الى قسم حساب العمر ', 1, 'md') end
 if text == "حساب العمر" or text == "↫ حساب العمر ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙من خلال البوت يمكنك حساب عمرك \n✯︙فقط قم بارسال امر احسب + مواليدك الى البوت \n✯︙بالتنسيق التالي مثال : احسب 2000/7/24', 1, 'md') end
 if text == "الحمايه" or text == "↫ الحمايه ✯" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙اضف البوت في المجموعه ثم قم برفعه مشرف وارسل تفعيل \n✯︙وتمتع بخدمات غير موجوده في باقي البوتات ', 1, 'md') end
@@ -3807,7 +3807,7 @@ local WaTaNTeaM = {'- Nothing stops him who wants you .','make them wish they ha
 Dev_Abs(msg.chat_id_, msg.id_, 1, ''..WaTaNTeaM[math.random(#WaTaNTeaM)]..'' , 1, 'md')  
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "المطور" or text == "مطور" or text == "↫ المطور ✯" then
 local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(WaTaN2.."Abs:ChId"))
 local GetInfo = JSON.decode(Check)
@@ -3832,7 +3832,7 @@ end,nil)
 end,nil)   
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "معرفي" or text == "↫  معرفي ✯" then
 function get_username(extra,result,success)
 text = '✯︙معرفك ↫ ❨ User ❩'
@@ -3872,7 +3872,7 @@ send(msg.chat_id_, msg.id_,'لا تمتلك صوره في حسابك', 1, 'md')
 end end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "الالعاب المتطوره" or text == "الالعاب الاحترافيه" or text == "↫ الالعاب المتطوره ✯" then
 if not DevAbs:get(WaTaN2..'Abs:Lock:Gamesinline'..msg.chat_id_) then
 Text =[[
@@ -3901,7 +3901,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^غادر (-%d+)$")  then
 local Text = { string.match(text, "^(غادر) (-%d+)$")}
 if not SecondSudo(msg) then
@@ -3919,7 +3919,7 @@ end
 end,nil)
 end 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function getUser(user_id, cb)
 tdcli_function ({
 ID = "GetUser",
@@ -4023,7 +4023,7 @@ DevAbs:incr(WaTaN2..'Abs:EntryNumber'..msg.chat_id_..':'..os.date('%d'))
 elseif msg.content_.ID == "MessageChatDeleteMember" then   
 DevAbs:incr(WaTaN2..'Abs:ExitNumber'..msg.chat_id_..':'..os.date('%d'))  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text ==('تفعيل') and not SudoBot(msg) and ChCheck(msg) then
 if not DevAbs:get(WaTaN2..'Abs:Lock:FreeBot'..WaTaN2) then
 if ChatType == 'pv' then
@@ -4120,18 +4120,18 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙لا تستطيع تفعيل هذه المجموعه بسبب تعطيل البوت الخدمي من قبل المطور الاساسي', 1, 'md') 
 end 
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
 DevAbs:set(WaTaN2..'Save:UserName'..msg.sender_user_id_,data.username_)
 end;end,nil) 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 local ReFalse = tostring(msg.chat_id_)
 if not DevAbs:sismember(WaTaN2.."Abs:Groups",msg.chat_id_) and not ReFalse:match("^(%d+)") and not SudoBot(msg) then
 print("Return False : The Bot Is Not Enabled In The Group")
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 -------- MSG TYPES ---------
 if msg.content_.ID == "MessageChatJoinByLink" and not VipMem(msg) then 
 if DevAbs:get(WaTaN2..'Abs:Lock:Robot'..msg.chat_id_) then
@@ -4187,7 +4187,7 @@ end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^(.*)$") then
 local DelGpRedRedods = DevAbs:get(WaTaN2..'Abs:Add:GpRedod'..msg.sender_user_id_..msg.chat_id_)
 local GetGpTexts = DevAbs:get(WaTaN2..'Abs:Add:GpTexts'..msg.sender_user_id_..msg.chat_id_)
@@ -4242,7 +4242,7 @@ DevAbs:del(WaTaN2.."Abs:Sudo:AllRed",msg.content_.text_)
 return false
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^(.*)$") then
 local SaveGpRedod = DevAbs:get(WaTaN2..'Abs:Add:GpRedod'..msg.sender_user_id_..msg.chat_id_)
 if SaveGpRedod == 'SaveGpRedod' then
@@ -4277,7 +4277,7 @@ local WaTaNTeaM =  DevAbs:smembers(WaTaN2..'Abs:Text:GpTexts'..text..msg.chat_id
 Dev_Abs(msg.chat_id_, msg.id_, 1, '['..WaTaNTeaM[math.random(#WaTaNTeaM)]..']' , 1, 'md')  
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^(.*)$") then
 local SaveKt = DevAbs:get(WaTaN2..'Abs:Add:Kt'..msg.sender_user_id_..msg.chat_id_)
 if SaveKt == 'SaveKt' then
@@ -4312,7 +4312,7 @@ local WaTaNTeaM =  DevAbs:smembers(WaTaN2..'Abs:Text:KtTexts'..text..msg.chat_id
 Dev_Abs(msg.chat_id_, msg.id_, 1, '['..WaTaNTeaM[math.random(#WaTaNTeaM)]..']' , 1, 'md')  
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if msg.content_.text_ or msg.content_.video_ or msg.content_.document_ or msg.content_.sticker_ or msg.content_.voice_ or msg.content_.audio_ or msg.content_.photo_ or msg.content_.animation_ then 
 local SaveGpRed = DevAbs:get(WaTaN2..'Abs:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 if SaveGpRed == 'SaveGpRed' then 
@@ -4402,7 +4402,7 @@ end
 getUser(msg.sender_user_id_, WaTaNTeaM)
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 text = msg.content_.text_
 if msg.content_.text_ or msg.content_.video_ or msg.content_.document_ or msg.content_.sticker_ or msg.content_.voice_ or msg.content_.audio_ or msg.content_.photo_ or msg.content_.animation_ then
 local SaveAllRed = DevAbs:get(WaTaN2.."Abs:Add:AllRed"..msg.sender_user_id_)
@@ -4497,7 +4497,7 @@ end
 getUser(msg.sender_user_id_, WaTaNTeaM)
 end
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --       Spam Send        --
 function NotSpam(msg,Type)
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dp) 
@@ -4561,7 +4561,7 @@ end
 end,nil)
 end  
 --  end functions WaTaN2 --
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --       Spam Check       --
 if not VipMem(msg) and msg.content_.ID ~= "MessageChatAddMembers" and DevAbs:hget(WaTaN2.."Abs:Spam:Group:User"..msg.chat_id_,"Spam:User") then 
 if msg.sender_user_id_ ~= WaTaN2 then
@@ -4585,7 +4585,7 @@ Time_Spam = DevAbs:hget(WaTaN2.."Abs:Spam:Group:User"..msg.chat_id_,"Num:Spam:Ti
 end 
 end
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 ----- START MSG CHECKS -----
 if msg.sender_user_id_ and Ban(msg.sender_user_id_, msg.chat_id_) then
 ChatKick(msg.chat_id_, msg.sender_user_id_)
@@ -4623,7 +4623,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙عدد مشاهدات المنشور ه
 DevAbs:del(WaTaN2..'Abs:viewget'..msg.sender_user_id_)
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         Photo          --
 if msg.content_.ID == "MessagePhoto" then
 if not VipMem(msg) then
@@ -4671,7 +4671,7 @@ end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --        Markdown        --
 elseif not msg.reply_markup_ and msg.via_bot_user_id_ ~= 0 then
 if DevAbs:get(WaTaN2..'Abs:Lock:Markdown'..msg.chat_id_) then
@@ -4679,7 +4679,7 @@ if not VipMem(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --        Document        --
 elseif msg.content_.ID == "MessageDocument" then
 if not VipMem(msg) then
@@ -4727,7 +4727,7 @@ end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         Inline         --
 elseif msg.reply_markup_ and msg.reply_markup_.ID == "ReplyMarkupInlineKeyboard" and msg.via_bot_user_id_ ~= 0 then
 if not VipMem(msg) then
@@ -4735,7 +4735,7 @@ if DevAbs:get(WaTaN2..'Abs:Lock:Inline'..msg.chat_id_) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --        Sticker         --
 elseif msg.content_.ID == "MessageSticker" then
 if not VipMem(msg) then
@@ -4762,7 +4762,7 @@ end
 if DevAbs:get(WaTaN2.."Abs:Lock:Welcome"..msg.chat_id_) then
 getUser(msg.sender_user_id_,get_welcome)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --      New User Add      --
 elseif msg.content_.ID == "MessageChatAddMembers" then
 if not DevAbs:get(WaTaN2..'Abs:Lock:BotWelcome') then 
@@ -4807,7 +4807,7 @@ local Welcomes = Welcomes:gsub('firstname',('['..msg.content_.members_[0].first_
 local Welcomes = Welcomes:gsub('username',('[@'..msg.content_.members_[0].username_..']' or '[@WaTaNTeaM]'))
 Dev_Abs(msg.chat_id_, msg.id_, 1, Welcomes, 1, 'md')
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --        Contact         --
 elseif msg.content_.ID == "MessageContact" then
 if not VipMem(msg) then
@@ -4822,7 +4822,7 @@ if DevAbs:get(WaTaN2..'Abs:Lock:Contact'..msg.chat_id_) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         Audio          --
 elseif msg.content_.ID == "MessageAudio" then
 if not VipMem(msg) then
@@ -4870,7 +4870,7 @@ end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         Voice          --
 elseif msg.content_.ID == "MessageVoice" then
 if not VipMem(msg) then
@@ -4918,7 +4918,7 @@ end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --        Location        --
 elseif msg.content_.ID == "MessageLocation" then
 if not VipMem(msg) then
@@ -4967,7 +4967,7 @@ end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         Video          --
 elseif msg.content_.ID == "MessageVideo" then
 if not VipMem(msg) then
@@ -5015,7 +5015,7 @@ end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --          Gif           --
 elseif msg.content_.ID == "MessageAnimation" then
 if not VipMem(msg) then
@@ -5063,7 +5063,7 @@ end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         Text           --
 elseif msg.content_.ID == "MessageText" then
 if not VipMem(msg) then
@@ -5121,7 +5121,7 @@ DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DevAbs:get(WaTaN2.."Abs:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_) then
 if text == "الغاء" then
 send(msg.chat_id_,msg.id_,"✯︙تم الغاء حفظ الرابط")       
@@ -5136,7 +5136,7 @@ DevAbs:del(WaTaN2.."Abs:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_)
 return false 
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 local msg = data.message_
 text = msg.content_.text_
 if text and Constructor(msg) then 
@@ -5169,7 +5169,7 @@ Dev_Abs(msg.chat_id_, msg.id_,  1, "✯︙تم اضافة "..numadded..' نقط�
 DevAbs:del('WaTaNTeaM:'..WaTaN2..'ids:user'..msg.chat_id_)  
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and (text:match("طيز") or text:match("ديس") or text:match("انيج") or text:match("نيج") or text:match("ديوس") or text:match("عير") or text:match("كسختك") or text:match("كسمك") or text:match("كسربك") or text:match("بلاع") or text:match("ابو العيوره") or text:match("منيوج") or text:match("كحبه") or text:match("كحاب") or text:match("الكحبه") or text:match("كسك") or text:match("طيزك") or text:match("كس امك") or text:match("صرم") or text:match("كس اختك")) then
 if not DevAbs:get(WaTaN2.."Abs:Lock:Fshar"..msg.chat_id_) and not VipMem(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
@@ -5195,7 +5195,7 @@ if not DevAbs:get(WaTaN2.."Abs:Lock:Taf"..msg.chat_id_) and not VipMem(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 ReplyStatus(msg,msg.sender_user_id_,"WrongWay","✯︙ممنوع التكلم بالطائفيه هنا") 
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if SecondSudo(msg) then
 if text == 'جلب ملف السورس' then
 if not Sudo(msg) then
@@ -5321,7 +5321,7 @@ end
 end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DevAbs:get(WaTaN2.."SET:GAME"..msg.chat_id_) then  
 if text and text:match("^(%d+)$") then
 local NUM = text:match("^(%d+)$")
@@ -5367,7 +5367,7 @@ return false
 end
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DevAbs:get(WaTaN2.."Abs:DevText"..msg.chat_id_..":" .. msg.sender_user_id_) then
 if text and text:match("^الغاء$") then 
 DevAbs:del(WaTaN2.."Abs:DevText"..msg.chat_id_..":" .. msg.sender_user_id_)
@@ -5390,7 +5390,7 @@ DevAbs:del(WaTaN2..'Abs:NameBot'..msg.sender_user_id_)
 DevAbs:set(WaTaN2..'Abs:NameBot', text)
 return false 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if msg.chat_id_ then
 local id = tostring(msg.chat_id_)
 if id:match("-100(%d+)") then
@@ -5407,7 +5407,7 @@ else
 ChatType = 'gp' 
 end
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if ChatType == 'sp' or ChatType == 'gp' or ChatType == 'pv' then
 if text == 'بوت' or text == 'بوتت' then 
 NameBot = (DevAbs:get(WaTaN2..'Abs:NameBot') or 'وطن')
@@ -5438,7 +5438,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,'✯︙عدد النقاط التي ربحته�
 end
 end
 if text ==  'حذف نقاطي' and ChCheck(msg) or text ==  'مسح نقاطي' and ChCheck(msg) then DevAbs:del(WaTaN2..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم حذف جميع نقاطك', 1, 'md') end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'سمايلات' and ChCheck(msg) or text == 'السمايلات' and ChCheck(msg) or text == '↫ سمايلات ✯' and ChCheck(msg) then
 if not DevAbs:get(WaTaN2..'Abs:Lock:Games'..msg.chat_id_) then
 DevAbs2 = {'🍏','🍎','🍐','🍊','🍋','🍌','🍉','🍇','🍓','🍈','🍒','🍑','🍍','🥥','🥝','🍅','🍆','🥑','🥦','🥒','🌶','🌽','🥕','🥔','🍠','🥐','🍞','🥖','🥨','🧀','🥚','🍳','🥞','🥓','🥩','🍗','🍖','🌭','🍔','🍟','🍕','🥪','🥙','🍼','☕️','🍵','🥤','🍶','🍺','🍻','🏀','⚽️','🏈','⚾️','🎾','🏐','🏉','🎱','🏓','🏸','🥅','🎰','🎮','🎳','🎯','🏆','🎻','🎸','🎺','🥁','🎹','🎼','🎧','🎤','🎬','🎨','🎭','🎪','🛎','📤','🎗','🏵','🎖','🏆','🥌','??','🚕','🚗','🚙','🚌','🚎','🏎','🚓','🚑','🚚','🚛','🚜','🇮🇶','⚔️','🛡','🔮','🌡','💣','⏱','🛢','📓','📗','📂','📅','📪','📫','📬','📭','⏰','📺','🎚','☎️','📡'}
@@ -5933,7 +5933,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,WaTaNTeaM, 1, 'md')
 end
 DevAbs:set(WaTaN2..'Abs:Games:Ids'..msg.chat_id_,true)
 end  
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'اسئله' and ChCheck(msg) or text == 'اختيارات' and ChCheck(msg) or text == 'الاسئله' and ChCheck(msg) or text == 'اساله' and ChCheck(msg) or text == '↫ اسئله ✯' and ChCheck(msg) then
 if not DevAbs:get(WaTaN2..'Abs:Lock:Games'..msg.chat_id_) then
 DevAbs2 = {'النيل','14','الفم','11','30','بوتين','ستيف جوبر','باريس','10','النمل','حرف الواو','الشعر','سحاب','الاسم','ذهب','حرف الام','العزائم','انسات','المنجنيق','اسيا','6','الاسد','مهر','الدولفين','اوروبا','الزئبق','لندن','الانسان','طوكيو','خديجه',}
@@ -5983,7 +5983,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,WaTaNTeaM, 1, 'md')
 end
 DevAbs:set(WaTaN2..'Abs:Games:Ids'..msg.chat_id_,true)
 end  
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DevAbs:get(WaTaN2.."GAME:TKMEN"..msg.chat_id_.."" .. msg.sender_user_id_) then  
 if text and text:match("^(%d+)$") then
 local NUM = text:match("^(%d+)$")
@@ -6022,7 +6022,7 @@ DevAbs:setex(WaTaN2.."GAME:TKMEN"..msg.chat_id_.."" .. msg.sender_user_id_, 100,
 return false  
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'روليت' and ChCheck(msg) then
 if not DevAbs:get(WaTaN2..'Abs:Lock:Games'..msg.chat_id_) then
 DevAbs:del(WaTaN2.."Abs:NumRolet"..msg.chat_id_..msg.sender_user_id_) 
@@ -6073,7 +6073,7 @@ Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'كت' and ChCheck(msg) or text == 'تويت' and ChCheck(msg) or text == '↫ كت ✯' and ChCheck(msg) then
 if not DevAbs:get(WaTaN2..'Abs:Lock:Games'..msg.chat_id_) then
 local WaTaNTeaM = {
@@ -6086,7 +6086,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, ''..WaTaNTeaM[math.random(#WaTaNTeaM)]..'' , 1
 return false
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "مسح سحكاتي" or text == "مسح رسائلي" then
 local Msg = DevAbs:get(WaTaN2..'Abs:Msg')
 local Text = [[
@@ -6097,7 +6097,7 @@ keyboard.inline_keyboard = {{{text="مسح رسائلي",callback_data="/DelMsg:
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Msg or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and (text == "التسليه" or text == "اوامر التسليه" or text == "تسليه" or text == "تسلية" or text == "التسلية") and ChCheck(msg) then
 local Tsl = DevAbs:get(WaTaN2..'Abs:Tsl')
 local Text = [[
@@ -6116,7 +6116,7 @@ keyboard.inline_keyboard = {{{text="غنيلي",callback_data="/Song:"..msg.send
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Help or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text ==('تحكم') and ChCheck(msg) and Admin(msg) then
 function prom_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,dp) 
@@ -6135,7 +6135,7 @@ if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text ==('رفع') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,dp) 
@@ -6172,7 +6172,7 @@ if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text ==('تنزيل') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,dp) 
@@ -6209,7 +6209,7 @@ if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "الرابط" then
 local Link = DevAbs:get(WaTaN2..'Abs:Link')
 local Text = [[
@@ -6220,7 +6220,7 @@ keyboard.inline_keyboard = {{{text="الرابط نص",callback_data="/LinkText:
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Link or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'الالعاب' and ChCheck(msg) or text == 'العاب' and ChCheck(msg) or text == 'اللعبه' and ChCheck(msg) or text == '↫ الالعاب ✯' and ChCheck(msg) then
 if not DevAbs:get(WaTaN2..'Abs:Lock:Games'..msg.chat_id_) then
 local Games = DevAbs:get(WaTaN2..'Abs:Games')
@@ -6252,7 +6252,7 @@ Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Game or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'بيع نقاطي' and ChCheck(msg) then
 if tonumber((DevAbs:get(WaTaN2..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
 Dev_Abs(msg.chat_id_, msg.id_, 1,'✯︙لم تربح اي نقطه\n✯︙ارسل ↫ الالعاب للعب', 1, 'md')
@@ -6263,7 +6263,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,'✯︙تم بيع '..(DevAbs:get(WaTaN2..'Abs:
 DevAbs:del(WaTaN2..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_)
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'رفع المشرفين' and ChCheck(msg) or text == 'رفع الادمنيه' and ChCheck(msg) then  
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 200},function(arg,Abs) 
 local num = 0
@@ -6293,7 +6293,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم رفع '..num..' من الادمن
 end
 end,nil) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text ==('موقعي') and ChCheck(msg) then
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
 if da.status_.ID == "ChatMemberStatusCreator" then
@@ -6306,7 +6306,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙موقعك ↫ '..rtpa, 1, 'md')
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "معلوماتي" and ChCheck(msg) then
 function get_me(extra,result,success)
 local msguser = tonumber(DevAbs:get(WaTaN2..'Abs:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_))
@@ -6320,7 +6320,7 @@ end
 getUser(msg.sender_user_id_,get_me)
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تعيين قناة الاشتراك" or text == "تغيير قناة الاشتراك" or text == "تعيين الاشتراك الاجباري" or text == "وضع قناة الاشتراك" or text == "↫ تعيين قناة الاشتراك ✯" then
 if not Sudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
@@ -6374,7 +6374,7 @@ send(msg.chat_id_, msg.id_, "✯︙لاتوجد قناة في الاشتراك �
 end
 return false  
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if SudoBot(msg) then
 if text == 'اذاعه للكل بالتوجيه' and tonumber(msg.reply_to_message_id_) > 0 then
 function WaTaNTeaM(extra,result,success)
@@ -6395,12 +6395,12 @@ end
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),WaTaNTeaM)
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "مشاهده المنشور" and ChCheck(msg) or text == "مشاهدات المنشور" and ChCheck(msg) or text == "عدد المشاهدات" and ChCheck(msg) then
 DevAbs:set(WaTaN2..'Abs:viewget'..msg.sender_user_id_,true)
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'همسه' or text == 'الهمسه' or text == 'همسة' or text == 'الهمسة' or text == 'اهمس' or text == 'همس' or text == '↫ بوت الهمسه ✯' then
 Text = "✯︙اهلا بك عزيزي \n✯︙عليك اضافة هذا البوت @kg7bot الى مجموعتك\n✯︙ثم رفعه مشرفا ثم اتبع الاوامر التاليه [هـنـا](https://t.me/WaTaNTeaM/6499)"
 keyboard = {} 
@@ -6411,7 +6411,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/kg7bot&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "سورس" and ChCheck(msg) or text == "السورس" and ChCheck(msg) or text == "يا سورس" and ChCheck(msg) or text == "ياسورس" and ChCheck(msg) or text == "↫  السورس ✯" and ChCheck(msg) then
 local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
@@ -6429,7 +6429,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/WaTaNTeaM&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if ChatType == 'sp' or ChatType == 'gp'  then
 if text == "اطردني" and ChCheck(msg) or text == "ادفرني" and ChCheck(msg) then
 if DevAbs:get(WaTaN2.."Abs:Kick:Me"..msg.chat_id_) then
@@ -6444,7 +6444,7 @@ keyboard.inline_keyboard = {{{text="نعم",callback_data="/delyes"},{text="لا
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'تعطيل اطردني' and Manager(msg) and ChCheck(msg) then
 DevAbs:set(WaTaN2.."Abs:Kick:Me"..msg.chat_id_, true)
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تعطيل امر اطردني'
@@ -6455,7 +6455,7 @@ DevAbs:del(WaTaN2.."Abs:Kick:Me"..msg.chat_id_)
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل امر اطردني'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "نزلني" and ChCheck(msg) then
 if DevAbs:get(WaTaN2.."Abs:Del:Me"..msg.chat_id_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙عذرا هذه الخاصيه معطله ', 1, 'md')
@@ -6469,7 +6469,7 @@ keyboard.inline_keyboard = {{{text="نعم",callback_data="/yesdel"},{text="لا
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'تعطيل نزلني' and BasicConstructor(msg) and ChCheck(msg) then
 DevAbs:set(WaTaN2.."Abs:Del:Me"..msg.chat_id_, true)
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تعطيل امر نزلني'
@@ -6480,7 +6480,7 @@ DevAbs:del(WaTaN2.."Abs:Del:Me"..msg.chat_id_)
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل امر نزلني'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and (text == 'تفعيل التاك' or text == 'تفعيل التاك للكل' or text == 'تفعيل تاك للكل') and Admin(msg) and ChCheck(msg) then 
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل امر تاك للكل'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -6510,7 +6510,7 @@ end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},TagAll,nil)
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^كللهم (.*)$") and ChCheck(msg) then
 local txt = {string.match(text, "^(كللهم) (.*)$")}
 if not DevAbs:get(WaTaN2..'Abs:Lock:TagAll'..msg.chat_id_) then
@@ -6531,7 +6531,7 @@ tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).I
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "رسائلي" and msg.reply_to_message_id_ == 0 and ChCheck(msg) then
 local user_msgs = DevAbs:get(WaTaN2..'Abs:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_)
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙عدد رسائلك هنا ↫ *❨ "..user_msgs.." ❩*", 1, 'md')
@@ -6542,7 +6542,7 @@ local ExitNumber = (DevAbs:get(WaTaN2..'Abs:ExitNumber'..msg.chat_id_..':'..os.d
 local MsgNumberDay = (DevAbs:get(WaTaN2..'Abs:MsgNumberDay'..msg.chat_id_..':'..os.date('%d')) or 0)
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙انضمام الاعضاء اليوم ↫ *"..EntryNumber.."*\n✯︙مغادرة الاعضاء اليوم ↫ *"..ExitNumber.."*\n✯︙عدد الرسائل اليوم ↫ *"..MsgNumberDay.."*\n✯︙نسبة التفاعل اليوم ↫ *"..math.random(40,100).."%*", 1, 'md')
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تعطيل تفاعلي" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تعطيل تفاعلي'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -6573,13 +6573,13 @@ tdcli_function ({ID = "GetMessage",chat_id_=msg.chat_id_,message_id_=tonumber(ms
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "جهاتي" and ChCheck(msg) or text == "اضافاتي" and ChCheck(msg) then add = (tonumber(DevAbs:get(WaTaN2..'Abs:ContactNumber'..msg.chat_id_..':'..msg.sender_user_id_)) or 0) Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙عدد جهاتك المضافه ↫ *❨ "..add.." ❩* ", 1, 'md') end
 if text == "تعديلاتي" or text == "سحكاتي" and ChCheck(msg) then local edit_msg = DevAbs:get(WaTaN2..'Abs:EditMsg'..msg.chat_id_..msg.sender_user_id_) or 0  Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙عدد تعديلاتك ↫ *❨ "..edit_msg.." ❩* ", 1, 'md') end
 if text == "رتبتي" and ChCheck(msg) then Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙رتبتك ↫ '..IdRank(msg.sender_user_id_, msg.chat_id_), 1, 'html') end
 if text == "ايدي المجموعه" and ChCheck(msg) then Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙ايدي المجموعه ↫ `"..msg.chat_id_.."`", 1, 'md') end
 if text == 'مسح جهاتي' or text == 'مسح اضافاتي' or text == 'حذف جهاتي' or text == 'حذف اضافاتي' then DevAbs:del(WaTaN2..'Abs:ContactNumber'..msg.chat_id_..':'..msg.sender_user_id_) Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم حذف جميع جهاتك المضافه' , 1, 'md') end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match('^هينه @(.*)') and ChCheck(msg) or text and text:match('^هينها @(.*)') and ChCheck(msg) then 
 if not DevAbs:get(WaTaN2..'Abs:Lock:Stupid'..msg.chat_id_) then
 local username = text:match('^هينه @(.*)') or text:match('^هينها @(.*)') 
@@ -6612,7 +6612,7 @@ end
 resolve_username(username,WaTaNTeaM)
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == ("هينه") or text == ("بعد هينه") or text == ("هينه بعد") or text == ("لك هينه") or text == ("هينها") or text == ("هينهه") or text == ("رزله") or text == ("رزلهه") or text == ("رزلها") then
 if not DevAbs:get(WaTaN2..'Abs:Lock:Stupid'..msg.chat_id_) then
 function hena(extra, result, success)
@@ -6687,7 +6687,7 @@ getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),seha)
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match('^صيحه @(.*)') and ChCheck(msg) or text and text:match('^صيح @(.*)') and ChCheck(msg) then 
 if not DevAbs:get(WaTaN2..'Abs:Lock:Stupid'..msg.chat_id_) then
 local username = text:match('^صيحه @(.*)') or text:match('^صيح @(.*)') 
@@ -6713,7 +6713,7 @@ resolve_username(username,WaTaNTeaM)
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == ("تنزيل الكل") and msg.reply_to_message_id_ ~= 0 and Manager(msg) and ChCheck(msg) then 
 function promote_by_reply(extra, result, success)
 if SudoId(result.sender_user_id_) == true then
@@ -6907,7 +6907,7 @@ end
 end
 resolve_username(rem[2],remm)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --     Set AbsSudo     --
 if Sudo(msg) then
 if text ==('اضف مطور اساسي') or text ==('رفع مطور اساسي') and ChCheck(msg) then
@@ -6935,7 +6935,7 @@ local user = text:match('اضف مطور اساسي (%d+)') or text:match('رف�
 DevAbs:sadd(WaTaN2..'Abs:AbsSudo:',user)
 ReplyStatus(msg,user,"Reply","✯︙تم رفعه في قائمة المطورين الاساسيين")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --     Rem SecondSudo     --
 if text ==('حذف مطور اساسي') or text ==('تنزيل مطور اساسي') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -6962,7 +6962,7 @@ local user = text:match('حذف مطور اساسي (%d+)') or text:match('تن�
 DevAbs:srem(WaTaN2..'Abs:AbsSudo:',user)
 ReplyStatus(msg,user,"Reply","✯︙تم تنزيله من قائمة المطورين الاساسيين")  
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --     Set SecondSudo     --
 if AbsSudo(msg) then
 if text ==('اضف مطور ثانوي') or text ==('رفع مطور ثانوي') and ChCheck(msg) then
@@ -6989,7 +6989,7 @@ local user = text:match('اضف مطور ثانوي (%d+)') or text:match('رف�
 DevAbs:sadd(WaTaN2..'Abs:SecondSudo:',user)
 ReplyStatus(msg,user,"Reply","✯︙تم رفعه في قائمة المطورين الثانويين")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --     Rem SecondSudo     --
 if text ==('حذف مطور ثانوي') or text ==('تنزيل مطور ثانوي') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -7015,7 +7015,7 @@ local user = text:match('حذف مطور ثانوي (%d+)') or text:match('تن�
 DevAbs:srem(WaTaN2..'Abs:SecondSudo:',user)
 ReplyStatus(msg,user,"Reply","✯︙تم تنزيله من قائمة المطورين الثانويين")  
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --       Set SudoBot      --
 if SecondSudo(msg) then
 if text ==('اضف مطور') or text ==('رفع مطور') and ChCheck(msg) then
@@ -7042,7 +7042,7 @@ local user = text:match('اضف مطور (%d+)') or text:match('رفع مطور 
 DevAbs:sadd(WaTaN2..'Abs:SudoBot:',user)
 ReplyStatus(msg,user,"Reply","✯︙تم رفعه في قائمة المطورين")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --       Rem SudoBot      --
 if text ==('حذف مطور') or text ==('تنزيل مطور') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -7068,7 +7068,7 @@ local user = text:match('حذف مطور (%d+)') or text:match('تنزيل مط�
 DevAbs:srem(WaTaN2..'Abs:SudoBot:',user)
 ReplyStatus(msg,user,"Reply","✯︙تم تنزيله من قائمة المطورين")  
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --   Set AbsConstructor   --
 if ChatType == 'sp' or ChatType == 'gp'  then
 if SudoBot(msg) then
@@ -7096,7 +7096,7 @@ local user = text:match('رفع مالك (%d+)')
 DevAbs:sadd(WaTaN2..'Abs:Owner:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","✯︙تم رفعه مالك")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --   Rem AbsConstructor   --
 if text ==('تنزيل مالك') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -7150,7 +7150,7 @@ ReplyStatus(msg,user,"Reply","✯︙تم تنزيله من المالكين")
 end end end
 end,nil)
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --  Set BasicConstructor  --
 if Owner(msg) then
 if text ==('رفع منشئ اساسي') and ChCheck(msg) then
@@ -7189,7 +7189,7 @@ end
 DevAbs:sadd(WaTaN2..'Abs:BasicConstructor:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","✯︙تم رفعه منشئ اساسي")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --  Rem BasicConstructor  --
 if text ==('تنزيل منشئ اساسي') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -7218,7 +7218,7 @@ end end
 if text ==('رفع منشئ اساسي') and not Owner(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙هذا الامر للمالكين والمطورين فقط', 1, 'md')
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --    Set  Constructor    --
 if BasicConstructor(msg) then
 if text ==('رفع منشئ') and ChCheck(msg) then
@@ -7257,7 +7257,7 @@ end
 DevAbs:sadd(WaTaN2..'Abs:Constructor:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","✯︙تم رفعه في قائمة المنشئين")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --    Rem  Constructor    --
 if text ==('تنزيل منشئ') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -7284,7 +7284,7 @@ DevAbs:srem(WaTaN2..'Abs:Constructor:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","✯︙تم تنزيله من قائمة المنشئين")  
 end 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --      Set Manager       --
 if Constructor(msg) then
 if text ==('رفع مدير') and ChCheck(msg) then
@@ -7323,7 +7323,7 @@ end
 DevAbs:sadd(WaTaN2..'Abs:Managers:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","✯︙تم رفعه في قائمة المدراء")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --       Rem Manager      --
 if text ==('تنزيل مدير') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -7349,7 +7349,7 @@ local user = text:match('تنزيل مدير (%d+)')
 DevAbs:srem(WaTaN2..'Abs:Managers:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","✯︙تم تنزيله من قائمة المدراء")  
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --       Set Cleaner      --
 if text ==('رفع منظف') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -7387,7 +7387,7 @@ end
 DevAbs:sadd(WaTaN2..'Abs:Cleaner:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","✯︙تم رفعه في قائمة المنظفين")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --       Rem Cleaner      --
 if text ==('تنزيل منظف') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -7413,7 +7413,7 @@ local user = text:match('تنزيل منظف (%d+)')
 DevAbs:srem(WaTaN2..'Abs:Cleaner:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","✯︙تم تنزيله من قائمة المنظفين")  
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --       Set admin        --
 if Manager(msg) then
 if text ==('رفع ادمن') and ChCheck(msg) then
@@ -7452,7 +7452,7 @@ end
 DevAbs:sadd(WaTaN2..'Abs:Admins:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","✯︙تم رفعه في قائمة الادمنيه")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --        Rem admin       --
 if text ==('تنزيل ادمن') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -7478,7 +7478,7 @@ local user = text:match('تنزيل ادمن (%d+)')
 DevAbs:srem(WaTaN2..'Abs:Admins:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","✯︙تم تنزيله من قائمة الادمنيه")  
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --       Set Vipmem       --
 if Admin(msg) then
 if text ==('رفع مميز') and ChCheck(msg) then
@@ -7517,7 +7517,7 @@ end
 DevAbs:sadd(WaTaN2..'Abs:VipMem:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","✯︙تم رفعه في قائمة المميزين")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --       Rem Vipmem       --
 if text ==('تنزيل مميز') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -7543,7 +7543,7 @@ local user = text:match('تنزيل مميز (%d+)')
 DevAbs:srem(WaTaN2..'Abs:VipMem:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","✯︙تم تنزيله من قائمة المميزين")  
 end end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if AbsConstructor(msg) then
 if text and text:match("^رفع مشرف$") and msg.reply_to_message_id_ then
 function promote_by_reply(extra, result, success)
@@ -7625,7 +7625,7 @@ if text == "راسلني" and ChCheck(msg) then
 WaTaNTeaM = {"ها هلاو","انطق","كول","تفضل","احبك","عمري","لاف"};
 send(msg.sender_user_id_, 0,WaTaNTeaM[math.random(#WaTaNTeaM)])
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "صلاحيتي" or text == "صلاحياتي" and ChCheck(msg) then 
 if tonumber(msg.reply_to_message_id_) == 0 then 
 Validity(msg,msg.sender_user_id_)
@@ -7651,14 +7651,14 @@ if text and (text:match('^صلاحيته (%d+)') or text:match('^صلاحيات�
 local ValidityId = text:match('صلاحيته (%d+)') or text:match('صلاحياته (%d+)')
 Validity(msg,ValidityId)  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
 if msg.reply_to_message_id_ ~= 0 then
 if text and (text:match("^مسح$") or text:match("^حذف$") or text:match("^↫ اخفاء الكيبورد ✯$")) and ChCheck(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.reply_to_message_id_})
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if AbsConstructor(msg) then
 if text == "تفعيل الحظر" and ChCheck(msg) or text == "تفعيل الطرد" and ChCheck(msg) then
 DevAbs:del(WaTaN2.."Abs:Lock:KickBan"..msg.chat_id_)
@@ -7691,7 +7691,7 @@ DevAbs:set(WaTaN2.."Abs:Lock:ProSet"..msg.chat_id_,"true")
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم تعطيل رفع ↫ المنشئ الاساسي • المنشئ • المدير • الادمن • المميز', 1, 'md')
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --          Kick          --
 if Admin(msg) then
 if text ==('طرد') and ChCheck(msg) then
@@ -7777,7 +7777,7 @@ end,nil)
 end
 end
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --          Ban           --
 if Admin(msg) then
 if text ==('حضر') or text ==('حظر') and ChCheck(msg) then
@@ -7865,7 +7865,7 @@ ReplyStatus(msg,user,"Reply","✯︙تم حظره من المجموعه")
 end,nil) 
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         UnBan          --
 if text ==('الغاء الحظر') or text ==('الغاء حظر') and ChCheck(msg) then
 function UnBanReply(extra, result, success)
@@ -7895,7 +7895,7 @@ tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_i
 ReplyStatus(msg,user,"Reply","✯︙تم الغاء حظره من المجموعه")  
 end 
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --          Mute          --
 if Admin(msg) then
 if text ==('كتم') and ChCheck(msg) then
@@ -7962,7 +7962,7 @@ ReplyStatus(msg,user,"Reply","✯︙تم كتمه من المجموعه")
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         UnMute         --
 if text ==('الغاء الكتم') or text ==('الغاء كتم') and ChCheck(msg) then
 function UnMuteReply(extra, result, success)
@@ -8001,7 +8001,7 @@ ReplyStatus(msg,user,"Reply","✯︙تم الغاء كتمه من المجموع
 end
 end 
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --          Tkeed           --
 if Admin(msg) then
 if text ==('تقييد') or text ==('تقيد') and ChCheck(msg) then
@@ -8059,7 +8059,7 @@ DevAbs:sadd(WaTaN2..'Abs:Tkeed:'..msg.chat_id_, user)
 ReplyStatus(msg,user,"Reply","✯︙تم تقيده من المجموعه")  
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         UnTkeed          --
 if text ==('الغاء تقييد') or text ==('الغاء تقيد') and ChCheck(msg) then
 function UnTkeedReply(extra, result, success)
@@ -8090,7 +8090,7 @@ ReplyStatus(msg,user,"Reply","✯︙تم الغاء تقيده من المجمو
 end
 end 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         BanAll         --
 if SecondSudo(msg) then
 if text ==('حضر عام') or text ==('حظر عام') and ChCheck(msg) then
@@ -8173,7 +8173,7 @@ ChatKick(msg.chat_id_, user)
 DevAbs:sadd(WaTaN2..'Abs:BanAll:', user)
 ReplyStatus(msg,user,"Reply","✯︙تم حظره عام من المجموعات")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         MuteAll        --
 if text ==('كتم عام') and ChCheck(msg) then
 function MuteAllReply(extra, result, success)
@@ -8252,7 +8252,7 @@ end
 DevAbs:sadd(WaTaN2..'Abs:MuteAll:', user)
 ReplyStatus(msg,user,"Reply","✯︙تم كتمه عام من المجموعات")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         UnAll          --
 if text ==('الغاء عام') or text ==('الغاء العام') and ChCheck(msg) then
 function UnAllReply(extra, result, success)
@@ -8283,7 +8283,7 @@ ReplyStatus(msg,user,"Reply","✯︙تم الغاء (الحظر • الكتم) 
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if (text == "تغير المطور الاساسي" or text == "نقل ملكيه البوت" or text == "تغيير المطور الاساسي" or text == "↫ تغير المطور الاساسي ✯") and msg.reply_to_message_id_ == 0 and Sudo(msg) and ChCheck(msg) then 
 send(msg.chat_id_, msg.id_,'✯︙يجب التاكد ان المطور الجديد ارسل start لخاص البوت بعد ذلك يمكنك ارسال ايدي المطور')
 DevAbs:setex(WaTaN2.."Abs:EditDev"..msg.sender_user_id_,300,true)
@@ -8313,7 +8313,7 @@ end,nil)
 return false
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if msg.reply_to_message_id_ ~= 0 then
 if text and text:match("^رفع مطي$") and not DevAbs:get(WaTaN2..'Abs:Lock:Stupid'..msg.chat_id_) and ChCheck(msg) then
 function donky_by_reply(extra, result, success)
@@ -8325,7 +8325,7 @@ DevAbs:sadd(WaTaN2..'User:Donky:'..msg.chat_id_, result.sender_user_id_)
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if msg.reply_to_message_id_ ~= 0  then
 if text and text:match("^تنزيل مطي$") and not DevAbs:get(WaTaN2..'Abs:Lock:Stupid'..msg.chat_id_) and ChCheck(msg) then
 function donky_by_reply(extra, result, success)
@@ -8337,7 +8337,7 @@ ReplyStatus(msg,result.sender_user_id_,"Reply","✯︙تم تنزيله من ق�
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
 if text and (text:match('^تقييد دقيقه (%d+)$') or text:match('^كتم دقيقه (%d+)$') or text:match('^تقيد دقيقه (%d+)$')) and ChCheck(msg) then 
 local function mut_time(extra, result,success)
@@ -8385,7 +8385,7 @@ if tonumber(msg.reply_to_message_id_) == 0 then else
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, mut_time,nil) end 
 end 
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^اضف رسائل (%d+)$") and msg.reply_to_message_id_ == 0 and ChCheck(msg) then  
 if Constructor(msg) then
 TXT = text:match("^اضف رسائل (%d+)$")
@@ -8454,7 +8454,7 @@ end
 end,nil)
 end 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
 if text == "المميزين" and ChCheck(msg) then 
 local List = DevAbs:smembers(WaTaN2..'Abs:VipMem:'..msg.chat_id_)
@@ -8474,7 +8474,7 @@ keyboard.inline_keyboard = {{{text="مسح المميزين",callback_data="/Del
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Manager(msg) then
 if text == "الادمنيه" and ChCheck(msg) or text == "الادمنية" and ChCheck(msg) then 
 local Abs =  'Abs:Admins:'..msg.chat_id_
@@ -8495,7 +8495,7 @@ keyboard.inline_keyboard = {{{text="مسح الادمنيه",callback_data="/Del
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
---     Source WaTaN2     -- 
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ ----- 
 if Constructor(msg) then
 if text == "المدراء" and ChCheck(msg) or text == "مدراء" and ChCheck(msg) then 
 local List = DevAbs:smembers(WaTaN2..'Abs:Managers:'..msg.chat_id_)
@@ -8533,7 +8533,7 @@ keyboard.inline_keyboard = {{{text="مسح المنظفين",callback_data="/Del
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if BasicConstructor(msg) then
 if text == "المنشئين" and ChCheck(msg) then 
 local List = DevAbs:smembers(WaTaN2..'Abs:Constructor:'..msg.chat_id_)
@@ -8553,7 +8553,7 @@ keyboard.inline_keyboard = {{{text="مسح المنشئين",callback_data="/Del
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Owner(msg) then
 if text == "المالكين" and ChCheck(msg) then 
 local List = DevAbs:smembers(WaTaN2..'Abs:Owner:'..msg.chat_id_)
@@ -8616,7 +8616,7 @@ end
 end
 end,nil)  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
 if text == "المكتومين" and ChCheck(msg) then 
 local List = DevAbs:smembers(WaTaN2..'Abs:Muted:'..msg.chat_id_)
@@ -8636,7 +8636,7 @@ keyboard.inline_keyboard = {{{text="مسح المكتومين",callback_data="/D
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "المقيدين" and ChCheck(msg) then 
 local List = DevAbs:smembers(WaTaN2..'Abs:Tkeed:'..msg.chat_id_)
 text = "✯︙قائمة المقيدين ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
@@ -8655,7 +8655,7 @@ keyboard.inline_keyboard = {{{text="مسح المقيدين",callback_data="/Del
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "المحظورين" and ChCheck(msg) or text == "المحضورين" and ChCheck(msg) then 
 local List = DevAbs:smembers(WaTaN2..'Abs:Ban:'..msg.chat_id_)
 text = "✯︙قائمة المحظورين ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
@@ -8674,7 +8674,7 @@ keyboard.inline_keyboard = {{{text="مسح المحظورين",callback_data="/D
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "المطايه" and ChCheck(msg) or text == "المطاية" and ChCheck(msg) then
 local List = DevAbs:smembers(WaTaN2..'User:Donky:'..msg.chat_id_)
 text = "✯︙قائمة مطاية المجموعه ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
@@ -8690,7 +8690,7 @@ text = "✯︙*لا يوجد مطايه كلها اوادم*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "قائمه المنع" and AbsConstructor(msg) and ChCheck(msg) then
 local List = DevAbs:hkeys(WaTaN2..'Abs:Filters:'..msg.chat_id_)
 text = "✯︙قائمة المنع ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
@@ -8706,7 +8706,7 @@ Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text or List).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "المطورين الاساسيين" and ChCheck(msg) and AbsSudo(msg) or text == "الاساسيين" and AbsSudo(msg) and ChCheck(msg) or text == "↫ الاساسيين ✯" and AbsSudo(msg) and ChCheck(msg) then 
 local List = DevAbs:smembers(WaTaN2..'Abs:AbsSudo:')
 text = "✯︙قائمة المطورين الاساسيين ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
@@ -8725,7 +8725,7 @@ keyboard.inline_keyboard = {{{text="مسح الاساسيين",callback_data="/D
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "المطورين الثانويين" and SecondSudo(msg) and ChCheck(msg) or text == "الثانويين" and SecondSudo(msg) and ChCheck(msg) or text == "↫ الثانويين ✯" and SecondSudo(msg) and ChCheck(msg) then 
 local List = DevAbs:smembers(WaTaN2..'Abs:SecondSudo:')
 text = "✯︙قائمة المطورين الثانويين ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
@@ -8744,7 +8744,7 @@ keyboard.inline_keyboard = {{{text="مسح الثانويين",callback_data="/D
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if SudoBot(msg) then
 if text == "قائمه العام" and ChCheck(msg) or text == "المحظورين عام" and ChCheck(msg) or text == "المكتومين عام" and ChCheck(msg) or text == "↫ قائمه العام ✯" and ChCheck(msg) or text == "↫ قائمه العام ✯" and ChCheck(msg) then 
 local BanAll = DevAbs:smembers(WaTaN2..'Abs:BanAll:')
@@ -8783,7 +8783,7 @@ keyboard.inline_keyboard = {{{text="مسح قائمه العام",callback_data=
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "المطورين" and ChCheck(msg) or text == "↫ المطورين ✯" and ChCheck(msg) then 
 local List = DevAbs:smembers(WaTaN2..'Abs:SudoBot:')
 text = "✯︙قائمة المطورين ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
@@ -8803,7 +8803,7 @@ keyboard.inline_keyboard = {{{text="مسح المطورين",callback_data="/Del
 Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text ==("رفع المنشئ") and ChCheck(msg) or text ==("رفع المالك") and ChCheck(msg) then 
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
 local admins = data.members_
@@ -8824,7 +8824,7 @@ end,nil)
 end,nil)   
 end
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Manager(msg) then
 if text == 'منع' and tonumber(msg.reply_to_message_id_) > 0 and ChCheck(msg) then 
 function filter_by_reply(extra, result, success) 
@@ -8849,7 +8849,7 @@ end
 end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,filter_by_reply) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'الغاء منع' and tonumber(msg.reply_to_message_id_) > 0 and ChCheck(msg) then     
 function unfilter_by_reply(extra, result, success) 
 if result.content_.sticker_ then
@@ -8874,7 +8874,7 @@ end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,unfilter_by_reply) 
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and (text == "تفعيل تحويل الصيغ" or text == "تفعيل التحويل") and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل تحويل الصيغ'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -8916,7 +8916,7 @@ end
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),ThwelByReply) 
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text ==("كشف") and msg.reply_to_message_id_ ~= 0 and ChCheck(msg) or text ==("ايدي") and msg.reply_to_message_id_ ~= 0 and ChCheck(msg) then 
 function id_by_reply(extra, result, success) 
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -9070,7 +9070,7 @@ end
 end,nil)
 return false 
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'كشف القيود' and tonumber(msg.reply_to_message_id_) > 0 and Admin(msg) and ChCheck(msg) then 
 function kshf_by_reply(extra, result, success)
 if DevAbs:sismember(WaTaN2..'Abs:Muted:'..msg.chat_id_,result.sender_user_id_) then muted = 'مكتوم' else muted = 'غير مكتوم' end
@@ -9168,7 +9168,7 @@ end,nil)
 end  
 resolve_username(username,unbanusername) 
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Manager(msg) then
 if text and text:match("^تغيير الايدي$") and ChCheck(msg) or text and text:match("^تغير الايدي$") and ChCheck(msg) then 
 local List = {
@@ -9257,7 +9257,7 @@ local Text_Rand = List[math.random(#List)]
 DevAbs:set(WaTaN2.."Abs:GpIds:Text"..msg.chat_id_,Text_Rand)
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","✯︙تم تغير كليشة الايدي")  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if SecondSudo(msg) then
 if text and text:match("^تعيين الايدي العام$") or text and text:match("^تعين الايدي العام$") or text and text:match("^تعيين كليشة الايدي$") then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙رجائا اتبع التعليمات للتعيين \n✯︙لطبع كليشة الايدي ارسل كليشه تحتوي على النصوص التي باللغه الانجليزيه ادناه ↫ ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n `#username` ↬ لطبع المعرف\n `#id` ↬ لطبع الايدي \n `#photos` ↬ لطبع عدد الصور \n `#stast` ↬ لطبع الرتب \n `#msgs` ↬ لطبع عدد الرسائل \n `#msgday` ↬ لطبع الرسائل اليوميه \n `#CustomTitle` ↬ لطبع اللقب \n `#bio` ↬ لطبع البايو \n `#auto` ↬ لطبع التفاعل \n `#game` ↬ لطبع عدد النقاط \n `#cont` ↬ لطبع عدد الجهات \n `#edit` ↬ لطبع عدد السحكات \n `#Description` ↬ لطبع تعليق الصور\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉', 1, 'md')
@@ -9280,7 +9280,7 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","✯︙تم حذف كليشة ال
 DevAbs:del(WaTaN2.."Abs:AllIds:Text")
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^تعيين الايدي$") and ChCheck(msg) or text and text:match("^تعين الايدي$") and ChCheck(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙رجائا اتبع التعليمات للتعيين \n✯︙لطبع كليشة الايدي ارسل كليشه تحتوي على النصوص التي باللغه الانجليزيه ادناه ↫ ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n `#username` ↬ لطبع المعرف\n `#id` ↬ لطبع الايدي \n `#photos` ↬ لطبع عدد الصور \n `#stast` ↬ لطبع الرتب \n `#msgs` ↬ لطبع عدد الرسائل \n `#msgday` ↬ لطبع الرسائل اليوميه \n `#CustomTitle` ↬ لطبع اللقب \n `#bio` ↬ لطبع البايو \n `#auto` ↬ لطبع التفاعل \n `#game` ↬ لطبع عدد النقاط \n `#cont` ↬ لطبع عدد الجهات \n `#edit` ↬ لطبع عدد السحكات \n `#Description` ↬ لطبع تعليق الصور\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉', 1, 'md')
 DevAbs:set("WaTaN2:New:id:"..WaTaN2..msg.chat_id_..msg.sender_user_id_,'WaTaNTeaM')
@@ -9302,7 +9302,7 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","✯︙تم حذف كليشة ال
 DevAbs:del(WaTaN2.."Abs:GpIds:Text"..msg.chat_id_)
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if msg.reply_to_message_id_ ~= 0 then
 return ""
 else
@@ -9434,7 +9434,7 @@ end
 getUser(msg.sender_user_id_, WaTaNTeaM)
 end
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if ChatType == 'sp' or ChatType == 'gp'  then
 if Admin(msg) then
 if text and text:match("^قفل (.*)$") and ChCheck(msg) then
@@ -9536,7 +9536,7 @@ end end end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
 if text and (text:match("^ضع تكرار (%d+)$") or text:match("^وضع تكرار (%d+)$")) then   
 local TextSpam = text:match("ضع تكرار (%d+)$") or text:match("وضع تكرار (%d+)$")
@@ -9552,7 +9552,7 @@ local TextSpam = text:match("ضع زمن التكرار (%d+)$") or text:match("
 DevAbs:hset(WaTaN2.."Abs:Spam:Group:User"..msg.chat_id_ ,"Num:Spam:Time" ,TextSpam) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم وضع زمن التكرار ↫ '..TextSpam, 1, 'md')
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Manager(msg) then
 if text and text == 'تفعيل الايدي بالصوره' and ChCheck(msg) then
 if not DevAbs:get(WaTaN2..'Abs:Lock:Id:Photo'..msg.chat_id_) then
@@ -9588,7 +9588,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2..'Abs:Lock:Id'..msg.chat_id_,true)
 end end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'ضع رابط' and ChCheck(msg) or text == 'وضع رابط' and ChCheck(msg) or text == 'ضع الرابط' and ChCheck(msg) or text == 'وضع الرابط' and ChCheck(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙ارسل رابط المجموعه او رابط قناة المجموعه', 1, 'md')
 DevAbs:setex(WaTaN2.."Abs:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_,300,true) 
@@ -9609,7 +9609,7 @@ DevAbs:setex(WaTaN2.."Abs:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_,3
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
 if text and text:match("^تفعيل الترحيب$") and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل الترحيب بنجاح'
@@ -9649,7 +9649,7 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙لم يتم وضع الترحيب \n✯︙ارسل ↫ ضع ترحيب للحفظ ', 1, 'md')
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DevAbs:get(WaTaN2..'Abs:SetDescription'..msg.chat_id_..':'..msg.sender_user_id_) then  
 if text == 'الغاء' then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙تم الغاء حفظ الوصف", 1, 'md')
@@ -9665,7 +9665,7 @@ if text and text:match("^ضع وصف$") and ChCheck(msg) or text and text:match(
 DevAbs:set(WaTaN2..'Abs:SetDescription'..msg.chat_id_..':'..msg.sender_user_id_,true)
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙ارسل لي الوصف الان', 1, 'md')
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text == "منع" and msg.reply_to_message_id_ == 0 and ChCheck(msg) then       
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙ارسل لي الكلمه الان", 1, 'md') 
 DevAbs:set(WaTaN2.."Abs:SetFilters"..msg.sender_user_id_..msg.chat_id_,"add")  
@@ -9703,7 +9703,7 @@ DevAbs:del(WaTaN2.."Abs:SetFilters"..msg.sender_user_id_..msg.chat_id_)
 end
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if SudoBot(msg) then
 if text and text == "الاحصائيات" and ChCheck(msg) or text and text == "↫  الاحصائيات ✯" and ChCheck(msg) then
 local gps = DevAbs:scard(WaTaN2.."Abs:Groups") local users = DevAbs:scard(WaTaN2.."Abs:Users") 
@@ -9718,7 +9718,7 @@ local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙عدد المجموعات ↫ ❨ '..gps..' ❩', 1, 'md')
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text == "المجموعات" and ChCheck(msg) or text and text == "↫ المجموعات ✯" and ChCheck(msg) then
 if not SudoBot(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطورين فقط ', 1, 'md')
@@ -9733,7 +9733,7 @@ t = '✯︙لا يوجد مجموعات مفعله'
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1,t, 1, 'md')
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match('^تنظيف (%d+)$') or text and text:match('^مسح (%d+)$') and ChCheck(msg) then  
 if not DevAbs:get(WaTaN2..'Delete:Time'..msg.chat_id_..':'..msg.sender_user_id_) then  
 local Number = tonumber(text:match('^تنظيف (%d+)$') or text:match('^مسح (%d+)$')) 
@@ -9776,7 +9776,7 @@ end,nil)
 end
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تنظيف الكروبات" and SecondSudo(msg) and ChCheck(msg) or text == "تنظيف المجموعات" and SecondSudo(msg) and ChCheck(msg) or text == "↫ تنظيف المجموعات ✯" and SecondSudo(msg) and ChCheck(msg) then 
 local group = DevAbs:smembers(WaTaN2.."Abs:Groups")
 local w = 0
@@ -9823,7 +9823,7 @@ end
 return false
 end 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and (text == "تفعيل التلقائي" or text == "تفعيل المسح التلقائي" or text == "تفعيل الحذف التلقائي") and Constructor(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل ميزة الحذف التلقائي للميديا'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -9867,7 +9867,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙لاتوجد ميديا هنا", 1, 'md
 end end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل امسح" and Constructor(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل امسح بنجاح'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -9903,7 +9903,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙لاتوجد ميديا هنا", 1, 'md
 end end 
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل مسح الاغاني" and Constructor(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل مسح الاغاني بنجاح'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -9937,7 +9937,7 @@ DevAbs:del(WaTaN2.."Abs:cleanermusic"..msg.chat_id_)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙لاتوجد اغاني هنا", 1, 'md') 
 end end end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
 if text == "تنظيف تعديل" and ChCheck(msg) or text == "تنظيف التعديل" and ChCheck(msg) then   
 Abs_Del = {[0]= msg.id_}
@@ -9959,7 +9959,7 @@ DeleteMessage(msg.chat_id_,Abs_Del2)
 end,nil)  
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم تنظيف 100 من الرسائل المعدله', 1, 'md')
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if ChatType == 'sp' or ChatType == 'gp'  then
 if Admin(msg) then
 if text and text:match("^فتح (.*)$") and ChCheck(msg) then
@@ -10042,7 +10042,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙التثبيت بالفعل مفتوح 
 end end end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
 if text and text:match("^قفل (.*)$") and ChCheck(msg) then
 local LockText = {string.match(text, "^(قفل) (.*)$")}
@@ -10224,7 +10224,7 @@ end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
 if text and text:match("^فتح (.*)$") and ChCheck(msg) then
 local UnLockText = {string.match(text, "^(فتح) (.*)$")}
@@ -10406,7 +10406,7 @@ end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^قفل التفليش$") or text and text:match("^تفعيل الحمايه القصوى$") and ChCheck(msg) then
 if not Constructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمنشئين فقط', 1, 'md')
@@ -10431,7 +10431,7 @@ end
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","✯︙تم فتح التفليش")  
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^قفل الكل$") and ChCheck(msg) then
 if not Constructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمنشئين فقط', 1, 'md')
@@ -10457,7 +10457,7 @@ end
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","✯︙تم فتح جميع الاوامر")  
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
 if text and (text:match("^ضع سبام (%d+)$") or text:match("^وضع سبام (%d+)$")) then
 local SetSpam = text:match("ضع سبام (%d+)$") or text:match("وضع سبام (%d+)$")
@@ -10469,7 +10469,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم وضع عدد السبام ↫'..S
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Manager(msg) then
 if text == "فحص" and ChCheck(msg) or text == "فحص البوت" and ChCheck(msg) then
 local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChatMember?chat_id='..msg.chat_id_..'&user_id='..WaTaN2)
@@ -10535,7 +10535,7 @@ DevAbs:del(WaTaN2.."Abs:BasicConstructor:Rd"..msg.chat_id_)
 DevAbs:del(WaTaN2.."Abs:SudoBot:Rd"..msg.chat_id_)
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "كشف البوتات" and ChCheck(msg) then 
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(extra,result,success)
 local admins = result.members_  
@@ -10586,9 +10586,9 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙*عدد البوتات هنا* ↫ "..c
 end 
 end,nil)  
 end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
 if text and text:match("^حذف (.*)$") or text and text:match("^مسح (.*)$") then
 local txts = {string.match(text, "^(حذف) (.*)$")}
@@ -10697,7 +10697,7 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","✯︙تم حذف قائمة من
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^حذف القوائم$") and ChCheck(msg) or text and text:match("^مسح القوائم$") and ChCheck(msg) then
 if not BasicConstructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمنشئ الاساسي فقط', 1, 'md')
@@ -10705,7 +10705,7 @@ else
 DevAbs:del(WaTaN2..'Abs:Ban:'..msg.chat_id_) DevAbs:del(WaTaN2..'Abs:Admins:'..msg.chat_id_) DevAbs:del(WaTaN2..'User:Donky:'..msg.chat_id_) DevAbs:del(WaTaN2..'Abs:VipMem:'..msg.chat_id_) DevAbs:del(WaTaN2..'Abs:Filters:'..msg.chat_id_) DevAbs:del(WaTaN2..'Abs:Muted:'..msg.chat_id_)
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙تم حذف ↫ ❨ قائمة المنع • المحظورين • المكتومين • الادمنيه • المميزين • المطايه ❩ بنجاح \n ✓", 1, 'md')
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^حذف جميع الرتب$") and ChCheck(msg) or text and text:match("^مسح جميع الرتب$") and ChCheck(msg) or text and text:match("^تنزيل جميع الرتب$") and ChCheck(msg) then
 if not AbsConstructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمالكين فقط', 1, 'md')
@@ -10735,7 +10735,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙لاتوجد رتب هنا", 1, 'md')
 end 
 end 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then 
 if text and text:match("^الاعدادات$") and ChCheck(msg) then
 if not DevAbs:get(WaTaN2..'Abs:Spam:Text'..msg.chat_id_) then
@@ -10743,7 +10743,7 @@ spam_c = 400
 else
 spam_c = DevAbs:get(WaTaN2..'Abs:Spam:Text'..msg.chat_id_)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DevAbs:hget(WaTaN2.."Abs:Spam:Group:User"..msg.chat_id_, "Spam:User") == "kick" then     
 flood = "بالطرد"     
 elseif DevAbs:hget(WaTaN2.."Abs:Spam:Group:User"..msg.chat_id_,"Spam:User") == "keed" then     
@@ -10755,7 +10755,7 @@ flood = "بالحذف"
 else     
 flood = "مفتوح"     
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DevAbs:get(WaTaN2.."Abs:Lock:Bots"..msg.chat_id_) == "del" then
 lock_bots = "بالحذف"
 elseif DevAbs:get(WaTaN2.."Abs:Lock:Bots"..msg.chat_id_) == "ked" then
@@ -10765,7 +10765,7 @@ lock_bots = "بالطرد"
 else
 lock_bots = "مفتوحه"    
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DevAbs:get(WaTaN2..'Abs:Lock:Text'..msg.chat_id_) then mute_text = 'مقفله' else mute_text = 'مفتوحه'end
 if DevAbs:get(WaTaN2..'Abs:Lock:Photo'..msg.chat_id_) then mute_photo = 'مقفله' else mute_photo = 'مفتوحه' end
 if DevAbs:get(WaTaN2..'Abs:Lock:Videos'..msg.chat_id_) then mute_video = 'مقفله' else mute_video = 'مفتوحه' end
@@ -10796,7 +10796,7 @@ if DevAbs:get(WaTaN2..'Abs:Lock:Kfr'..msg.chat_id_) then lock_kaf = 'مفتوح'
 if DevAbs:get(WaTaN2..'Abs:Lock:Taf'..msg.chat_id_) then lock_taf = 'مفتوحه' else lock_taf = 'مقفله' end
 if DevAbs:get(WaTaN2..'Abs:Lock:Farsi'..msg.chat_id_) then lock_farsi = 'مقفله' else lock_farsi = 'مفتوحه' end
 local Flood_Num = DevAbs:hget(WaTaN2.."Abs:Spam:Group:User"..msg.chat_id_,"Num:Spam") or 5
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 local TXTE = "✯︙اعدادات المجموعه ↫ ⤈\n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 .."✯︙الروابط ↫ "..mute_links.."\n"
 .."✯︙المعرف ↫ "..lock_tag.."\n"
@@ -10834,7 +10834,7 @@ local TXTE = "✯︙اعدادات المجموعه ↫ ⤈\n┉ ┉ ┉ ┉ ┉
 Dev_Abs(msg.chat_id_, msg.id_, 1, TXTE, 1, 'md')
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل كول" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل كول'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -10869,7 +10869,7 @@ sendAudio(msg.chat_id_, msg.id_, 0, 1,nil, './'..Antk.result.translate..'.mp3')
 os.execute('rm -rf ./'..Antk.result.translate..'.mp3') 
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DevAbs:get(WaTaN2..'Abs:setrules'..msg.chat_id_..':'..msg.sender_user_id_) then 
 if text == 'الغاء' then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم الغاء حفظ قوانين المجموعه', 1, 'md')
@@ -10890,7 +10890,7 @@ if text and text:match("^القوانين$") and ChCheck(msg) then
 local rules = DevAbs:get(WaTaN2..'Abs:rules'..msg.chat_id_)
 Dev_Abs(msg.chat_id_, msg.id_, 1, rules, 1, nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'رقمي' and ChCheck(msg) then
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
 if result.phone_number_  then
@@ -10901,7 +10901,7 @@ end
 send(msg.chat_id_, msg.id_,MyNumber)
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل الزخرفه" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل الزخرفه بنجاح'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -10950,7 +10950,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, t, 1, 'md')
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل الابراج" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل الابراج بنجاح'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -10970,7 +10970,7 @@ t = Brg.ok.abs
 Dev_Abs(msg.chat_id_, msg.id_, 1, t, 1, 'html')
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and (text == "تفعيل اوامر النسب" or text == "تفعيل نسبه الحب" or text == "تفعيل نسبه الكره" or text == "تفعيل نسبه الرجوله" or text == "تفعيل نسبه الانوثه" or text == "تفعيل نسبه الغباء") and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل اوامر النسب'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11100,7 +11100,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙نسبة غباء '..text..' هي : '..
 DevAbs:del(WaTaN2..'StupidNsba:Abs'..msg.chat_id_..msg.sender_user_id_) 
 return false 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل حساب العمر" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل حساب العمر'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11120,7 +11120,7 @@ t = Age.ok.abs
 Dev_Abs(msg.chat_id_, msg.id_, 1, t, 1, 'html')
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل معاني الاسماء" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل معاني الاسماء'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11140,7 +11140,7 @@ t = Mean.ok.abs
 Dev_Abs(msg.chat_id_, msg.id_, 1, t, 1, 'html')
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل متحركه" and Manager(msg) and ChCheck(msg) or text == "تفعيل المتحركه" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل المتحركه'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11159,7 +11159,7 @@ keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/gif:"
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendanimation?chat_id=' .. msg.chat_id_ .. '&animation=https://t.me/GifWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل ميمز" and Manager(msg) and ChCheck(msg) or text == "تفعيل الميمز" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل الميمز'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11178,7 +11178,7 @@ keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/memz:
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/MemzWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل غنيلي" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل غنيلي'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11197,7 +11197,7 @@ keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/Song:
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/AudiosWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل الاغاني" and Manager(msg) and ChCheck(msg) or text == "تفعيل اغنيه" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل الاغاني'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11216,7 +11216,7 @@ keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/mp3:"
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendAudio?chat_id=' .. msg.chat_id_ .. '&audio=https://t.me/WaTaN2Mp3/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل ريمكس" and Manager(msg) and ChCheck(msg) or text == "تفعيل الريمكس" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل الريمكس'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11235,7 +11235,7 @@ keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/remix
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/RemixWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل صوره" and Manager(msg) and ChCheck(msg) or text == "تفعيل الصوره" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل الصوره'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11254,7 +11254,7 @@ keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/photo
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/PhotosWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل انمي" and Manager(msg) and ChCheck(msg) or text == "تفعيل الانمي" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل الانمي'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11273,7 +11273,7 @@ keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/anime
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/AnimeWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل فلم" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل الافلام'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11292,7 +11292,7 @@ keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/Movie
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/MoviesWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تفعيل مسلسل" and Manager(msg) and ChCheck(msg) then
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل المسلسلات'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11311,7 +11311,7 @@ keyboard.inline_keyboard = {{{text=". مره اخرى ✯",callback_data="/serie
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendphoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/SeriesWaTaN/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Admin(msg) then
 if DevAbs:get(WaTaN2..'Abs:LockSettings'..msg.chat_id_) then 
 if text == "الروابط" then if DevAbs:get(WaTaN2..'Abs:Lock:Links'..msg.chat_id_) then mute_links = 'مقفله' else mute_links = 'مفتوحه' end local WaTaNTeaM = "\n" .."✯︙الروابط ↫ "..mute_links.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, WaTaNTeaM, 1, 'md') end
@@ -11341,7 +11341,7 @@ if text == "الكفر" then if DevAbs:get(WaTaN2..'Abs:Lock:Kfr'..msg.chat_id_)
 if text == "الفشار" then if DevAbs:get(WaTaN2..'Abs:Lock:Fshar'..msg.chat_id_) then lock_fshar = 'مفتوح' else lock_fshar = 'مقفل' end local WaTaNTeaM = "\n" .."✯︙الفشار ↫ "..lock_fshar.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, WaTaNTeaM, 1, 'md') end
 if text == "الطائفيه" then if DevAbs:get(WaTaN2..'Abs:Lock:Taf'..msg.chat_id_) then lock_taf = 'مفتوحه' else lock_taf = 'مقفله' end local WaTaNTeaM = "\n" .."✯︙الطائفيه ↫ "..lock_taf.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, WaTaNTeaM, 1, 'md') end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'تفعيل كشف الاعدادات' and ChCheck(msg) then 
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل كشف الاعدادات'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11352,7 +11352,7 @@ local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
 DevAbs:del(WaTaN2..'Abs:LockSettings'..msg.chat_id_) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and (text == 'تعطيل التحقق' or text == 'قفل التحقق' or text == 'تعطيل تنبيه الدخول') and Manager(msg) and ChCheck(msg) then 
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تعطيل التحقق بنجاح'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11363,7 +11363,7 @@ local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
 DevAbs:set(WaTaN2..'Abs:Lock:Robot'..msg.chat_id_,true)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'تفعيل ردود المدير' and Manager(msg) and ChCheck(msg) then 
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل ردود المدير'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11374,7 +11374,7 @@ local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
 DevAbs:set(WaTaN2..'Abs:Lock:GpRed'..msg.chat_id_,true)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'تفعيل ردود المطور' and Manager(msg) and ChCheck(msg) then 
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل ردود المطور'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -11385,7 +11385,7 @@ local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
 DevAbs:set(WaTaN2..'Abs:Lock:AllRed'..msg.chat_id_,true)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if AbsSudo(msg) then
 if text == 'تفعيل المغادره' or text == '↫ تفعيل المغادره ✯' and ChCheck(msg) then 
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل المغادره بنجاح'
@@ -11408,7 +11408,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 DevAbs:set(WaTaN2.."Abs:Send:Bot"..WaTaN2,true) 
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^ضع اسم (.*)$") and Manager(msg) and ChCheck(msg) then
 local txt = {string.match(text, "^(ضع اسم) (.*)$")}
 tdcli_function ({ ID = "ChangeChatTitle",chat_id_ = msg.chat_id_,title_ = txt[2] },function(arg,data) 
@@ -11424,7 +11424,7 @@ Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(m
 end
 end,nil) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if msg.content_.photo_ then
 if DevAbs:get(WaTaN2..'Abs:SetPhoto'..msg.chat_id_..':'..msg.sender_user_id_) then
 if msg.content_.photo_.sizes_[3] then
@@ -11452,13 +11452,13 @@ if text and text:match("^ضع صوره$") and ChCheck(msg) or text and text:matc
 Dev_Abs(msg.chat_id_,msg.id_, 1, '✯︙ارسل صورة المجموعه الان', 1, 'md')
 DevAbs:set(WaTaN2..'Abs:SetPhoto'..msg.chat_id_..':'..msg.sender_user_id_,true)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^حذف الصوره$") and ChCheck(msg) or text and text:match("^مسح الصوره$") and ChCheck(msg) then
 https.request("https://api.telegram.org/bot"..TokenBot.."/deleteChatPhoto?chat_id="..msg.chat_id_) 
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","✯︙تم حذف صورة المجموعه")  
 return false  
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Manager(msg) then
 if text and text:match("^الغاء تثبيت$") and ChCheck(msg) or text and text:match("^الغاء التثبيت$") and ChCheck(msg) then
 if DevAbs:sismember(WaTaN2.."Abs:Lock:Pinpin",msg.chat_id_) and not BasicConstructor(msg) then
@@ -11482,7 +11482,7 @@ return false
 end
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^الغاء تثبيت الكل$") and ChCheck(msg) then  
 if DevAbs:sismember(WaTaN2.."Abs:Lock:Pinpin",msg.chat_id_) and not BasicConstructor(msg) then
 Dev_Abs(msg.chat_id_,msg.id_, 1, "✯︙التثبيت والغاء واعادة التثبيت تم قفله من قبل المنشئين الاساسيين", 1, 'md')
@@ -11506,7 +11506,7 @@ return false
 end
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^اعاده تثبيت$") and ChCheck(msg) or text and text:match("^اعاده التثبيت$") and ChCheck(msg) or text and text:match("^اعادة التثبيت$") and ChCheck(msg) then
 if DevAbs:sismember(WaTaN2.."Abs:Lock:Pinpin",msg.chat_id_) and not BasicConstructor(msg) then
 Dev_Abs(msg.chat_id_,msg.id_, 1, "✯︙التثبيت والغاء واعادة التثبيت تم قفله من قبل المنشئين الاساسيين", 1, 'md')
@@ -11519,7 +11519,7 @@ local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
 end end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'طرد المحذوفين' and ChCheck(msg) or text == 'مسح المحذوفين' and ChCheck(msg) or text == 'طرد الحسابات المحذوفه' and ChCheck(msg) or text == 'حذف المحذوفين' and ChCheck(msg) then  
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),offset_ = 0,limit_ = 1000}, function(arg,del)
 for k, v in pairs(del.members_) do
@@ -11532,7 +11532,7 @@ end
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","✯︙تم طرد المحذوفين")  
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^مسح المحظورين$") or text and text:match("^حذف المحظورين$") and ChCheck(msg) or text and text:match("^مسح المطرودين$") or text and text:match("^حذف المطرودين$") and ChCheck(msg) then
 local function RemoveBlockList(extra, result)
 if tonumber(result.total_count_) == 0 then 
@@ -11551,7 +11551,7 @@ end
 tdcli_function({ID="GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersKicked"},offset_ = 0,limit_ = 200}, RemoveBlockList, {chat_id_ = msg.chat_id_, msg_id_ = msg.id_})    
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^معلومات المجموعه$") and ChCheck(msg) or text and text:match("^عدد الاعضاء$") and ChCheck(msg) or text and text:match("^عدد الكروب$") and ChCheck(msg) or text and text:match("^عدد الادمنيه$") and ChCheck(msg) or text and text:match("^عدد المحظورين$") and ChCheck(msg) then
 local Muted = DevAbs:scard(WaTaN2.."Abs:Muted:"..msg.chat_id_) or "0"
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
@@ -11560,7 +11560,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙المجموعه ↫ ❨ '..dp.title_..
 end,nil)
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match('^كشف (-%d+)') and ChCheck(msg) then
 local ChatId = text:match('كشف (-%d+)') 
 if not SudoBot(msg) then
@@ -11599,13 +11599,13 @@ end,nil)
 end,nil)
 end 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^تعين عدد الاعضاء (%d+)$") and SecondSudo(msg) or text and text:match("^تعيين عدد الاعضاء (%d+)$") and SecondSudo(msg) then
 local Num = text:match("تعين عدد الاعضاء (%d+)$") or text:match("تعيين عدد الاعضاء (%d+)$")
 DevAbs:set(WaTaN2..'Abs:Num:Add:Bot',Num) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم وضع عدد الاعضاء ↫ *'..Num..'* عضو', 1, 'md')
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'تفعيل البوت الخدمي' and ChCheck(msg) or text == '↫ تفعيل البوت الخدمي ✯' and ChCheck(msg) then 
 if not AbsSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط', 1, 'md')
@@ -11737,7 +11737,7 @@ DevAbs:set(WaTaN2.."Abs:Lock:Rd"..msg.chat_id_,true)
 return false  
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match('^تفعيل$') and SudoBot(msg) and ChCheck(msg) then
 if ChatType ~='sp' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙المجموعه عاديه وليست خارقه لا تستطيع تفعيلي يرجى ان تضع سجل رسائل المجموعه ضاهر وليس مخفي ومن بعدها يمكنك رفعي ادمن ثم تفعيلي', 1, 'md')
@@ -11861,7 +11861,7 @@ end,nil)
 end,nil)
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^المطور$") then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
@@ -11893,7 +11893,7 @@ end
 end,nil)
 end,nil)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'روابط الكروبات' or text == 'روابط المجموعات' or text == '↫ روابط المجموعات ✯' then
 if not AbsSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
@@ -11918,7 +11918,7 @@ io.popen('rm -rf ./GroupsBot.txt')
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "اذاعه خاص" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) or text == "↫ اذاعه خاص ✯" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) then 
 if DevAbs:get(WaTaN2.."Abs:Send:Bot"..WaTaN2) and not AbsSudo(msg) then 
 send(msg.chat_id_, msg.id_,"✯︙الاذاعه معطله من قبل المطور الاساسي")
@@ -11985,7 +11985,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙تم اذاعة "..AbsText.." بنجاح \n✯︙‏الى ↫ ❨ "..#List.." ❩ مشترك \n ✓", 1, 'md')
 DevAbs:del(WaTaN2.."Abs:Send:Pv"..msg.chat_id_..":" .. msg.sender_user_id_) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "اذاعه" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) or text == "↫ اذاعه عام ✯" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) then 
 if DevAbs:get(WaTaN2.."Abs:Send:Bot"..WaTaN2) and not AbsSudo(msg) then 
 send(msg.chat_id_, msg.id_,"✯︙الاذاعه معطله من قبل المطور الاساسي")
@@ -12052,7 +12052,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙تم اذاعة "..AbsText.." بنجاح \n✯︙‏في ↫ ❨ "..#List.." ❩ مجموعه \n ✓", 1, 'md')
 DevAbs:del(WaTaN2.."Abs:Send:Gp"..msg.chat_id_..":" .. msg.sender_user_id_) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "اذاعه بالتوجيه" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) or text == "↫ اذاعه عام بالتوجيه ✯" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) then 
 if DevAbs:get(WaTaN2.."Abs:Send:Bot"..WaTaN2) and not AbsSudo(msg) then 
 send(msg.chat_id_, msg.id_,"✯︙الاذاعه معطله من قبل المطور الاساسي")
@@ -12076,7 +12076,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙تم اذاعة رسالتك بالتوجيه \n✯︙‏في ↫ ❨ "..#List.." ❩ مجموعه \n ✓", 1, 'md')
 DevAbs:del(WaTaN2.."Abs:Send:FwdGp"..msg.chat_id_..":" .. msg.sender_user_id_) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "اذاعه خاص بالتوجيه" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) or text == "↫ اذاعه خاص بالتوجيه ✯" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) then 
 if DevAbs:get(WaTaN2.."Abs:Send:Bot"..WaTaN2) and not AbsSudo(msg) then 
 send(msg.chat_id_, msg.id_,"✯︙الاذاعه معطله من قبل المطور الاساسي")
@@ -12100,7 +12100,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙تم اذاعة رسالتك بالتوجيه \n✯︙‏الى ↫ ❨ "..#List.." ❩ مشترك \n ✓", 1, 'md')
 DevAbs:del(WaTaN2.."Abs:Send:FwdPv"..msg.chat_id_..":" .. msg.sender_user_id_) 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) or text == "↫ اذاعه بالتثبيت ✯" and msg.reply_to_message_id_ == 0 and SudoBot(msg) and ChCheck(msg) then 
 if DevAbs:get(WaTaN2.."Abs:Send:Bot"..WaTaN2) and not AbsSudo(msg) then 
 send(msg.chat_id_, msg.id_,"✯︙الاذاعه معطله من قبل المطور الاساسي")
@@ -12176,7 +12176,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙تم اذاعة "..AbsText.." بالت�
 DevAbs:del(WaTaN2.."Abs:Send:Gp:Pin"..msg.chat_id_..":" .. msg.sender_user_id_) 
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and (text == 'حذف رد من متعدد' or text == 'مسح رد من متعدد') and ChCheck(msg) then
 if not Bot(msg) and DevAbs:get(WaTaN2..'Abs:Lock:Rd'..msg.chat_id_) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1,'✯︙لاتستطيع حذف رد وذالك بسبب تعطيله', 1, 'md')
@@ -12263,7 +12263,7 @@ DevAbs:set(WaTaN2..'Abs:Add:GpTexts'..msg.sender_user_id_..msg.chat_id_,text)
 DevAbs:sadd(WaTaN2..'Abs:Manager:GpRedod'..msg.chat_id_,text)
 return false
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'اضف كت تويت' and ChCheck(msg) or text == 'اضف كت' and ChCheck(msg) then
 DevAbs:set(WaTaN2..'Abs:Add:Kt'..msg.sender_user_id_..msg.chat_id_,'SetKt')
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙حسنا ارسل امر `كت تويت` الان" ,  1, "md")
@@ -12283,7 +12283,7 @@ DevAbs:set(WaTaN2..'Abs:Add:KtTexts'..msg.sender_user_id_..msg.chat_id_,text)
 DevAbs:sadd(WaTaN2..'Abs:Sudo:Kt'..msg.chat_id_,text)
 return false
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and (text == 'حذف رد' or text == 'مسح رد') and ChCheck(msg) then
 if not Bot(msg) and DevAbs:get(WaTaN2..'Abs:Lock:Rd'..msg.chat_id_) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1,'✯︙لاتستطيع حذف رد وذالك بسبب تعطيله', 1, 'md')
@@ -12328,7 +12328,7 @@ Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and (text == 'حذف رد عام' or text == '↫ حذف رد عام ✯' or text == 'مسح رد عام' or text == 'حذف رد للكل' or text == 'مسح رد للكل' or text == 'مسح رد مطور' or text == 'حذف رد مطور') and ChCheck(msg) then
 if not Bot(msg) and DevAbs:get(WaTaN2..'Abs:Lock:Rd'..msg.chat_id_) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1,'✯︙لاتستطيع حذف رد وذالك بسبب تعطيله', 1, 'md')
@@ -12373,7 +12373,7 @@ Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'الردود المتعدده' and ChCheck(msg) then
 if not Manager(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمدير واعلى فقط ', 1, 'md')
@@ -12410,7 +12410,7 @@ end
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'الردود' and Manager(msg) and ChCheck(msg) or text == 'ردود المدير' and Manager(msg) and ChCheck(msg) then
 local redod = DevAbs:smembers(WaTaN2..'Abs:Manager:GpRed'..msg.chat_id_)
 MsgRep = '✯︙ردود المدير ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n'
@@ -12470,7 +12470,7 @@ return false
 end
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if  text == "ردود المطور" and SecondSudo(msg) or text == "الردود العام" and SecondSudo(msg) or text == "ردود العام" and SecondSudo(msg) or text == "↫ الردود العام ✯" and SecondSudo(msg) then
 local redod = DevAbs:smembers(WaTaN2.."Abs:Sudo:AllRed")
 MsgRep = '✯︙ردود المطور ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n'
@@ -12531,7 +12531,7 @@ return false
 end
 end 
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text == "تغيير اسم البوت" and ChCheck(msg) or text and text == "وضع اسم البوت" and ChCheck(msg) or text and text == "تغير اسم البوت" and ChCheck(msg) then
 if not SecondSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
@@ -12549,7 +12549,7 @@ DevAbs:del(WaTaN2..'Abs:NameBot')
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم حذف اسم البوت'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
 end end 
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^استعاده الاوامر$") and SecondSudo(msg) and ChCheck(msg) or text and text:match("^استعادة كلايش الاوامر$") and SecondSudo(msg) and ChCheck(msg) then
 HelpList ={'Abs:Help','Abs:Help1','Abs:Help2','Abs:Help3','Abs:Help4','Abs:Help5','Abs:Help6'}
 for i,Help in pairs(HelpList) do
@@ -12986,7 +12986,7 @@ local Text = [[
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "مسح الرتب" and Admin(msg) then
 local Del = DevAbs:get(WaTaN2..'Abs:Del')
 local Text = [[
@@ -13001,7 +13001,7 @@ keyboard.inline_keyboard = {{{text="مسح الاساسيين",callback_data="/D
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Del or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "مسح قائمه المنع" and AbsConstructor(msg) then
 local Filter = DevAbs:get(WaTaN2..'Abs:Filter')
 local Text = [[
@@ -13016,7 +13016,7 @@ keyboard.inline_keyboard = {{{text="مسح المتحركات",callback_data="/D
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Filter or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Manager(msg) then
 if text == "قفل" or text == "القفل" or text == "قفل" or text == "فتح" or text == "اوامر القفل" or text == "اوامر القفل" or text == "اوامر الفتح و القفل" then
 local locklist = DevAbs:get(WaTaN2..'Abs:locklist')
@@ -13032,7 +13032,7 @@ keyboard.inline_keyboard = {{{text="قفل الدردشه",callback_data="/lockT
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(locklist or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Manager(msg) then
 if text == "التعطيل" or text == "التفعيل" or text == "اوامر التفعيل" or text == "اوامر التعطيل" or text == "اوامر التفعيل والتعطيل" then
 local order = DevAbs:get(WaTaN2..'Abs:order')
@@ -13048,7 +13048,7 @@ keyboard.inline_keyboard = {{{text="تعطيل الايدي بالصوره",call
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(order or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if Cleaner(msg) then
 if text == "امسح" then
 if DevAbs:get(WaTaN2..'Abs:Lock:Clean'..msg.chat_id_) then 
@@ -13061,7 +13061,7 @@ keyboard.inline_keyboard = {{{text="مسح الميديا",callback_data="/DelMe
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Media or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "غادر" and SudoBot(msg) then
 local Leave = DevAbs:get(WaTaN2..'Abs:Leave')
 local Text = [[
@@ -13072,7 +13072,7 @@ keyboard.inline_keyboard = {{{text="نعم",callback_data="/LeaveBot:"..msg.send
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Leave or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "تحديث" or text == "تحديث السورس" and ChCheck(msg) or text == "تحديث سورس" and ChCheck(msg) or text == "↫ تحديث السورس ✯" and ChCheck(msg) then
 local Source = DevAbs:get(WaTaN2..'Abs:Source')
 local Text = [[
@@ -13083,7 +13083,7 @@ keyboard.inline_keyboard = {{{text="تحديث السورس",callback_data="/Upd
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Source or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'تفعيل اليوتيوب' and Manager(msg) then  
 local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تفعيل اليوتيوب بنجاح'
 Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
@@ -13101,7 +13101,7 @@ local Text = text:match('^بحث (.*)$')
 local msg_id = msg.id_/2097152/0.5 
 https.request('https://ccccxcc.ml/WaTaN2/Yt.php?Put=Search&TokenBot='..TokenBot..'&ChatId='..msg.chat_id_..'&UserId='..msg.sender_user_id_..'&Text='..URL.escape(Text)..'&MsgId='..msg_id..'&Name='..DirName)
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if SecondSudo(msg) then
 if text == 'تحديث المتجر' then 
 io.popen("mkdir Files")
@@ -13125,7 +13125,7 @@ io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n        ( تم تحديث ملفات البوت )        \n\27[0;34;49m\n") 
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙تم تحديث ملفات البوت", 1, "md")
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'نقل الاحصائيات' and ChCheck(msg) or text == '↫ نقل الاحصائيات ✯' and ChCheck(msg) then
 local Users = DevAbs:smembers(WaTaN2.."User_Bot")
 local Groups = DevAbs:smembers(WaTaN2..'Chek:Groups')
@@ -13179,7 +13179,7 @@ end
 send(msg.chat_id_, msg.id_,'✯︙تم نقل ↫ '..#Groups..' مجموعه\n✯︙تم نقل ↫ '..#Users..' مشترك\n✯︙من التحديث القديم الى التحديث الجديد')
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'الملفات' and ChCheck(msg) and SecondSudo(msg) then
 Files = '\n✯︙الملفات المفعله في البوت ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n'
 i = 0
@@ -13251,7 +13251,7 @@ send(msg.chat_id_, msg.id_,"✯︙لا يوجد ملف بهذا الاسم")
 end
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and (text == 'حذف معلومات الترحيب' or text == 'مسح معلومات الترحيب') and SecondSudo(msg) and ChCheck(msg) then    
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم حذف معلومات الترحيب', 1, 'md')   
 DevAbs:del(WaTaN2..'Abs:Text:BotWelcome')
@@ -13299,7 +13299,7 @@ DevAbs:del(WaTaN2.."Abs:Set:BotWelcome"..msg.sender_user_id_)
 end
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text and text:match("^ضع كليشه المطور$") or text and text:match("^وضع كليشه المطور$") or text and text:match("^تغيير كليشه المطور$") or text and text:match("^↫ تغيير كليشه المطور ✯$") and ChCheck(msg) then
 if not Sudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
@@ -13314,7 +13314,7 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙تم حذف كليشة المطور", 1, "md")
 DevAbs:del(WaTaN2.."DevText")
 end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DevAbs:get(WaTaN2.."textch:user"..msg.chat_id_.."" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙تم الغاء الامر", 1, "md") 
@@ -13362,7 +13362,7 @@ https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='.
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙لم يتم تعيين قناة الاشتراك الاجباري \n✯︙ارسل ↫ تعيين قناة الاشتراك للتعيين ', 1, 'md')
 end end end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'القناة' and ChCheck(msg) or text == 'قناة السورس' and ChCheck(msg) or text == 'قناه السورس' and ChCheck(msg) or text == 'قنات السورس' and ChCheck(msg) or text == '↫ قناة السورس ✯' and ChCheck(msg) then 
 Text = [[
 ✯︙[قناة السورس](https://t.me/WaTaNTeaM)
@@ -13375,7 +13375,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/WaTaNTeaM&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "مبرمج السورس" and ChCheck(msg) or text == "مطور السورس" and ChCheck(msg) or text == "وين المبرمج" and ChCheck(msg) or text == "المبرمج" and ChCheck(msg) or text == "↫ مبرمج السورس ✯" and ChCheck(msg) then 
 Text = [[
 ✯︙[مبرمج السورس](https://t.me/abbasfadhil)
@@ -13388,7 +13388,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/abbasfadhil&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'معلومات السيرفر' or text == 'السيرفر' or text == '↫ السيرفر ✯' then 
 if not AbsSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
@@ -13408,9 +13408,9 @@ echo '┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n✯︙مدة تشغيل السيرف�
 ]]):read('*a'), 1, 'md')
 end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 WaTaN2Files(msg)
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 elseif (data.ID == "UpdateMessageEdited") then
 local msg = data
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.message_id_)},function(extra, result, success)
@@ -13454,7 +13454,7 @@ if DevAbs:get(WaTaN2..'Abs:Lock:EditMsgs'..msg.chat_id_) then
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_})
 end end end 
 end,nil)
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 elseif (data.ID == "UpdateMessageSendSucceeded") then
 local msg = data.message_
 local text = msg.content_.text_
@@ -13488,7 +13488,7 @@ end
 if id_photo == GetMsgPin then
 tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,dp) DevAbs:del(WaTaN2..'Abs:PinnedMsgs'..msg.chat_id_) end,nil)   
 end end end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then
 print('\27[30;32mجاري تنظيف المجموعات الوهميه يرجى الانتظار\n\27[1;37m')
 local PvList = DevAbs:smembers(WaTaN2..'Abs:Users')  
@@ -13515,7 +13515,7 @@ if data and data.type_ and data.type_.channel_ and data.type_.channel_.status_ a
 DevAbs:sadd(WaTaN2..'Abs:Groups',v)  
 end end,nil) end
 end
---     Source WaTaN2     --
+----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 end 
 -----------------------------------------------------
 -- This Source Was Developed By (Abs) @abbasfadhil. --
