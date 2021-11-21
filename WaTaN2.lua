@@ -1,4 +1,3 @@
-
 ----- لم ولن ابرئ الذمة لأي شخص ينسخ الملفات والسورس والاكواد الخاصه بي حتى لو كان قريبا مني لن ابرئ الذمة له -----
 -----------------------------------------------------
 -- This Source Was Developed By (Abs) @abbasfadhil. --
@@ -3531,8 +3530,8 @@ end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بردود الخاص لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'↫ تعيين رد الخاص ✯','↫ حذف رد الخاص ✯'},
-{'↫ جلب رد الخاص ✯'},
+{'↫ ضع كليشه ستارت ✯','↫ حذف كليشه ستارت ✯'},
+{'↫ جلب كليشه ستارت ✯'},
 {'↫ رجوع ✯'},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
@@ -3751,16 +3750,16 @@ DevAbs:del(WaTaN2..'Abs:Start:Bots'..msg.sender_user_id_)
 return false
 end
 if SecondSudo(msg) then
-if text == 'تعيين رد الخاص' and ChCheck(msg) or text == 'ضع كليشه ستارت' and ChCheck(msg) or text == '↫ تعيين رد الخاص ✯' and ChCheck(msg) then 
+if text == 'ضع كليشه ستارت' and ChCheck(msg) or text == '↫ ضع كليشه ستارت ✯' and ChCheck(msg) then 
 DevAbs:set(WaTaN2..'Abs:Start:Bots'..msg.sender_user_id_,true) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙ارسل لي كليشة الستارت الان', 1, 'md')
 return false
 end
-if text == 'حذف رد الخاص' and ChCheck(msg) or text == 'حذف كليشه ستارت' and ChCheck(msg) or text == '↫ حذف رد الخاص ✯' and ChCheck(msg) then 
+if text == 'حذف كليشه ستارت' and ChCheck(msg) or text == '↫ حذف كليشه ستارت ✯' and ChCheck(msg) then 
 DevAbs:del(WaTaN2..'Start:Bot') 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم حذف كليشة الستارت بنجاح', 1, 'md')
 end
-if text == 'جلب رد الخاص' and ChCheck(msg) or text == '↫ جلب رد الخاص ✯' and ChCheck(msg) then  
+if text == 'جلب كليشه ستارت' and ChCheck(msg) or text == '↫ جلب كليشه ستارت ✯' and ChCheck(msg) then  
 local start = DevAbs:get(WaTaN2.."Abs:Start:Bot")
 if start then 
 Start_Source = start
@@ -3809,24 +3808,18 @@ return false
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == "المطور" or text == "مطور" or text == "↫ المطور ✯" then
-local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(WaTaN2.."Abs:ChId"))
-local GetInfo = JSON.decode(Check)
-local DevCh1 = GetInfo.result.username
 local DevText = DevAbs:get(WaTaN2.."DevText")
-if DevAbs:get(WaTaN2.."Abs:ChId") then DevCh = '\n✯︙*Dev Ch* ↬ [@'..DevCh1..']' else DevCh = '' end
 if DevText then
 Dev_Abs(msg.chat_id_, msg.id_,DevText)
 else
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,result)
 tdcli_function({ID = "GetUserProfilePhotos",user_id_=DevId,offset_=0,limit_ = 1},function(arg,getpro) 
 if getpro.photos_[0] then
-Text = "*✯︙Dev Name ↬ * ["..result.first_name_.."](t.me/"..result.username_..")\n*✯︙Dev User ↬* [@"..result.username_.."]\n*✯︙Dev Ch ↬* [@"..DevCh1.."]"
+Text = "*✯︙Dev Name ↬ * ["..result.first_name_.."](t.me/"..result.username_..")\n*✯︙Dev User ↬* [@"..result.username_.."]"
 keyboard = {}
 keyboard.inline_keyboard = {{{text=''..result.first_name_..'',url="https://t.me/"..result.username_..""}}}
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Text)..'&photo='..getpro.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙*Dev User* ↬ ['..DevUser..']\n✯︙*Dev Id* ↬ '..DevId..DevCh, 1, "md")
 end
 end,nil)   
 end,nil)   
@@ -3850,7 +3843,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 getUser(msg.sender_user_id_,get_firstname)
 end 
-if text == 'نبذتي' or text == 'بايو' or text == '↫  نبذتي ✯' then
+if text == 'نبذتي' or text == 'بايو' or text == 'البايو' or text == '↫  نبذتي ✯' then
 local my_ph = DevAbs:get(WaTaN2.."Abs:Bio:Profile"..msg.chat_id_)
 if not my_ph then
 send(msg.chat_id_, msg.id_," ✯︙البايو معطل") 
@@ -6412,22 +6405,24 @@ https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. ms
 return false
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
-if text == "سورس" and ChCheck(msg) or text == "السورس" and ChCheck(msg) or text == "يا سورس" and ChCheck(msg) or text == "ياسورس" and ChCheck(msg) or text == "↫  السورس ✯" and ChCheck(msg) then
+if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس' then
 local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
+Dev_Abs(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
 return false 
 end
-Text = [[
-Welcome To Source
-✯︙[WaTaN TeaM](https://t.me/WaTaNTeaM)
-]]
+Text = "[⦑ Welcome to Source ⦒](t.me/watanteam)\n[✯ ⦑ SOURCE WaTaN ⦒](t.me/watanteam)\n✯ Source version : 3.2"
 keyboard = {} 
-keyboard.inline_keyboard = {{{text = '✯ Source Channel',url="https://t.me/WaTaNTeaM"}},{{text = '✯ Developer',url="t.me/abbasfadhil"},{text = '✯ Tws WaTaN',url="https://t.me/zg4bot"}},{{text= '✯ Exp Source .',url="https://t.me/watanupdate"}}}
+keyboard.inline_keyboard = {
+{{text = '𝒄𝒉𝒂𝒏𝒏𝒆𝒍 𝒔𝒐𝒖𝒓𝒄𝒆',url="t.me/WaTaNTeaM"},
+{text = '𝒖𝒑𝒅𝒂𝒕𝒆 𝒔𝒐𝒖𝒓𝒄𝒆',url="t.me/watanupdate"}},
+{{text = '𝒊𝒏𝒔𝒕𝒂𝒍𝒍 𝒔𝒐𝒖𝒓𝒄𝒆',url="https://t.me/WaTaNTeaM/7"},
+{text = '𝒘𝒂𝒕𝒂𝒏 𝒈𝒓𝒐𝒖𝒑',url="https://t.me/joinchat/MJjy8Vab_jVmODdi"}},
+{{text = '𝒅𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓',url="t.me/abbasfadhil"}},
+}
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/WaTaNTeaM&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-return false
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if ChatType == 'sp' or ChatType == 'gp'  then
@@ -8113,7 +8108,8 @@ return false
 end
 ChatKick(result.chat_id_, result.sender_user_id_)
 DevAbs:sadd(WaTaN2..'Abs:BanAll:', result.sender_user_id_)
-text = "✯︙تم حظره عام من المجموعات" 
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+text = '✯︙تم حظره عام من ❨ '..gps..' ❩ مجموعه' 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="الغاء العام",callback_data=msg.sender_user_id_..":UnAll:"..result.sender_user_id_},{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
@@ -8145,7 +8141,8 @@ end
 if result.id_ then
 ChatKick(msg.chat_id_, result.id_)
 DevAbs:sadd(WaTaN2..'Abs:BanAll:', result.id_)
-ReplyStatus(msg,result.id_,"Reply","✯︙تم حظره عام من المجموعات")  
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,result.id_,'Reply','✯︙تم حظره عام من ❨ '..gps..' ❩ المجموعات')  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -8171,7 +8168,8 @@ return false
 end
 ChatKick(msg.chat_id_, user)
 DevAbs:sadd(WaTaN2..'Abs:BanAll:', user)
-ReplyStatus(msg,user,"Reply","✯︙تم حظره عام من المجموعات")  
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,user,'Reply','✯︙تم حظره عام من ❨ '..gps..' ❩ مجموعه')  
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         MuteAll        --
@@ -8193,8 +8191,9 @@ if DevAbs:sismember(WaTaN2..'Abs:SecondSudo:',result.sender_user_id_) and not Ab
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙*لاتستطيع كتم المطور الاساسي²*", 1, 'md')
 return false 
 end
-DevAbs:sadd(WaTaN2..'Abs:MuteAll:', result.sender_user_id_)          
-text = "✯︙تم كتمه عام من المجموعات" 
+DevAbs:sadd(WaTaN2..'Abs:MuteAll:', result.sender_user_id_)  
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+text = '✯︙تم كتمه عام من ❨ '..gps..' ❩ مجموعه' 
 keyboard = {} 
 keyboard.inline_keyboard = {{{text="الغاء العام",callback_data=msg.sender_user_id_..":UnAll:"..result.sender_user_id_},{text="• اخفاء الكليشه •",callback_data="/HideHelpList:"..msg.sender_user_id_}}}
 Msg_id = msg.id_/2097152/0.5
@@ -8225,7 +8224,8 @@ return false
 end
 if result.id_ then
 DevAbs:sadd(WaTaN2..'Abs:MuteAll:', result.id_)
-ReplyStatus(msg,result.id_,"Reply","✯︙تم كتمه عام من المجموعات")  
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,result.id_,'Reply','✯︙تم كتمه عام من ❨ '..gps..' ❩ مجموعه')  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙*المعرف غير صحيح*', 1, 'md')
 end end 
@@ -8250,7 +8250,8 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙*لاتستطيع كتم المطور �
 return false 
 end
 DevAbs:sadd(WaTaN2..'Abs:MuteAll:', user)
-ReplyStatus(msg,user,"Reply","✯︙تم كتمه عام من المجموعات")  
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,user,'Reply','✯︙تم كتمه عام من ❨ '..gps..' ❩ مجموعه')  
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 --         UnAll          --
@@ -8258,7 +8259,26 @@ if text ==('الغاء عام') or text ==('الغاء العام') and ChCheck(
 function UnAllReply(extra, result, success)
 DevAbs:srem(WaTaN2..'Abs:BanAll:', result.sender_user_id_)
 DevAbs:srem(WaTaN2..'Abs:MuteAll:', result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","✯︙تم الغاء (الحظر • الكتم) عام من المجموعات")  
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,result.sender_user_id_,'Reply','✯︙تم الغاء كتمه وحظره عام من ❨ '..gps..' ❩ مجموعه')  
+end 
+if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
+getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),UnAllReply)
+end end
+if text ==('الغاء حظر عام') or text ==('الغاء الحظر العام') and ChCheck(msg) then
+function UnAllReply(extra, result, success)
+DevAbs:srem(WaTaN2..'Abs:BanAll:', result.sender_user_id_)
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,result.sender_user_id_,'Reply','✯︙تم الغاء حظره عام من ❨ '..gps..' ❩ مجموعه')  
+end 
+if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
+getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),UnAllReply)
+end end
+if text ==('الغاء كتم عام') or text ==('الغاء الكتم العام') and ChCheck(msg) then
+function UnAllReply(extra, result, success)
+DevAbs:srem(WaTaN2..'Abs:MuteAll:', result.sender_user_id_)
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,result.sender_user_id_,'Reply','✯︙تم الغاء كتمه عام من ❨ '..gps..' ❩ مجموعه')  
 end 
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),UnAllReply)
@@ -8269,17 +8289,55 @@ function UnAllUser(extra,result,success)
 if result.id_ then
 DevAbs:srem(WaTaN2..'Abs:BanAll:', result.id_)
 DevAbs:srem(WaTaN2..'Abs:MuteAll:', result.id_)
-ReplyStatus(msg,result.id_,"Reply","✯︙تم الغاء (الحظر • الكتم) عام من المجموعات")  
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,result.id_,'Reply','✯︙تم الغاء كتمه وحظره عام من ❨ '..gps..' ❩ مجموعه')  
 else 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙*المعرف غير صحيح*', 1, 'md')
 end end 
 resolve_username(username,UnAllUser)
 end
+if text and (text:match('^الغاء حظر عام @(.*)') or text:match('^الغاء الحظر العام @(.*)')) and ChCheck(msg) then
+local username = text:match('^الغاء حظر عام @(.*)') or text:match('^الغاء الحظر العام @(.*)')
+function UnAllUser(extra,result,success)
+if result.id_ then
+DevAbs:srem(WaTaN2..'Abs:BanAll:', result.id_)
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,result.id_,'Reply','✯︙تم الغاء حظره عام من ❨ '..gps..' ❩ مجموعه')  
+else 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙*المعرف غير صحيح*', 1, 'md')
+end end 
+resolve_username(username,UnAllUser)
+end
+if text and (text:match('^الغاء كتم عام @(.*)') or text:match('^الغاء الكتم العام @(.*)')) and ChCheck(msg) then
+local username = text:match('^الغاء كتم عام @(.*)') or text:match('^الغاء الكتم العام @(.*)')
+function UnAllUser(extra,result,success)
+if result.id_ then
+DevAbs:srem(WaTaN2..'Abs:MuteAll:', result.id_)
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,result.id_,'Reply','✯︙تم الغاء كتمه عام من ❨ '..gps..' ❩ مجموعه')  
+else 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙*المعرف غير صحيح*', 1, 'md')
+end end 
+resolve_username(username,UnAllUser)
+end
+if text and (text:match('^الغاء حظر عام (%d+)') or text:match('^الغاء الحظر العام (%d+)')) and ChCheck(msg) then
+local user = text:match('الغاء حظر عام (%d+)') or text:match('الغاء الحظر العام (%d+)')
+DevAbs:srem(WaTaN2..'Abs:BanAll:', user)
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,user,'Reply','✯︙تم الغاء حظره عام من ❨ '..gps..' ❩ مجموعه') 
+end
+if text and (text:match('^الغاء كتم عام (%d+)') or text:match('^الغاء الكتم العام (%d+)')) and ChCheck(msg) then
+local user = text:match('الغاء كتم عام (%d+)') or text:match('الغاء الكتم العام (%d+)')
+DevAbs:srem(WaTaN2..'Abs:MuteAll:', user)
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,user,'Reply','✯︙تم الغاء كتمه عام من ❨ '..gps..' ❩ مجموعه') 
+end
 if text and (text:match('^الغاء عام (%d+)') or text:match('^الغاء العام (%d+)')) and ChCheck(msg) then
 local user = text:match('الغاء عام (%d+)') or text:match('الغاء العام (%d+)')
 DevAbs:srem(WaTaN2..'Abs:BanAll:', user)
 DevAbs:srem(WaTaN2..'Abs:MuteAll:', user)
-ReplyStatus(msg,user,"Reply","✯︙تم الغاء (الحظر • الكتم) عام من المجموعات")  
+local gps = DevAbs:scard(WaTaN2.."Abs:Groups")
+ReplyStatus(msg,user,'Reply','✯︙تم الغاء كتمه وحظره عام من ❨ '..gps..' ❩ مجموعه')  
 end
 end
 end
@@ -8637,7 +8695,7 @@ Msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
-if text == "المقيدين" and ChCheck(msg) then 
+if text == "المقيدين" or text == "مسح المقيدين" and ChCheck(msg) then 
 local List = DevAbs:smembers(WaTaN2..'Abs:Tkeed:'..msg.chat_id_)
 text = "✯︙قائمة المقيدين ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n"
 for k,v in pairs(List) do
