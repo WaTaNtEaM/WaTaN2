@@ -839,35 +839,15 @@ end
 function Absmoned(chat_id, user_id, msg_id, text, offset, length) local tt = DevAbs:get(WaTaN2..'endmsg') or '' tdcli_function ({ ID = "SendMessage", chat_id_ = chat_id, reply_to_message_id_ = msg_id, disable_notification_ = 0, from_background_ = 1, reply_markup_ = nil, input_message_content_ = { ID = "InputMessageText", text_ = text..'\n\n'..tt, disable_web_page_preview_ = 1, clear_draft_ = 0, entities_ = {[0]={ ID="MessageEntityMentionName", offset_=offset, length_=length, user_id_=user_id }, }, }, }, dl_cb, nil) end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function ChCheck(msg)
-local var = true 
-if DevAbs:get(WaTaN2.."Abs:ChId") then
-local url , res = https.request('https://api.telegram.org/bot'..TokenBot..'/getchatmember?chat_id='..DevAbs:get(WaTaN2..'Abs:ChId')..'&user_id='..msg.sender_user_id_)
-local data = json:decode(url)
-if res ~= 200 or data.result.status == "left" or data.result.status == "kicked" then
-var = false 
-if DevAbs:get(WaTaN2..'Abs:ChText') then
-local ChText = DevAbs:get(WaTaN2..'Abs:ChText')
-send(msg.chat_id_,msg.id_,'['..ChText..']')
+local url,res = https.request('https://abbas.watanteam.tk/ch/SourceCh.php?id='..msg.sender_user_id_)
+data = JSON.decode(url)
+if data.ChatMember.WaTaN ~= true then
+Var = false
+send(msg.chat_id_,msg.id_,'['..data.ChatMember.WaTaN..']')   
 else
-local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(WaTaN2.."Abs:ChId"))
-local GetInfo = JSON.decode(Check)
-if GetInfo.result.username then
-User = "https://t.me/"..GetInfo.result.username
-else
-User = GetInfo.result.invite_link
+Var = true
 end
-Text = "*✯︙عذرا لاتستطيع استخدام البوت !\n✯︙عليك الاشتراك في القناة اولا :*"
-keyboard = {} 
-keyboard.inline_keyboard = {{{text=GetInfo.result.title,url=User}}} 
-Msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-end
-elseif data.ok then
-return var
-end
-else
-return var
-end
+return Var
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 function tdcli_update_callback(data)
@@ -3365,12 +3345,6 @@ end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if ChatType == 'pv' then 
 if text == '/start' or text == '↫ رجوع ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙مرحبا عزيزي المطور \n✯︙انت المطور الاساسي هنا \n✯︙اليك ازرار سورس وطن \n✯︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3384,12 +3358,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ تعيين كلايش الاوامر ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3405,12 +3373,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ السورس ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بتحديث  سورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3424,12 +3386,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاحصائيات ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب أحصائيات  سورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3444,12 +3400,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫  المطورين ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب المطورين لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3463,12 +3413,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ التفعيل والتعطيل ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه ب التفعيل والتعطيل لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3484,12 +3428,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاذاعه ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالاذاعه لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3503,12 +3441,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ العام ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالعام لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3521,12 +3453,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ ردود الخاص ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بردود الخاص لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3538,12 +3464,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاشتراك الاجباري ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 if SecondSudo(msg) then 
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي المطور \n✯︙اليك الازرار الخاصه بالاشتراك الاجباري لسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
@@ -3557,12 +3477,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
 if text == '↫ الاوامر الخدميه ✯' or text == '/play' or text == '↫  رجوع  ✯' or text == 'اوامر الخدميه' or text == '/free' then
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ اوامر التسليه ✯','↫ الاوامر الخدميه  ✯'},
@@ -3575,12 +3489,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ اوامر التسليه ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بأوامر التسليه الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ غنيلي ✯','↫ اغنيه ✯'},
@@ -3593,12 +3501,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ الاوامر الخدميه  ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بالاوامر الخدميه الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ الابراج ✯','↫ حساب العمر ✯'},
@@ -3612,12 +3514,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ اوامر النسب ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بأوامر النسب الخاصه بسورس وطن فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
 {'↫ نسبه الكره ✯','↫ نسبه الحب ✯'},
@@ -3630,12 +3526,6 @@ SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end
 if text == '↫ العاب ✯' then 
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 local Sudo_Welcome = '✯︙اهلا بك مجددا عزيزي \n✯︙اليك الازرار الخاصه بألعاب سورس وطن فقط اضغط على اللعبه الذي تريد لعبها'
 local key = {
 {'↫ الالعاب ✯','↫ الالعاب المتطوره ✯'},
@@ -3653,12 +3543,6 @@ return false
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == '/start' then  
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-send(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 if not DevAbs:get(WaTaN2..'Abs:Start:Time'..msg.sender_user_id_) then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp)
 tdcli_function({ID="GetUser",user_id_=WaTaN2},function(arg,dpbot)
@@ -5332,34 +5216,6 @@ Dev_Abs( msg.chat_id_, msg.id_, 1,'✯︙*المحيبس باليد رقم* ↫ 
 end
 end
 end
-if DevAbs:get(WaTaN2..'DevAbs4'..msg.sender_user_id_) then
-if text and text:match("^الغاء$") then 
-send(msg.chat_id_, msg.id_, "✯︙تم الغاء الامر")
-DevAbs:del(WaTaN2..'DevAbs4'..msg.sender_user_id_)
-return false  end 
-DevAbs:del(WaTaN2..'DevAbs4'..msg.sender_user_id_)
-local username = string.match(text, "@[%a%d_]+") 
-tdcli_function({ID = "SearchPublicChat",username_ = username},function(arg,data) 
-if data and data.message_ and data.message_ == "USERNAME_NOT_OCCUPIED" then 
-send(msg.chat_id_, msg.id_, '✯︙المعرف لا يوجد فيه قناة')
-return false  end
-if data and data.type_ and data.type_.ID and data.type_.ID == 'PrivateChatInfo' then
-send(msg.chat_id_, msg.id_, '✯︙عذرا لا يمكنك وضع معرف حسابات في الاشتراك')
-return false  end
-if data and data.type_ and data.type_.channel_ and data.type_.channel_.is_supergroup_ == true then
-send(msg.chat_id_, msg.id_, '✯︙عذرا لا يمكنك وضع معرف مجموعه في الاشتراك')
-return false  end
-if data and data.type_ and data.type_.channel_ and data.type_.channel_.is_supergroup_ == false then
-if data and data.type_ and data.type_.channel_ and data.type_.channel_.ID and data.type_.channel_.status_.ID == 'ChatMemberStatusEditor' then
-send(msg.chat_id_, msg.id_,'✯︙البوت ادمن في القناة \n✯︙تم تفعيل الاشتراك الاجباري \n✯︙ايدي القناة ↫ '..data.id_..'\n✯︙معرف القناة ↫ [@'..data.type_.channel_.username_..']')
-DevAbs:set(WaTaN2..'Abs:ChId',data.id_)
-else
-send(msg.chat_id_, msg.id_,'✯︙عذرا البوت ليس ادمن في القناة')
-end
-return false  
-end
-end,nil)
-end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if DevAbs:get(WaTaN2.."Abs:DevText"..msg.chat_id_..":" .. msg.sender_user_id_) then
 if text and text:match("^الغاء$") then 
@@ -6314,60 +6170,6 @@ getUser(msg.sender_user_id_,get_me)
 end
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
-if text == "تعيين قناة الاشتراك" or text == "تغيير قناة الاشتراك" or text == "تعيين الاشتراك الاجباري" or text == "وضع قناة الاشتراك" or text == "↫ تعيين قناة الاشتراك ✯" then
-if not Sudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
-else
-DevAbs:setex(WaTaN2..'DevAbs4'..msg.sender_user_id_,360,true)
-send(msg.chat_id_, msg.id_, '✯︙ارسل لي معرف قناة الاشتراك الان')
-end
-return false  
-end
-if text == "تفعيل الاشتراك الاجباري" or text == "↫  تفعيل الاشتراك الاجباري ✯" then  
-if not Sudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
-else
-if DevAbs:get(WaTaN2..'Abs:ChId') then
-local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(WaTaN2.."Abs:ChId"))
-local GetInfo = JSON.decode(Check)
-send(msg.chat_id_, msg.id_,"✯︙الاشتراك الاجباري مفعل \n✯︙على القناة ↫ [@"..GetInfo.result.username.."]")
-else
-DevAbs:setex(WaTaN2..'DevAbs4'..msg.sender_user_id_,360,true)
-send(msg.chat_id_, msg.id_,"✯︙لاتوجد قناة لتفعيل الاشتراك\n✯︙ارسل لي معرف قناة الاشتراك الان")
-end
-end
-return false  
-end
-if text == "تعطيل الاشتراك الاجباري" or text == "↫  تعطيل الاشتراك الاجباري ✯" then  
-if not Sudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
-else
-DevAbs:del(WaTaN2..'Abs:ChId')
-local WaTaNTeaM = '✯︙اهلا عزيزي ↫ '..AbsRank(msg)..' \n✯︙تم تعطيل الاشتراك الاجباري'
-Absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, WaTaNTeaM, 14, string.len(msg.sender_user_id_))
-end
-return false  
-end
-if text == "حذف قناة الاشتراك" or text == "حذف قناه الاشتراك" or text == "↫ حذف قناة الاشتراك ✯" then
-if not SecondSudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
-else
-DevAbs:del(WaTaN2..'Abs:ChId')
-Dev_Abs(msg.chat_id_, msg.id_, 1,"✯︙تم حذف قناة الاشتراك الاجباري", 1, 'md') 
-end
-end
-if SecondSudo(msg) then
-if text == 'جلب قناة الاشتراك' or text == 'قناة الاشتراك' or text == 'الاشتراك الاجباري' or text == 'قناة الاشتراك الاجباري' or text == '↫ قناة الاشتراك ✯' then
-if DevAbs:get(WaTaN2..'Abs:ChId') then
-local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(WaTaN2.."Abs:ChId"))
-local GetInfo = JSON.decode(Check)
-send(msg.chat_id_, msg.id_, "✯︙قناة الاشتراك ↫ [@"..GetInfo.result.username.."]")
-else
-send(msg.chat_id_, msg.id_, "✯︙لاتوجد قناة في الاشتراك الاجباري")
-end
-return false  
-end end
------ لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if SudoBot(msg) then
 if text == 'اذاعه للكل بالتوجيه' and tonumber(msg.reply_to_message_id_) > 0 then
 function WaTaNTeaM(extra,result,success)
@@ -6406,12 +6208,6 @@ return false
 end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'ياسورس' then
-local url,res = https.request('https://abbas.watanteam.tk/ch/joinch.php?id='..msg.sender_user_id_)
-data = JSON.decode(url)
-if data.Ch_Member.Info_WaTaNTeaM ~= true then
-Dev_Abs(msg.chat_id_,msg.id_,'✯︙اهلا بك عزيزي ،\n✯︙اشترك في قناة السورس\n✯︙ثم ارسل الامر مره اخرى\n✯︙قناة السورس @WaTaNTeaM')   
-return false 
-end
 Text = "[⦑ Welcome to Source ⦒](t.me/watanteam)\n[✯ ⦑ SOURCE WaTaN ⦒](t.me/watanteam)\n✯ Source version : 3.2"
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13372,54 +13168,6 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙تم حذف كليشة المطور", 1, "md")
 DevAbs:del(WaTaN2.."DevText")
 end end
------ لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
-if DevAbs:get(WaTaN2.."textch:user"..msg.chat_id_.."" .. msg.sender_user_id_) then 
-if text and text:match("^الغاء$") then 
-Dev_Abs(msg.chat_id_, msg.id_, 1, "✯︙تم الغاء الامر", 1, "md") 
-DevAbs:del(WaTaN2.."textch:user"..msg.chat_id_.."" .. msg.sender_user_id_)  
-return false  end 
-DevAbs:del(WaTaN2.."textch:user"..msg.chat_id_.."" .. msg.sender_user_id_)  
-local texxt = string.match(text, "(.*)") 
-DevAbs:set(WaTaN2..'Abs:ChText',texxt)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙تم تغيير كليشة الاشتراك الاجباري', 1, 'md')
-end
-if text and text:match("^↫ تغير كليشه الاشتراك ✯$") and Sudo(msg)  or text and text:match("^تغيير كليشه الاشتراك$") and Sudo(msg) then  
-DevAbs:setex(WaTaN2.."textch:user"..msg.chat_id_.."" .. msg.sender_user_id_, 300, true)   
-local text = '✯︙حسنا ارسل كليشة الاشتراك الجديده'  
-Dev_Abs(msg.chat_id_, msg.id_, 1,text, 1, 'md') 
-end
-if text == "حذف كليشه الاشتراك الاجباري" or text == "↫ حذف كليشه الاشتراك ✯" then  
-if not Sudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
-else
-DevAbs:del(WaTaN2..'Abs:ChText')
-textt = "✯︙تم حذف كليشة الاشتراك الاجباري"
-Dev_Abs(msg.chat_id_, msg.id_, 1,textt, 1, 'md') 
-end end
-if text == 'كليشه الاشتراك' or text == 'جلب كليشه الاشتراك' or text == '↫ كليشه الاشتراك ✯' then
-if not SecondSudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1, 'md')
-else
-local chtext = DevAbs:get(WaTaN2.."Abs:ChText")
-if chtext then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙كليشة الاشتراك ↫ ⤈ \n┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉\n['..chtext..']', 1, 'md')
-else
-if DevAbs:get(WaTaN2.."Abs:ChId") then
-local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(WaTaN2.."Abs:ChId"))
-local GetInfo = JSON.decode(Check)
-if GetInfo.result.username then
-User = "https://t.me/"..GetInfo.result.username
-else
-User = GetInfo.result.invite_link
-end
-Text = "*✯︙عذرا لاتستطيع استخدام البوت !\n✯︙عليك الاشتراك في القناة اولا :*"
-keyboard = {} 
-keyboard.inline_keyboard = {{{text=GetInfo.result.title,url=User}}} 
-Msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙لم يتم تعيين قناة الاشتراك الاجباري \n✯︙ارسل ↫ تعيين قناة الاشتراك للتعيين ', 1, 'md')
-end end end end
 ----- لن ابرئ الذمة لأي شخص يأخذ حرفاً او رقما من ملفي ، ايٍ كان الشخص لن ابرئ الذمة لهُ -----
 if text == 'القناة' and ChCheck(msg) or text == 'قناة السورس' and ChCheck(msg) or text == 'قناه السورس' and ChCheck(msg) or text == 'قنات السورس' and ChCheck(msg) or text == '↫ قناة السورس ✯' and ChCheck(msg) then 
 Text = [[
