@@ -5196,6 +5196,108 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙للمطور الاساسي فقط ', 1
 else
 sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './WaTaN2.lua', '✯︙نسخة ملف سورس وطن',dl_cb, nil)
 end end
+if text == 'جلب النسخه' and SudoBot(msg) then
+local Groups = DevAbs:smembers(WaTaN2..'Abs:Groups')  
+local UsersBot = DevAbs:smembers(WaTaN2..'Abs:Users')  
+local Get_Json = '{"BotId": '..WaTaN2..','  
+if #UsersBot ~= 0 then 
+Get_Json = Get_Json..'"UsersBot":['  
+for k,v in pairs(UsersBot) do
+if k == 1 then
+Get_Json = Get_Json..'"'..v..'"'
+else
+Get_Json = Get_Json..',"'..v..'"'
+end
+end   
+Get_Json = Get_Json..']'
+end
+Get_Json = Get_Json..',"GroupsBot":{'
+for k,v in pairs(Groups) do   
+local Malk = DevAbs:smembers(WaTaN2..":Abs:AbsConstructor:"..v)
+local President = DevAbs:smembers(WaTaN2.."Abs:BasicConstructor:"..v)
+local Constructor = DevAbs:smembers(WaTaN2..":Abs:Constructor:"..v)
+local Manager = DevAbs:smembers(WaTaN2.."Abs:Managers:"..v)
+local Admin = DevAbs:smembers(WaTaN2.."Abs:Admins:"..v)
+local Vips = DevAbs:smembers(WaTaN2.."Abs:VipMem:"..v)
+if k == 1 then
+Get_Json = Get_Json..'"'..v..'":{'
+else
+Get_Json = Get_Json..',"'..v..'":{'
+end
+if #Malk ~= 0 then 
+Get_Json = Get_Json..'"Malk":['
+for k,v in pairs(Malk) do
+if k == 1 then
+Get_Json = Get_Json..'"'..v..'"'
+else
+Get_Json = Get_Json..',"'..v..'"'
+end
+end   
+Get_Json = Get_Json..'],'
+end
+if #President ~= 0 then 
+Get_Json = Get_Json..'"President":['
+for k,v in pairs(President) do
+if k == 1 then
+Get_Json = Get_Json..'"'..v..'"'
+else
+Get_Json = Get_Json..',"'..v..'"'
+end
+end   
+Get_Json = Get_Json..'],'
+end
+if #Constructor ~= 0 then
+Get_Json = Get_Json..'"Constructor":['
+for k,v in pairs(Constructor) do
+if k == 1 then
+Get_Json = Get_Json..'"'..v..'"'
+else
+Get_Json = Get_Json..',"'..v..'"'
+end
+end   
+Get_Json = Get_Json..'],'
+end
+if #Manager ~= 0 then
+Get_Json = Get_Json..'"Manager":['
+for k,v in pairs(Manager) do
+if k == 1 then
+Get_Json = Get_Json..'"'..v..'"'
+else
+Get_Json = Get_Json..',"'..v..'"'
+end
+end   
+Get_Json = Get_Json..'],'
+end
+if #Admin ~= 0 then
+Get_Json = Get_Json..'"Admin":['
+for k,v in pairs(Admin) do
+if k == 1 then
+Get_Json = Get_Json..'"'..v..'"'
+else
+Get_Json = Get_Json..',"'..v..'"'
+end
+end   
+Get_Json = Get_Json..'],'
+end
+if #Vips ~= 0 then
+Get_Json = Get_Json..'"Vips":['
+for k,v in pairs(Vips) do
+if k == 1 then
+Get_Json = Get_Json..'"'..v..'"'
+else
+Get_Json = Get_Json..',"'..v..'"'
+end
+end   
+Get_Json = Get_Json..'],'
+end
+Get_Json = Get_Json..'"Dev":"558"}'
+end
+Get_Json = Get_Json..'}}'
+local File = io.open('./'..WaTaN2..'.json', "w")
+File:write(Get_Json)
+File:close()
+return sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './'..WaTaN2..'.json', '',dl_cb, nil)
+end
 if text == 'جلب نسخه الكروبات' and ChCheck(msg) or text == 'جلب نسخه احتياطيه' and ChCheck(msg) or text == 'جلب النسخه الاحتياطيه' and ChCheck(msg) or text == '↫ جلب نسخه احتياطيه ✯' and ChCheck(msg) then
 local List = DevAbs:smembers(WaTaN2..'Abs:Groups') 
 local BotName = (DevAbs:get(WaTaN2.."Abs:NameBot") or 'وطن')
